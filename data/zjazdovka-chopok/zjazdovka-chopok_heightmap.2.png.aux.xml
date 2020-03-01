@@ -1,0 +1,10 @@
+<PAMDataset>
+  <SRS>PROJCS["S_JTSK_Krovak",GEOGCS["GCS_S_JTSK",DATUM["D_S_JTSK",SPHEROID["Bessel_1841",6377397.155,299.1528128]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.017453292519943295]],PROJECTION["Krovak"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Pseudo_Standard_Parallel_1",78.5],PARAMETER["Scale_Factor",0.9999],PARAMETER["Azimuth",30.28813975277778],PARAMETER["Longitude_Of_Center",24.83333333333333],PARAMETER["Latitude_Of_Center",49.5],PARAMETER["X_Scale",1.0],PARAMETER["Y_Scale",1.0],PARAMETER["XY_Plane_Rotation",0.0],UNIT["Meter",1.0]]</SRS>
+  <GeoTransform> -3.8416099990000000e+05,  1.1640042598509053e+00,  0.0000000000000000e+00, -1.2053399998999999e+06,  0.0000000000000000e+00, -1.0000000000000000e+00</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <NoDataValue le_hex_equiv="000000A0FFFFEFC7">-3.40282306073710E+38</NoDataValue>
+  </PAMRasterBand>
+</PAMDataset>
