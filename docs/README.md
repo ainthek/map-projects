@@ -1,6 +1,12 @@
-# Work Log
+# map-projects
 
-## 22.03.2020
+Just experiments with geo data, and additional infos (tests) and additional objects (3d models) and various engines and frameworks.
+here you will find my "daily blog" with random mission and down below are som more collected and structured data.
+
+
+## Work Log
+
+### 22.03.2020
 
 ### How to embed [Cesium] Viewer with my KML data ?
 I already have KMLs of BMX tracks and now I want them in cesium viewer,
@@ -22,11 +28,13 @@ Link:
 
 Embeded with IFrame:
 
-<iframe 
+<iframe width="100%" height="500px"
 	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360">
 </iframe>	
 
+![Buried by cesium](./2020-03-22-cesium.png)
 
+TODO: review KMLs elevation data, try GPX etc.....
 
 ---------------------------------------------
 
