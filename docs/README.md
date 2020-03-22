@@ -64,8 +64,14 @@ Source Code of Cesium Viewer
 
 - <https://github.com/CesiumGS/cesium/tree/master/Apps/CesiumViewer>
 
-Status: UNRESOLVED
+Status: UNRESOLVED posted my questions here:
 
+- <https://groups.google.com/forum/?hl=en#!searchin/cesium-dev/KML$20loading$20problems$20altitude%7Csort:date/cesium-dev/8TNmM0nQvSk/kVUF2l7_BwAJ>
+- <https://github.com/CesiumGS/cesium/issues/4327>
+
+## Detour - studying CZML
+
+cloning [Cesium Sources]
 
 ---------------------------------------------
 
@@ -191,6 +197,10 @@ XML imported to MyMaps and then exported to KML:
 Actually this 2 level structure is more logical and it does not contain 
 useless level 2 "MyPlaces" Folder in KML.	
 
+# CZML
+
+- <https://www.npmjs.com/package/czml-writer>
+
 # Toolbox
 
 - [dgal]
@@ -199,6 +209,14 @@ useless level 2 "MyPlaces" Folder in KML.
 ## Articles to review
 
 - Visualizing a Bike Ride in 3D <https://willgeary.github.io/GPXto3D/>
+- https://github.com/workingDog/kml2czml
+
+# Workflows
+
+## Testing [CZML] files 
+
+Just open [Cesium-Viewer] and drag and drop file from local disk.
+
 
 References:
 
@@ -212,8 +230,11 @@ References:
 [Google Earth Pro]: https://www.google.com/earth/versions/
 
 [Cesium]:https://cesium.com/
+[Cesium-Viewer]:https://cesium.com/cesiumjs/cesium-viewer
+[Cesium Sources]: https://github.com/CesiumGS/cesium.git
 
 [KML]: https://developers.google.com/kml
+[CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
 
 [dgal]: https://gdal.org/
 [xmlstarlet]: http://xmlstar.sourceforge.net/
