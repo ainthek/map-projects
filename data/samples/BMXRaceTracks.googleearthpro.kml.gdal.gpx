@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="48.077446410117069" minlon="17.125319973574811" maxlat="49.524014527345841" maxlon="21.279532664603099"/></metadata>                  
+<wpt lat="48.300287748019791" lon="17.350041748986222">
+  <name>Twisterbikes, Šenkvice</name>
+</wpt>
+<wpt lat="48.2031451988667" lon="17.146253497301089">
+  <name>BMX Klub Rača</name>
+</wpt>
+<wpt lat="48.077446410117069" lon="17.256020354793488">
+  <name>BMX Dráha, Dunajská Lúžna</name>
+</wpt>
+<wpt lat="49.070907604395643" lon="19.627682222728708">
+  <name>BMX Team Liptov</name>
+</wpt>
+<wpt lat="48.739192549470232" lon="21.279532664603099">
+  <name>BMX klub Košický Šarkaň</name>
+</wpt>
+<wpt lat="48.147971090770262" lon="17.204181897143659">
+  <name>Pedal Pump Track, Vrakuňa</name>
+</wpt>
+<wpt lat="48.845009803954987" lon="19.619660359427812">
+  <name>BirkePark, Mýto pod Ďumbierom</name>
+</wpt>
+<wpt lat="49.160279457285803" lon="20.447873736722631">
+  <name>Pumptrack, Kežmarok</name>
+</wpt>
+<wpt lat="48.311607473981233" lon="17.43924218494907">
+  <name>Panšula Park, Báhoň</name>
+</wpt>
+<wpt lat="48.696098855110193" lon="17.883328931746711">
+  <name>Pumptrack MTBiker, Hrádok</name>
+</wpt>
+<wpt lat="48.121707422663711" lon="17.125319973574811">
+  <name>PumpPark, Petržalka</name>
+</wpt>
+<wpt lat="48.67883112007187" lon="17.249367692740471">
+  <name>Pumptrack, Dojč</name>
+</wpt>
+<wpt lat="48.382050582348967" lon="17.275881004454771">
+  <name>Pumptrack, Zochova Chata</name>
+</wpt>
+<wpt lat="48.367825011318438" lon="17.668595049515439">
+  <name>BikePark, Dolné Lovčice</name>
+</wpt>
+<wpt lat="48.828371088472082" lon="17.83443850751279">
+  <name>Pumptrack, Bošáca</name>
+</wpt>
+<wpt lat="49.212122336099618" lon="18.779211428647951">
+  <name>Kia Pumptrack, Žilina</name>
+</wpt>
+<wpt lat="48.75659662332987" lon="17.571510871158779">
+  <name>Dema minibikepart, Myjava</name>
+</wpt>
+<wpt lat="48.754029866537849" lon="17.938047077249049">
+  <name>Pumptrack, Kálnica</name>
+</wpt>
+<wpt lat="48.755419768966668" lon="17.936809367206809">
+  <name>Detská zóna, Kálnica</name>
+</wpt>
+<wpt lat="48.458265347972038" lon="18.854185939901289">
+  <name>Salamandra, Hodruša Hámre</name>
+</wpt>
+<wpt lat="48.314961317134497" lon="18.06706428891485">
+  <name>Hidepark, Nitra</name>
+</wpt>
+<wpt lat="48.747794597533158" lon="19.116876153505441">
+  <name>Pumptrack, Laskomer</name>
+</wpt>
+<wpt lat="48.423257124730519" lon="18.420818334030031">
+  <name>Pumptrack, Topoľčianky</name>
+</wpt>
+<wpt lat="48.3029968043991" lon="17.937498633505829">
+  <name>Cyklopark, Veľké Zálužie</name>
+</wpt>
+<wpt lat="48.716993456946327" lon="18.542350997595179">
+  <name>Pumptrack, Nováky</name>
+</wpt>
+<wpt lat="49.19593644810147" lon="20.438030872400699">
+  <name>Pumptrack, Spišská Belá</name>
+</wpt>
+<wpt lat="48.585264778242937" lon="18.855492839377309">
+  <name>Pumptrack, Žiar nad Hronom</name>
+</wpt>
+<wpt lat="49.089265873592467" lon="18.923755344689781">
+  <name>Kia Pumptrack, Martin</name>
+</wpt>
+<wpt lat="48.990651319209519" lon="21.260536722078129">
+  <name>Pumptrack, Prešov</name>
+</wpt>
+<wpt lat="48.374319569500067" lon="17.566901097688358">
+  <name>Prednádražie, Trnava</name>
+</wpt>
+<wpt lat="49.524014527345841" lon="19.43919769464982">
+  <name>Pumptrack, Oravská Polhora</name>
+</wpt>
+<wpt lat="48.198362677247999" lon="17.193856228373011">
+  <name>Hangair</name>
+</wpt>
+<wpt lat="48.706260198625031" lon="21.216793102040061">
+  <name>DirtPark, Košice</name>
+</wpt>
+<wpt lat="48.205044619750609" lon="17.201185775699201">
+  <name>The Field, Vajnory</name>
+</wpt>
+<wpt lat="48.084839714398953" lon="18.184655651372481">
+  <name>Junkride Freestyle Park, Šurany</name>
+</wpt>
+</gpx>

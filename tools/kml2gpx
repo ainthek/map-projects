@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ogr2ogr -f GPX "${1}.gdal.gpx" "${1}"
