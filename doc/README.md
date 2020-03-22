@@ -12,7 +12,7 @@ Topics of interest
 - More Complex Processing Pipelines
 
 -------------
-## Authoring Maps
+# Authoring Maps
 
 Creating your own maps, sharing maps, contributing to global maps.
 
@@ -24,9 +24,9 @@ Creating your own maps, sharing maps, contributing to global maps.
 - [QGis]
 - ...
 
-## Exporting/Importing Data
+# Exporting/Importing Data
 
-### Google MyMaps
+## Google MyMaps
 
 Pros:
 
@@ -38,9 +38,13 @@ Cons:
 - reimporting and merging does not exist, must be done manually
 - live update even from Google Drive data does not exists
 
-## Embeding Maps
+## uMap
 
-### [uMap]
+- 
+
+# Embeding Maps
+
+## [uMap]
 On of the user friendly is [uMap].
 This is my map authored in GoogleEarth Pro (Desktop), and published in uMap, and embeded from uMap.
 
@@ -52,7 +56,7 @@ This is my map authored in GoogleEarth Pro (Desktop), and published in uMap, and
 <a href="https://umap.openstreetmap.fr/en/map/bmx-race-tracks-and-pumptracks-in-slovakia_434133">See full screen</a>
 </p>
 
-### [Google MyMaps]
+## [Google MyMaps]
 Also one click process.
 
 <iframe src="https://www.google.com/maps/d/embed?mid=1CgHIC2MTQMYrkcSair-y9QncFLes4dal" width="640" height="480"></iframe>
@@ -61,12 +65,52 @@ Also one click process.
 
 --------------
 
-## Exporting/Importing Data
+# Exporting/Importing Data
 
 ## TODO List
 - how to set Default View on embeded Google MyMap
 
+
+# KML
+
+## Hierarchical KML
+
+Google Earth Pro as well as Google MyMaps, display all features in tree view.
+Earth calls them "Folders" (this comes from KML structure) and MyMaps call the layers.
+
+Example of this type of KML looks like this.
+
+This is importalnt feature, since various tools handle this structure differently.
+
+XML exported from GoogleEarth looks like this:
+
+	$ xmlstarlet el ./data/samples/BMXRaceTracks.googleearthpro.kml | grep Folder$
+
+	kml/Document/Folder
+	kml/Document/Folder/Folder
+	kml/Document/Folder/Folder
+	kml/Document/Folder/Folder
+	kml/Document/Folder/Folder
+
+XML imported to MyMaps and then exported to KML:
+
+	xmlstarlet el ./data/samples/BMXRaceTracks.mymaps.kml | grep Folder$
+
+	kml/Document/Folder
+	kml/Document/Folder
+	kml/Document/Folder
+	kml/Document/Folder	
+
+Actually this 2 level structure is more logical and it does not contain 
+useless level 2 "MyPlaces" Folder in KML.	
+
+$ Toolbox
+
+- [xmlstarlet]
+
+
 References:
+
 
 
 [uMap]: https://umap.openstreetmap.fr
@@ -75,3 +119,8 @@ References:
 [Google Earth Studio]: https://earth.google.com/studio/
 [QGis]: https://qgis.org/
 [Google Earth Pro]: https://www.google.com/earth/versions/
+
+
+
+[xmlstarlet]: http://xmlstar.sourceforge.net/
+

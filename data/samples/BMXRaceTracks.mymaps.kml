@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>BMX Race Tracks and Pumptracks</name>
+    <description/>
+    <Style id="icon-1899-DB4436-nodesc-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-nodesc-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>BMX Race Track</name>
+      <Placemark>
+        <name>Twisterbikes, Šenkvice</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.350042,48.300288,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BMX Klub Rača</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.146253,48.203145,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BMX Dráha, Dunajská Lúžna</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.25602,48.077446,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BMX Team Liptov</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            19.627682,49.070908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BMX klub Košický Šarkaň</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            21.279533,48.739193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Pumptracks</name>
+      <Placemark>
+        <name>Pedal Pump Track, Vrakuňa</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.204182,48.147971,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BirkePark, Mýto pod Ďumbierom</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            19.61966,48.84501,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Kežmarok</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            20.447874,49.160279,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Panšula Park, Báhoň</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.439242,48.311607,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack MTBiker, Hrádok</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.883329,48.696099,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>PumpPark, Petržalka</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.12532,48.121707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Dojč</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.249368,48.678831,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Zochova Chata</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.275881,48.382051,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>BikePark, Dolné Lovčice</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.668595,48.367825,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Bošáca</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.834439,48.828371,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kia Pumptrack, Žilina</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.779211,49.212122,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dema minibikepart, Myjava</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.571511,48.756597,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Kálnica</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.938047,48.75403,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Detská zóna, Kálnica</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.936809,48.75542,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Salamandra, Hodruša Hámre</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.854186,48.458265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hidepark, Nitra</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.067064,48.314961,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Laskomer</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            19.116876,48.747795,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Topoľčianky</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.420818,48.423257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cyklopark, Veľké Zálužie</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.937499,48.302997,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Nováky</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.542351,48.716993,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Spišská Belá</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            20.438031,49.195936,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Žiar nad Hronom</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.855493,48.585265,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kia Pumptrack, Martin</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.923755,49.089266,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Prešov</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            21.260537,48.990651,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Prednádražie, Trnava</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.566901,48.37432,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pumptrack, Oravská Polhora</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            19.439198,49.524015,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Others</name>
+      <Placemark>
+        <name>Hangair</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.193856,48.198363,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>DirtParks and Freestyle</name>
+      <Placemark>
+        <name>DirtPark, Košice</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            21.216793,48.70626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Field, Vajnory</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            17.201186,48.205045,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Junkride Freestyle Park, Šurany</name>
+        <styleUrl>#icon-1899-DB4436-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            18.184656,48.08484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
