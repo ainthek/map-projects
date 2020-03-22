@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="waypoints" id="waypoints">
+	<SimpleField name="ele" type="float"></SimpleField>
+	<SimpleField name="time" type="string"></SimpleField>
+	<SimpleField name="magvar" type="float"></SimpleField>
+	<SimpleField name="geoidheight" type="float"></SimpleField>
+	<SimpleField name="cmt" type="string"></SimpleField>
+	<SimpleField name="desc" type="string"></SimpleField>
+	<SimpleField name="src" type="string"></SimpleField>
+	<SimpleField name="link1_href" type="string"></SimpleField>
+	<SimpleField name="link1_text" type="string"></SimpleField>
+	<SimpleField name="link1_type" type="string"></SimpleField>
+	<SimpleField name="link2_href" type="string"></SimpleField>
+	<SimpleField name="link2_text" type="string"></SimpleField>
+	<SimpleField name="link2_type" type="string"></SimpleField>
+	<SimpleField name="sym" type="string"></SimpleField>
+	<SimpleField name="type" type="string"></SimpleField>
+	<SimpleField name="fix" type="string"></SimpleField>
+	<SimpleField name="sat" type="int"></SimpleField>
+	<SimpleField name="hdop" type="float"></SimpleField>
+	<SimpleField name="vdop" type="float"></SimpleField>
+	<SimpleField name="pdop" type="float"></SimpleField>
+	<SimpleField name="ageofdgpsdata" type="float"></SimpleField>
+	<SimpleField name="dgpsid" type="int"></SimpleField>
+</Schema>
+<Folder><name>waypoints</name>
+  <Placemark>
+	<name>Twisterbikes, Šenkvice</name>
+      <Point><coordinates>17.3500417489862,48.3002877480198</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BMX Klub Rača</name>
+      <Point><coordinates>17.1462534973011,48.2031451988667</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BMX Dráha, Dunajská Lúžna</name>
+      <Point><coordinates>17.2560203547935,48.0774464101171</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BMX Team Liptov</name>
+      <Point><coordinates>19.6276822227287,49.0709076043956</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BMX klub Košický Šarkaň</name>
+      <Point><coordinates>21.2795326646031,48.7391925494702</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pedal Pump Track, Vrakuňa</name>
+      <Point><coordinates>17.2041818971437,48.1479710907703</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BirkePark, Mýto pod Ďumbierom</name>
+      <Point><coordinates>19.6196603594278,48.845009803955</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Kežmarok</name>
+      <Point><coordinates>20.4478737367226,49.1602794572858</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Panšula Park, Báhoň</name>
+      <Point><coordinates>17.4392421849491,48.3116074739812</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack MTBiker, Hrádok</name>
+      <Point><coordinates>17.8833289317467,48.6960988551102</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>PumpPark, Petržalka</name>
+      <Point><coordinates>17.1253199735748,48.1217074226637</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Dojč</name>
+      <Point><coordinates>17.2493676927405,48.6788311200719</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Zochova Chata</name>
+      <Point><coordinates>17.2758810044548,48.382050582349</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BikePark, Dolné Lovčice</name>
+      <Point><coordinates>17.6685950495154,48.3678250113184</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Bošáca</name>
+      <Point><coordinates>17.8344385075128,48.8283710884721</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kia Pumptrack, Žilina</name>
+      <Point><coordinates>18.779211428648,49.2121223360996</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Dema minibikepart, Myjava</name>
+      <Point><coordinates>17.5715108711588,48.7565966233299</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Kálnica</name>
+      <Point><coordinates>17.938047077249,48.7540298665378</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Detská zóna, Kálnica</name>
+      <Point><coordinates>17.9368093672068,48.7554197689667</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Salamandra, Hodruša Hámre</name>
+      <Point><coordinates>18.8541859399013,48.458265347972</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hidepark, Nitra</name>
+      <Point><coordinates>18.0670642889148,48.3149613171345</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Laskomer</name>
+      <Point><coordinates>19.1168761535054,48.7477945975332</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Topoľčianky</name>
+      <Point><coordinates>18.42081833403,48.4232571247305</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Cyklopark, Veľké Zálužie</name>
+      <Point><coordinates>17.9374986335058,48.3029968043991</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Nováky</name>
+      <Point><coordinates>18.5423509975952,48.7169934569463</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Spišská Belá</name>
+      <Point><coordinates>20.4380308724007,49.1959364481015</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Žiar nad Hronom</name>
+      <Point><coordinates>18.8554928393773,48.5852647782429</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Kia Pumptrack, Martin</name>
+      <Point><coordinates>18.9237553446898,49.0892658735925</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Prešov</name>
+      <Point><coordinates>21.2605367220781,48.9906513192095</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Prednádražie, Trnava</name>
+      <Point><coordinates>17.5669010976884,48.3743195695001</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pumptrack, Oravská Polhora</name>
+      <Point><coordinates>19.4391976946498,49.5240145273458</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hangair</name>
+      <Point><coordinates>17.193856228373,48.198362677248</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>DirtPark, Košice</name>
+      <Point><coordinates>21.2167931020401,48.706260198625</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>The Field, Vajnory</name>
+      <Point><coordinates>17.2011857756992,48.2050446197506</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Junkride Freestyle Park, Šurany</name>
+      <Point><coordinates>18.1846556513725,48.084839714399</coordinates></Point>
+  </Placemark>
+</Folder>
+<Folder><name>routes</name>
+</Folder>
+<Folder><name>tracks</name>
+</Folder>
+<Folder><name>route_points</name>
+</Folder>
+<Folder><name>track_points</name>
+</Folder>
+</Document></kml>

@@ -36,6 +36,22 @@ Embeded with IFrame:
 
 TODO: review KMLs elevation data, try GPX etc.....
 
+Display [GPX] in [Cesium] ? is it possible ? So far I get unrecognized format
+
+So let's try KML->GPX->KML
+
+Data:
+
+	data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml
+
+Link: 
+
+	https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml
+
+Cesium:
+
+	<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml>
+
 ---------------------------------------------
 
 # map-projects
@@ -149,6 +165,9 @@ useless level 2 "MyPlaces" Folder in KML.
 - [dgal]
 - [xmlstarlet]
 
+## Articles to review
+
+- Visualizing a Bike Ride in 3D <https://willgeary.github.io/GPXto3D/>
 
 References:
 
