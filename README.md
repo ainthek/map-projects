@@ -1,5 +1,7 @@
 # map-projects
 
-Just experiments with GeoData and Babylon.Just
+Just experiments with geo data, and various engines and frameworks.
+
+
 
 
