@@ -52,6 +52,21 @@ Cesium:
 
 	<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml>
 
+Result: BURIED AGAIN even with the simples KML
+
+### So what is "CesiumViewer" ? https://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html
+
+What code processes the KML file and why is this burial happening ?
+
+- <https://github.com/CesiumGS/cesium/issues/4327>
+
+Source Code of Cesium Viewer
+
+- <https://github.com/CesiumGS/cesium/tree/master/Apps/CesiumViewer>
+
+Status: UNRESOLVED
+
+
 ---------------------------------------------
 
 # map-projects
