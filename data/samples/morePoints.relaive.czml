@@ -1,0 +1,48 @@
+[
+
+  {
+    "id": "document",
+    "name": "BMX Race Track",
+    "version": "1.0",
+    "clock":
+    {
+      "interval": "2012-03-15T10:00:00Z/2012-03-16T10:00:00Z",
+      "currentTime": "2012-03-15T10:00:00Z",
+      "multiplier": 60,
+      "range": "LOOP_STOP",
+      "step": "SYSTEM_CLOCK_MULTIPLIER"
+    }
+  },
+  {
+    "id": "Pumptrack, Bošáca",
+    "position":
+    {
+      "cartographicDegrees": [17.8344385075128,48.8283710884721, 1.0]
+    },
+    "point":
+    {
+      "pixelSize":20,
+      "heightReference":"RELATIVE_TO_GROUND",  
+      "color":
+      {
+        "rgba": [255, 0, 255, 255]
+      }
+    }
+  },
+  {
+    "id": "BMX klub Košický Šarkaň",
+    "position":
+    {
+      "cartographicDegrees": [21.2795326646031,48.739192549470232, 1.0]
+    },
+    "point":
+    {
+      "pixelSize":20,
+      "heightReference":"RELATIVE_TO_GROUND",  
+      "color":
+      {
+        "rgba": [255, 255, 255, 255]
+      }
+    }
+  }
+]
