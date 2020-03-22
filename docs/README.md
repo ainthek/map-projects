@@ -1,3 +1,28 @@
+# Work Log
+
+## 22.03.2020
+
+### How to embed [Cesium] Viewer with my KML data ?
+I already have KMLs of BMX tracks and now I want them in cesium viewer,
+and embed them in my page. No programming if possible.
+
+Trying this <https://groups.google.com/forum/#!topic/cesium-dev/lY-7IDU4tkk>:
+
+Viewer:
+
+	https://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html?source=
+
+Source:
+
+	https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml
+
+
+<iframe src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360"/>
+
+
+
+---------------------------------------------
+
 # map-projects
 
 Just experiments with geo data, and additional infos (tests) and additional objects (3d models) and various engines and frameworks.
@@ -104,7 +129,7 @@ XML imported to MyMaps and then exported to KML:
 Actually this 2 level structure is more logical and it does not contain 
 useless level 2 "MyPlaces" Folder in KML.	
 
-$ Toolbox
+# Toolbox
 
 - [xmlstarlet]
 
@@ -120,6 +145,8 @@ References:
 [QGis]: https://qgis.org/
 [Google Earth Pro]: https://www.google.com/earth/versions/
 
+
+[Cesium]:https://cesium.com/
 
 
 [xmlstarlet]: http://xmlstar.sourceforge.net/
