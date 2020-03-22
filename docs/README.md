@@ -24,52 +24,71 @@ Source:
 
 Link:
 
-<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360>
+<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml>
 
 Embeded with IFrame:
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360">
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
 </iframe>	
 
 ![Buried by cesium](./2020-03-22-cesium.png)
 
-TODO: review KMLs elevation data, try GPX etc.....
+Interesting that this behaves differently in viewer (not working) and in sandbox (working, sometimes):
 
-Display [GPX] in [Cesium] ? is it possible ? So far I get unrecognized format
+	var viewer = new Cesium.Viewer('cesiumContainer');
+	//viewer.scene.globe.depthTestAgainstTerrain=false;
+	//viewer.extend(Cesium.viewerCesiumInspectorMixin);
+	var options = {
+	camera : viewer.scene.camera,
+	canvas : viewer.scene.canvas,
+	//elipsoid:Cesium.Ellipsoid.WGS84,
+	//clampToGround: true
+	};
+	
+	//a cele sa to sprava este inak ked je zapnuty alebo vupnuty inspector
+	
+	var BASE="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/";
+	
+	//a) OK, this is on, just labels are buries, toto vyzera ok
+	var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml";
+	//b) Err, kml with no style information, label are buried, pins are some default banners from Cesium
+	//var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml";
+	// c) Err, toto je export z google maps, nevidim nic
+	//var kmlFile = BASE+"BMXRaceTracks.mymaps.kml"; 
+	var promise = Cesium.KmlDataSource.load(kmlFile, options);
+	Cesium.when(promise, function(dataSource) {
+	viewer.dataSources.add(dataSource);
+	
+	});
+	viewer.flyTo(promise);
 
-So let's try KML->GPX->KML
-
-Data:
-
-	data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml
-
-Link: 
-
-	https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml
-
-Cesium:
-
-	<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml>
-
-Result: BURIED AGAIN even with the simples KML
-
-### So what is "CesiumViewer" ? https://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html
-
-What code processes the KML file and why is this burial happening ?
-
-- <https://github.com/CesiumGS/cesium/issues/4327>
-
-Source Code of Cesium Viewer
-
-- <https://github.com/CesiumGS/cesium/tree/master/Apps/CesiumViewer>
+TODO: why it is not working in Viewer ? Can we fix it with: 
+a) viewer params
+b) KML markup ?
+c) anything else ?
 
 Status: UNRESOLVED posted my questions here:
 
 - <https://groups.google.com/forum/?hl=en#!searchin/cesium-dev/KML$20loading$20problems$20altitude%7Csort:date/cesium-dev/8TNmM0nQvSk/kVUF2l7_BwAJ>
 - <https://github.com/CesiumGS/cesium/issues/4327>
 
+- <https://cesium.com/blog/2018/07/30/billboards-on-terrain-improvements/>
+
+Status este raz:
+
+1. original z google earth (BMXRaceTracks.googleearthpro.kml) ide v Sandboxe, nejde vo Viewri nevidno labels poriadne
+2. uplne nenastylovany BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml, ide v sandboxe, nejde vo Viewri nevidno labels poriadne
+3. export z myMaps nejde nikde, lebo relativne styly `<styleUrl>#icon-1899-DB4436-nodesc</styleUrl>`
+
+
+Source Code of Cesium Viewer
+
+- <https://github.com/CesiumGS/cesium/tree/master/Apps/CesiumViewer>
+
 ## Detour - studying CZML
+
+Bude podobny problem z CZML ?
 
 cloning [Cesium Sources]
 
@@ -95,10 +114,9 @@ I have ended up with creating relativelly good looking PINs with correct positio
         "nearFarScalar": [1.0, 1, 500000.0, 0.2]
       }
     }
-  }
+  	}
 
 So the translation from KML will be pretty streight forward.
-  
 
 ---------------------------------------------
 
