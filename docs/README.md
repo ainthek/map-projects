@@ -73,6 +73,33 @@ Status: UNRESOLVED posted my questions here:
 
 cloning [Cesium Sources]
 
+I have ended up with creating relativelly good looking PINs with correct positioning in ZCML.
+
+	{
+
+    "id": "Pumptrack, Bošáca",
+    "position":
+    {
+      "cartographicDegrees": [17.8344385075128, 48.8283710884721, 0.0]
+    },
+    "billboard":
+    {
+      "image":
+      {
+        "uri": "http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"
+      },
+      "heightReference": "CLAMP_TO_GROUND",
+      "verticalOrigin": "BOTTOM",
+      "scaleByDistance":
+      {
+        "nearFarScalar": [1.0, 1, 500000.0, 0.2]
+      }
+    }
+  }
+
+So the translation from KML will be pretty streight forward.
+  
+
 ---------------------------------------------
 
 # map-projects
