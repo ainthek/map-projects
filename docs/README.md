@@ -16,8 +16,15 @@ Source:
 
 	https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml
 
+Link:
 
-<iframe src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360"/>
+<https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360>
+
+Embeded with IFrame:
+
+<iframe 
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml&view=19.190566511163134%2C45.936826109815165%2C308637.71944634%2C5.088887490341627e-14%2C-47.596971672906086%2C360">
+</iframe>	
 
 
 
