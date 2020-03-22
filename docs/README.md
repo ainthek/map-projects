@@ -144,6 +144,22 @@ Also one click process.
 
 # KML
 
+## altitudeMode
+<https://developers.google.com/kml/documentation/altitudemode>
+
+When exporting clamped, the [Google Earth Pro] does not export anything:
+
+	<Point>
+		<coordinates>17.8344385075128,48.8283710884721,0</coordinates>
+	</Point>
+
+When exporting relativeToGround it looks like this:
+
+	<Point>
+		<altitudeMode>relativeToGround</altitudeMode>
+		<coordinates>17.8344385075128,48.8283710884721,0</coordinates>
+	</Point>
+
 ## Hierarchical KML
 
 Google Earth Pro as well as Google MyMaps, display all features in tree view.
@@ -195,8 +211,9 @@ References:
 [QGis]: https://qgis.org/
 [Google Earth Pro]: https://www.google.com/earth/versions/
 
-
 [Cesium]:https://cesium.com/
+
+[KML]: https://developers.google.com/kml
 
 [dgal]: https://gdal.org/
 [xmlstarlet]: http://xmlstar.sourceforge.net/
