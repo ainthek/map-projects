@@ -6,7 +6,7 @@ function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 1200,
-    height: 800,
+    height: 1000,
     webPreferences: {
       nodeIntegration: true
     }
@@ -16,7 +16,7 @@ function createWindow () {
   win.loadFile('index.html')
 
   // Open the DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -32,6 +32,7 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
+
 
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the
