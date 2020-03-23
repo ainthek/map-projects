@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cesium": "^1.67.0",
+    "electron": "^8.1.1"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.5.0"
+  }
+}

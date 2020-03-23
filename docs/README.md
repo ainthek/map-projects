@@ -6,6 +6,37 @@ here you will find my "daily blog" with random mission and down below are som mo
 
 ## Work Log
 
+### 23.03.2020
+
+Treba sa pohrat z customizaciu viewera, 
+kedze vcera som zistil ze veci v [sandcastle] chodia a v [Cesium Viewer] nie.
+
+- https://cesium.com/blog/2016/04/04/an-introduction-to-cesium-desktop-apps-with-electron/
+- https://www.electronjs.org/docs/tutorial/first-app
+- https://groups.google.com/forum/#!topic/cesium-dev/DMeBWr1LVbY
+
+
+Detour:
+	Geocoding is the process of converting addresses (like "1600 Amphitheatre Parkway, Mountain View, CA") 
+	into geographic coordinates (like latitude 37.423021 and longitude -122.083739), 
+	which you can use to place markers or position the map.
+
+Uz viem preco sa zda ze to chodi v [sandcastle] a preco to nechodi vo [Cesium Viewer].
+Viewer ma standardne zapnuty world terrain a sandcastle nie.
+
+
+// display depends on this ! burried
+viewer.scene.globe.depthTestAgainstTerrain = true;
+
+<https://sandcastle.cesium.com/#c=jVNNj9MwEP0rJkLaVCq2uPZLtOXjAGgRrYBDDuva08TUsSN7klJW+9+ZNAnb7gqJHKJ45r038zyTRgbWGDhCYHPm4MjWEE1d8m/nWHqjzse1dyiNg3AzZveZY/QIwTwWEI4mAjv5mskAbG8ldmmEEIjxJfjGaAiTQVcFkAjffbB620HSUeYeRtPMZY40tYmVlSemoQKnI/OOYWEie5G5rk0eFTjgufU74ITCYgsRlzkpRewlyQqGGlpNaqchi4fS3lZovIuU6x0oWUKQbMKuhLvoeIAQOz6HtNEBYmVZbf2H4GunJ21ZsnN2kzlF9ZCtlpt38ywpEKs4ESLII88NFvWujhAIguCQK18K6pxu9CBKWb2qgv8JCiMdIt2l0BKliFTKQsyS6aM6OVvO717et1UexOrzj69SwTZIdYg89z63ADJgQXqcoHfTC97q/3k815Je1a/u46nS+l9K5YnMxAF/wXhvLMzbHs7hdkRUqWx3aT6sysfSviXXG18HBdx6qdOeOL6YZ7c5PeVYgEt7oTHb1061mFT/lRkNw+8H+piJXGp9iZxeAff2tPWDdJvrVzYZJ7OIJwuLDv7GlJUPyOpgU84FAk2MFj6KXa0OQHOO545nYiDNtGmY0bQgT361LGl3K0bK7GtrN+Y3ZMliJgh/RWsvxrj8toFAP04LKV4vPnVBzvlM0PE5C723OxkuFP8A>
+
+
+// display depends on this ! not burried
+viewer.scene.globe.depthTestAgainstTerrain = false;
+
+<https://sandcastle.cesium.com/#c=jVNNj9MwEP0rJkLaVCq2uPZLtOXjAGgRrYBDDuva08TUsSOPk1JW+9+ZNAnb7gqJHKJ45r038zyTRgbWGDhCYHPm4MjWgKYu+bdzLL1R5+PauyiNg3AzZveZY/QIwXwsIBwNAjv5mskAbG9l7NIRQiDGl+AboyFMBl0VQEb47oPV2w6SjjL3MJpmLnOkqQ1WVp6YhgqcRuYdi4VB9iJzXZscFTjgufU74ISKxRYwLnNSwthLkpW9tAitKPXTkMdDaW+raLxDSvYWlCwhSDZhV8pddDxAiI3PIW10gFhZVlv/Ifja6UkMNZCfs53MKaoX2Wq5eTfPkiLGCidCBHnkuYlFvasRAkEiuMiVLwW1Tld6EKWsXlXB/wQVkQ5Ilym0jFIglbKAWTJ9VCdny/ndy/u2yoNYff7xVSrYBqkOyHPvcwsgQyxIjxP0bnrBW/0/j+da0qv61X08VVr/S6k8kRkc8BeM98bCvO3hHG5HRJXKdpnmw658LO1bcr3xdVDArZc67Ynji3l2q9NTjgW4tBcas33tVItJ9V+Z0TD8fqCPGeRS60vk9Aq4t6etH6TbXL+zyTiZYTxZWHTwN6asfIisDjblXESgidHGo9jV6gA0Zzx3PBMDaaZNw4ymBXnyr2VJu1uIlNnX1m7Mb8iSxUwQ/orWXoxx+W0Dgf6cFlK8XnzqgpzzmaDjc1b03u5kuFD8Aw>
+
+
 ### 22.03.2020
 
 ### How to embed [Cesium] Viewer with my KML data ?
@@ -44,6 +75,7 @@ Interesting that this behaves differently in viewer (not working) and in sandbox
 	canvas : viewer.scene.canvas,
 	//elipsoid:Cesium.Ellipsoid.WGS84,
 	//clampToGround: true
+	terrainProvider: Cesium.createWorldTerrain()
 	};
 	
 	//a cele sa to sprava este inak ked je zapnuty alebo vupnuty inspector
@@ -277,6 +309,7 @@ References:
 [Cesium]:https://cesium.com/
 [Cesium-Viewer]:https://cesium.com/cesiumjs/cesium-viewer
 [Cesium Sources]: https://github.com/CesiumGS/cesium.git
+[Sandcastle]: https://sandcastle.cesium.com/
 
 [KML]: https://developers.google.com/kml
 [CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
