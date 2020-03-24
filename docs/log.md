@@ -2,7 +2,87 @@
  
 --------------------------------------------------------------------
 ## 24.03.2020
-Rozhodol som sa ze budem pokracovat v cesium workshop.
+
+Digging deeper in animated tracks idea:
+Starting from:
+
+- Google Earth pro
+- ...
+- ...
+-
+- Cesium
+- ...
+- Relive
+
+### Google Earth Pro and GPX Import
+
+Ked importujete gpx do Google Earth Pro ponukne vam moznosti:
+
+- Generate KML tracks
+- Generate KML Line Strings
+- Adjust ...
+
+
+
+Z tohto vam vzniknu tri vrstvy (ktore ked exportnete do KMLka) budu vyzerat takto:
+
+- Points.kml
+- Paths.kml
+- Track.kml
+
+Dalsi sposob ako sa dostart z Track.kml je nad vrstvou kliknut Compy As Track a potom Paste.
+
+Ak si teraz klikne trur nad jednotlivymi vrstvami:
+
+- Points.kml - kamera sa zahrame do zeme a nevidite nic
+- Paths.kml - kamera akosi ide ale nevidite bod na trase ktory sa hybe
+- Track.kml - konecne nejaka animacia, hybe sa bod a kamera ho "akosi" sleduje
+
+Pome kuknut presny obsah tych KMLiek
+
+#### Points.kml:
+
+- `<trkpt>` z gpx sa zmenilo na `<Placemark>` z KML
+- zaroven pre kazdy z nich zgenerovalo `<LookAt>` element ktory by mal obladat kameru: <https://developers.google.com/kml/documentation/kmlreference#lookat>
+- a `<TimeStamp>/<when>` ktory zjavne ovlada zobrazenie bodu
+
+
+    <Placemark>
+        <name>Krasnansky trail-8</name>
+        <visibility>0</visibility>
+        <snippet></snippet>
+        <description>
+          <![CDATA[<table>
+            <tr><td>Longitude: 17.105496 </td></tr>
+            <tr><td>Latitude: 48.222485 </td></tr>
+            <tr><td>Altitude: 347.992 meters </td></tr>
+            <tr><td>Speed: 36.5 km/hour </td></tr>
+            <tr><td>Heading: 351.2 </td></tr>
+            <tr><td>Time: 2020-03-14T21:32:00Z </td></tr>
+            </table>]]>
+        </description>
+        <LookAt>
+          <longitude>17.105496</longitude>
+          <latitude>48.222485</latitude>
+          <altitude>0</altitude>
+          <heading>0</heading>
+          <tilt>66</tilt>
+          <range>0</range>
+        </LookAt>
+        <TimeStamp>
+          <when>2020-03-14T21:32:00Z</when>
+        </TimeStamp>
+        <styleUrl>#track-0</styleUrl>
+        <Point>
+          <coordinates>17.105496,48.222485,347.99</coordinates>
+        </Point>
+      </Placemark>
+
+Toto ale ani v googleearthpro prehlarelne rozumne nie je.
+Ani po drag and drop do [Cesium-Viewer] nie.
+
+Zaujimave je ze CESIUm vie prehrat Tracks.kml. Chyba sice path a ikonka, ale je to celkom fajn.
+
 
 
 ## 23.03.2020

@@ -68,6 +68,8 @@ IFramew with extrenal map as source= parameter, (still buggy)
 	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
 </iframe>	
 
+Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
+
 ## [Relive]
 
 <iframe src=https://www.relive.cc/view/vdvmBp7J8xO/explore width=100% height=600px></iframe>
@@ -183,6 +185,7 @@ Gdal:
 
 - [dgal]
 - [xmlstarlet]
+- brew install [gpsbabel]
 
 ## Articles to review
 
@@ -198,6 +201,7 @@ Gdal:
 Just open [Cesium-Viewer] and drag and drop file from local disk.
 
 ## GPX Converting Tracks to Routes and viceversa
+
 Using [GDAL, GPX driver](https://gdal.org/drivers/vector/gpx.html)
 
 The GPX writer supports the following layer creation options:
@@ -218,7 +222,89 @@ Exporting lines tracks:
 Batch:
 
 	ls -1 *.gpkg | xargs -I {} ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/{}.gpx {} 
-	
+
+## Remove part of Tracks from recorder GXP file
+You have 2 rides in gpx, different but with the same segment (MTB trail),
+you want to extract only the points common for both rides.
+
+- import gpx1 and gpx2 into qgis
+- turn on labels on both layers to show point numbers
+- find number of points from-to and from-to common for both tracks (visually)
+
+For each track:
+- open attribute table and select points from track1 
+- copy, 
+- Edit>Paste feature As->Temorary Scratch layer
+- Point To Paths, save to templ layer
+- Temp Layer - Export To GPX, FORCE_TRACKS=YES
+
+You should have now 2 files in GPX format with `<trk> format` on disk.
+
+BUT `<TIME>` is LOST !!!! SO THIS METHOD IS GOOD TO CREATE PATHS without times
+and not real TRACKS.
+
+HOW TO DO IT INCLUDING TIME ?
+
+- import gpx1 and gpx2 into qgis
+- turn on labels on both layers to show point numbers
+- find number of points from-to and from-to common for both tracks (visually)
+- open attribute table and select points from track1 
+- copy, 
+- Edit>Paste feature As->GPX
+
+You end up with GPX file as waypoints including elevation and time.
+
+Now Google Earth can handle them and create line strings (Paths) and kml tracks (gx:Track/when)
+
+
+## Align dates on 2 rides
+This works with Tracks from Google Earth
+
+Now you have 2 files with same track ridden 2 times or by 2 riders and you want to compare them.
+Files are in GPX waypoint format
+
+- import to Google Earth Pro
+- Copy as Track (on Waypoints)
+- Paste
+- Save pasted layer as KML
+
+same for file 2
+
+now you have 04-rider1.track.kml and 04-rider2.track.kml
+
+Lets align dates on both tracks.
+
+Files have these strating dates
+
+- 04-rider1.track.kml 2016-03-30T13:15:15Z
+- 04-rider2.track.kml 2020-03-15T12:08:55Z
+
+Align dates:
+
+	../../../../tools/kml-align-when.sh 2020-03-15T12:08:55Z  04-rider1.track.kml > 04-rider1.track.aligned.kml
+
+Now you have:
+
+- 04-rider1.track.aligned.kml 2020-03-15T12:08:55Z
+- 04-rider2.track.kml 2020-03-15T12:08:55Z
+
+
+
+
+## Convert GPX with WPTs to GPX with Track 
+
+Ani jedno z tohot mi nejde:
+
+- https://www.gpsvisualizer.com 
+- gpsbabel -i gpx -f 03-rider1.selected-points.wpt.gpx -x transform,wpt=trk,del,rptdigits=2 -o gpx -F route.gpx 
+
+
+- https://issues.qgis.org/issues/11542
+
+zatial sa mi zda ze mi to ide z gpkg ktory je multiline string
+
+	ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/test.gpx 01-access-road-70-157.gpkg
+
 -------------------------------------
 
 References:

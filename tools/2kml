@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ogr2ogr -f KML "${1}.gdal.kml" "${1}"
