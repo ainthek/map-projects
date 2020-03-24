@@ -72,7 +72,7 @@ Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.127745084233506%2C48.210573034475935%2C725.7873934315259%2C280.2914643923927%2C-30.02197638499377%2C359.78254986908985">
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.117977768647275%2C48.21516358587874%2C553.5685019284648%2C281.525245591343%2C-21.391550202590636%2C359.79865247344674">
 </iframe>	
 
 ## [Relive]
