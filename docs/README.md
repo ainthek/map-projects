@@ -70,6 +70,11 @@ IFramew with extrenal map as source= parameter, (still buggy)
 
 Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 
+
+<iframe width="100%" height="500px"
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.127745084233506%2C48.210573034475935%2C725.7873934315259%2C280.2914643923927%2C-30.02197638499377%2C359.78254986908985">
+</iframe>	
+
 ## [Relive]
 
 <iframe src=https://www.relive.cc/view/vdvmBp7J8xO/explore width=100% height=600px></iframe>
