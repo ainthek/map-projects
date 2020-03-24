@@ -61,6 +61,13 @@ Also one click process.
 
 <iframe src="https://www.google.com/maps/d/embed?mid=1CgHIC2MTQMYrkcSair-y9QncFLes4dal" width="640" height="480"></iframe>
 
+## [Cesium]
+IFramew with extrenal map as source= parameter, (still buggy)
+
+<iframe width="100%" height="500px"
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
+</iframe>	
+
 
 
 --------------
@@ -186,6 +193,7 @@ References:
 [Cesium-Viewer]:https://cesium.com/cesiumjs/cesium-viewer
 [Cesium Sources]: https://github.com/CesiumGS/cesium.git
 [Sandcastle]: https://sandcastle.cesium.com/
+[cesium-ion]: https://cesium.com/cesium-ion/
 
 [KML]: https://developers.google.com/kml
 [CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
