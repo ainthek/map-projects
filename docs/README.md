@@ -52,14 +52,14 @@ This is my map authored in GoogleEarth Pro (Desktop), and published in uMap, and
 	src="https://umap.openstreetmap.fr/en/map/bmx-race-tracks-and-pumptracks-in-slovakia_434133?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false">
 </iframe>
 
-<p>
-<a href="https://umap.openstreetmap.fr/en/map/bmx-race-tracks-and-pumptracks-in-slovakia_434133">See full screen</a>
-</p>
+<https://umap.openstreetmap.fr/en/map/bmx-race-tracks-and-pumptracks-in-slovakia_434133>
 
 ## [Google MyMaps]
 Also one click process.
 
 <iframe src="https://www.google.com/maps/d/embed?mid=1CgHIC2MTQMYrkcSair-y9QncFLes4dal" width="640" height="480"></iframe>
+
+<https://www.google.com/maps/d/embed?mid=1CgHIC2MTQMYrkcSair-y9QncFLes4dal>
 
 ## [Cesium]
 IFramew with extrenal map as source= parameter, (still buggy)
@@ -68,8 +68,11 @@ IFramew with extrenal map as source= parameter, (still buggy)
 	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
 </iframe>	
 
+## [Relive]
 
+<iframe src=https://www.relive.cc/view/vdvmBp7J8xO/explore width=100% height=600px></iframe>
 
+<https://www.relive.cc/view/vdvmBp7J8xO/explore>
 --------------
 
 # Exporting/Importing Data
@@ -233,6 +236,8 @@ References:
 [Sandcastle]: https://sandcastle.cesium.com/
 [cesium-ion]: https://cesium.com/cesium-ion/
 
+[Relive]: https://relive.cc
+
 [KML]: https://developers.google.com/kml
 [CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
 [GPX]: https://www.topografix.com/gpx.asp
@@ -241,4 +246,5 @@ References:
 
 [dgal]: https://gdal.org/
 [xmlstarlet]: http://xmlstar.sourceforge.net/
+
 

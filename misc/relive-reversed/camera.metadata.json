@@ -1,0 +1,54 @@
+{
+  "selected_segments": [],
+  "activity_start_frame": 1250,
+  "activity_end_frame": 17908,
+  "selected_highlights": [
+  {
+    "type": "moment",
+    "highlight_start_frame": 4522,
+    "highlight_duration": 600,
+    "moment_id": 1
+  },
+  {
+    "type": "moment",
+    "highlight_start_frame": 5936,
+    "highlight_duration": 1200,
+    "moment_id": 2
+  },
+  {
+    "type": "moment",
+    "highlight_start_frame": 8627,
+    "highlight_duration": 1200,
+    "moment_id": 3
+  },
+  {
+    "type": "moment",
+    "highlight_start_frame": 10697,
+    "highlight_duration": 1200,
+    "moment_id": 4
+  },
+  {
+    "type": "moment",
+    "highlight_start_frame": 13610,
+    "highlight_duration": 1200,
+    "moment_id": 5
+  }],
+  "zoom_style": "classic",
+  "minimum_camera_height": 2382.18852573402,
+  "increase_position_height": 20,
+  "calculated_metrics":
+  {
+    "distance": 25023.1451345694,
+    "bounds": [17.1049242, 48.2002265, 17.1503953, 48.2333993],
+    "radius": 2501.20117913034,
+    "total_elevation_change": 1311.53506591889,
+    "total_elevation_gain": 662.367532959445,
+    "elapsed_time": 18974,
+    "moving_time": 10996,
+    "average_speed": 2.27565888819292,
+    "start_date": "2020-03-15T09:01:58Z",
+    "end_date": "2020-03-15T14:18:12Z",
+    "start_latlng": [48.2004338, 17.1455932],
+    "end_latlng": [48.2002651, 17.145517]
+  }
+}
