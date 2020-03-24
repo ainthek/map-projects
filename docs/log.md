@@ -1,8 +1,11 @@
-## Work Log
-
+# Work Log
+ 
 --------------------------------------------------------------------
+## 24.03.2020
+Rozhodol som sa ze budem pokracovat v cesium workshop.
 
-### 23.03.2020
+
+## 23.03.2020
 
 Treba sa pohrat z customizaciu viewera, 
 kedze vcera som zistil ze veci v [sandcastle] chodia a v [Cesium Viewer] nie.
@@ -27,7 +30,7 @@ viewer.scene.globe.depthTestAgainstTerrain = false;
 
 <https://sandcastle.cesium.com/#c=jVNNj9MwEP0rJkLaVCq2uPZLtOXjAGgRrYBDDuva08TUsSOPk1JW+9+ZNAnb7gqJHKJ45r038zyTRgbWGDhCYHPm4MjWgKYu+bdzLL1R5+PauyiNg3AzZveZY/QIwXwsIBwNAjv5mskAbG9l7NIRQiDGl+AboyFMBl0VQEb47oPV2w6SjjL3MJpmLnOkqQ1WVp6YhgqcRuYdi4VB9iJzXZscFTjgufU74ISKxRYwLnNSwthLkpW9tAitKPXTkMdDaW+raLxDSvYWlCwhSDZhV8pddDxAiI3PIW10gFhZVlv/Ifja6UkMNZCfs53MKaoX2Wq5eTfPkiLGCidCBHnkuYlFvasRAkEiuMiVLwW1Tld6EKWsXlXB/wQVkQ5Ilym0jFIglbKAWTJ9VCdny/ndy/u2yoNYff7xVSrYBqkOyHPvcwsgQyxIjxP0bnrBW/0/j+da0qv61X08VVr/S6k8kRkc8BeM98bCvO3hHG5HRJXKdpnmw658LO1bcr3xdVDArZc67Ynji3l2q9NTjgW4tBcas33tVItJ9V+Z0TD8fqCPGeRS60vk9Aq4t6etH6TbXL+zyTiZYTxZWHTwN6asfIisDjblXESgidHGo9jV6gA0Zzx3PBMDaaZNw4ymBXnyr2VJu1uIlNnX1m7Mb8iSxUwQ/orWXoxx+W0Dgf6cFlK8XnzqgpzzmaDjc1b03u5kuFD8Aw>
 
-## Cesium ImageryProvider,
+# Cesium ImageryProvider,
 
 - https://cesium.com/docs/cesiumjs-ref-doc/WebMapTileServiceImageryProvider.html
 
@@ -38,7 +41,7 @@ Dokazem to zintegrovat z vlasnym ?
 
 - https://zbgis.skgeodesy.sk/zbgis/rest/services/DMR/MapServer/tile/16/22659/36097?blankTile=false
 
-	<ResourceURL format="image/jpgpng" resourceType="tile" template="https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get/tile/1.0.0/WMS_zbgis_ortofoto_wmts/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}"/>
+  <ResourceURL format="image/jpgpng" resourceType="tile" template="https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get/tile/1.0.0/WMS_zbgis_ortofoto_wmts/{Style}/{TileMatrixSet}/{TileMatrix}/{TileRow}/{TileCol}"/>
 
 
 
@@ -48,7 +51,7 @@ Ale stale dostavam 400 bad request od zbgis
 
 Ale toto ide:
 
-	https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get/tile/1.0.0/WMS_zbgis_ortofoto_wmts/default/default028mm/9/57295/54593
+  https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get/tile/1.0.0/WMS_zbgis_ortofoto_wmts/default/default028mm/9/57295/54593
 
 Sniff ?
 
@@ -63,21 +66,21 @@ and curl and gdal report invalid cert.
 Kde je CA file na OSX ?
 Ako exportnut a tam dostat CA Disig Root R2
 
-#### gdalinfo on WMTS
+### gdalinfo on WMTS
 
 <https://gdal.org/drivers/raster/wmts.html>
 
-	$ gdalinfo 'WMTS:https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get?'
+  $ gdalinfo 'WMTS:https://zbgisws.skgeodesy.sk/zbgis_ortofoto_wmts/service.svc/get?'
 
 WMTL terminologia, treba studovat:
 
-	TileMatrixSet
-	TileMatrix
-	TileRow
-	TileCol
+  TileMatrixSet
+  TileMatrix
+  TileRow
+  TileCol
 
-	default028mm/9/57295/54593
-	default028mm/10/114585/109192
+  default028mm/9/57295/54593
+  default028mm/10/114585/109192
 
 <http://docs.opengeospatial.org/is/13-082r2/13-082r2.html>
 
@@ -85,8 +88,8 @@ Ale aj tak je to celen nanic lebo sa zda ze podpruju tiles WGS84
 https://github.com/CesiumGS/cesium/issues/3877
 a nie 
 
-	Coordinate System is:
-	PROJCS["S-JTSK / Krovak East North",
+  Coordinate System is:
+  PROJCS["S-JTSK / Krovak East North",
     GEOGCS["S-JTSK",
         DATUM["System_Jednotne_Trigonometricke_Site_Katastralni",
             SPHEROID["Bessel 1841",6377397.155,299.1528128,
@@ -117,9 +120,9 @@ Cesium Projection System: <https://gis.stackexchange.com/questions/334002/cesium
 
 --------------------------------------------------------------------
 
-### 22.03.2020
+## 22.03.2020
 
-### How to embed [Cesium] Viewer with my KML data ?
+## How to embed [Cesium] Viewer with my KML data ?
 I already have KMLs of BMX tracks and now I want them in cesium viewer,
 and embed them in my page. No programming if possible.
 
@@ -127,11 +130,11 @@ Trying this <https://groups.google.com/forum/#!topic/cesium-dev/lY-7IDU4tkk>:
 
 Viewer:
 
-	https://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html?source=
+  https://cesiumjs.org/Cesium/Build/Apps/CesiumViewer/index.html?source=
 
 Source:
 
-	https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml
+  https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/BMXRaceTracks.googleearthpro.kml
 
 Link:
 
@@ -140,40 +143,40 @@ Link:
 Embeded with IFrame:
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
-</iframe>	
+  src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
+</iframe> 
 
 ![Buried by cesium](./2020-03-22-cesium.png)
 
 Interesting that this behaves differently in viewer (not working) and in sandbox (working, sometimes):
 
-	var viewer = new Cesium.Viewer('cesiumContainer');
-	//viewer.scene.globe.depthTestAgainstTerrain=false;
-	//viewer.extend(Cesium.viewerCesiumInspectorMixin);
-	var options = {
-	camera : viewer.scene.camera,
-	canvas : viewer.scene.canvas,
-	//elipsoid:Cesium.Ellipsoid.WGS84,
-	//clampToGround: true
-	terrainProvider: Cesium.createWorldTerrain()
-	};
-	
-	//a cele sa to sprava este inak ked je zapnuty alebo vupnuty inspector
-	
-	var BASE="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/";
-	
-	//a) OK, this is on, just labels are buries, toto vyzera ok
-	var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml";
-	//b) Err, kml with no style information, label are buried, pins are some default banners from Cesium
-	//var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml";
-	// c) Err, toto je export z google maps, nevidim nic
-	//var kmlFile = BASE+"BMXRaceTracks.mymaps.kml"; 
-	var promise = Cesium.KmlDataSource.load(kmlFile, options);
-	Cesium.when(promise, function(dataSource) {
-	viewer.dataSources.add(dataSource);
-	
-	});
-	viewer.flyTo(promise);
+  var viewer = new Cesium.Viewer('cesiumContainer');
+  //viewer.scene.globe.depthTestAgainstTerrain=false;
+  //viewer.extend(Cesium.viewerCesiumInspectorMixin);
+  var options = {
+  camera : viewer.scene.camera,
+  canvas : viewer.scene.canvas,
+  //elipsoid:Cesium.Ellipsoid.WGS84,
+  //clampToGround: true
+  terrainProvider: Cesium.createWorldTerrain()
+  };
+  
+  //a cele sa to sprava este inak ked je zapnuty alebo vupnuty inspector
+  
+  var BASE="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/";
+  
+  //a) OK, this is on, just labels are buries, toto vyzera ok
+  var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml";
+  //b) Err, kml with no style information, label are buried, pins are some default banners from Cesium
+  //var kmlFile = BASE+"BMXRaceTracks.googleearthpro.kml.gdal.gpx.gdal.kml";
+  // c) Err, toto je export z google maps, nevidim nic
+  //var kmlFile = BASE+"BMXRaceTracks.mymaps.kml"; 
+  var promise = Cesium.KmlDataSource.load(kmlFile, options);
+  Cesium.when(promise, function(dataSource) {
+  viewer.dataSources.add(dataSource);
+  
+  });
+  viewer.flyTo(promise);
 
 TODO: why it is not working in Viewer ? Can we fix it with: 
 a) viewer params
@@ -198,7 +201,7 @@ Source Code of Cesium Viewer
 
 - <https://github.com/CesiumGS/cesium/tree/master/Apps/CesiumViewer>
 
-## Detour - studying CZML
+# Detour - studying CZML
 
 Bude podobny problem z CZML ?
 
@@ -206,7 +209,7 @@ cloning [Cesium Sources]
 
 I have ended up with creating relativelly good looking PINs with correct positioning in ZCML.
 
-	{
+  {
 
     "id": "Pumptrack, Bošáca",
     "position":
@@ -226,8 +229,35 @@ I have ended up with creating relativelly good looking PINs with correct positio
         "nearFarScalar": [1.0, 1, 500000.0, 0.2]
       }
     }
-  	}
+    }
 
 So the translation from KML will be pretty streight forward.
 
 ---------------------------------------------
+
+References:
+
+
+
+[uMap]: https://umap.openstreetmap.fr
+[Google MyMaps]: https://google.com/mymaps
+[Google Earth Web]: https://earth.google.com/web/
+[Google Earth Studio]: https://earth.google.com/studio/
+[QGis]: https://qgis.org/
+[Google Earth Pro]: https://www.google.com/earth/versions/
+
+[Cesium]:https://cesium.com/
+[Cesium-Viewer]:https://cesium.com/cesiumjs/cesium-viewer
+[Cesium Sources]: https://github.com/CesiumGS/cesium.git
+[Sandcastle]: https://sandcastle.cesium.com/
+[cesium-ion]: https://cesium.com/cesium-ion/
+
+[KML]: https://developers.google.com/kml
+[CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
+
+[OCG WMTKS]: https://www.ogc.org/standards/wmts
+
+[dgal]: https://gdal.org/
+[xmlstarlet]: http://xmlstar.sourceforge.net/
+
+

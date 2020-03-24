@@ -78,6 +78,21 @@ IFramew with extrenal map as source= parameter, (still buggy)
 - how to set Default View on embeded Google MyMap
 
 
+# GPX
+
+## Routes, Tracks, Waypoints
+
+- waypoints : layer of features of OGR type wkbPoint
+- routes : layer of features of OGR type wkbLineString
+- tracks : layer of features of OGR type wkbMultiLineString
+
+Articles:
+
+- [Routes, Tracks and Waypoints - The Other RTW](http://www.globeriders.com/article_pages/article08_RTW/article08_rtw.shtml)
+- [Garmin, Differences Between Routes and Tracks](https://support.garmin.com/en-US/?faq=v0rJAHy2hq3prHjRlxdRw5)
+- [GDAL, GPX driver](https://gdal.org/drivers/vector/gpx.html)
+
+
 # KML
 
 ## altitudeMode
@@ -142,9 +157,11 @@ a optimalizované do formy mapových dlaždíc (tiles)
 z dôvodu dosiahnutia vyššej rýchlosti pri prehliadaní
 
 Specs:
+
 - [OCG WMTKS]
 
 Sources:
+
 - ...
 - ...
 - ZBGIS <https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wmts/wmts-zbgis.html>
@@ -177,10 +194,31 @@ Gdal:
 
 Just open [Cesium-Viewer] and drag and drop file from local disk.
 
+## GPX Converting Tracks to Routes and viceversa
+Using [GDAL, GPX driver](https://gdal.org/drivers/vector/gpx.html)
+
+The GPX writer supports the following layer creation options:
+
+	FORCE_GPX_TRACK: By default when writing a layer whose features are of type wkbLineString, 
+	the GPX driver chooses to write them as routes. 
+	If FORCE_GPX_TRACK=YES is specified, they will be written as tracks.
+	
+	FORCE_GPX_ROUTE: By default when writing a layer whose features are of type wkbMultiLineString, 
+	the GPX driver chooses to write them as tracks. 
+	If FORCE_GPX_ROUTE=YES is specified, they will be written as routes, 
+	provided that the multilines are composed of only one single line.
+
+Exporting lines tracks:
+
+	ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/test.gpx 01-access-road-70-157.gpkg
+	
+Batch:
+
+	ls -1 *.gpkg | xargs -I {} ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/{}.gpx {} 
+	
+-------------------------------------
 
 References:
-
-
 
 [uMap]: https://umap.openstreetmap.fr
 [Google MyMaps]: https://google.com/mymaps
@@ -197,6 +235,7 @@ References:
 
 [KML]: https://developers.google.com/kml
 [CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
+[GPX]: https://www.topografix.com/gpx.asp
 
 [OCG WMTKS]: https://www.ogc.org/standards/wmts
 
