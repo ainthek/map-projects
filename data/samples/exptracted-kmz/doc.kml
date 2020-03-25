@@ -434,7 +434,7 @@ and manually Cleaned Up.
 				<open>1</open>
 				<Placemark>
 					<name>Alternativny začiatok</name>
-					<description><![CDATA[<img src="files/image00000.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00000.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle8</styleUrl>
 					<Point>
 						<coordinates>17.12007665076346,48.21180536546078,352</coordinates>
@@ -442,7 +442,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Doľava</name>
-					<description><![CDATA[<img src="files/image00001.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00001.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle6</styleUrl>
 					<Point>
 						<coordinates>17.1202107976274,48.21137226774893,340</coordinates>
@@ -450,7 +450,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Hop, Hop, Klopka</name>
-					<description><![CDATA[<img src="files/image00002.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00002.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle26</styleUrl>
 					<Point>
 						<coordinates>17.12036979230135,48.21115671465351,336</coordinates>
@@ -458,7 +458,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Klopka</name>
-					<description><![CDATA[<img src="files/image00003.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00003.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle42</styleUrl>
 					<Point>
 						<coordinates>17.12046745742146,48.21097057623624,338</coordinates>
@@ -466,7 +466,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Klopka</name>
-					<description><![CDATA[<img src="files/image00004.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00004.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle7</styleUrl>
 					<Point>
 						<coordinates>17.12026515396031,48.21081031225241,339</coordinates>
@@ -474,7 +474,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Lavica</name>
-					<description><![CDATA[<img src="files/image00005.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00005.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle2</styleUrl>
 					<Point>
 						<coordinates>17.12028711551571,48.21066945344486,338</coordinates>
@@ -482,7 +482,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Hop Hop Hop Klopka</name>
-					<description><![CDATA[<img src="files/image00006.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00006.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle9</styleUrl>
 					<Point>
 						<coordinates>17.12032020667144,48.21041693595524,336</coordinates>
@@ -490,7 +490,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Double</name>
-					<description><![CDATA[<img src="files/image00007.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00007.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle25</styleUrl>
 					<Point>
 						<coordinates>17.12021417964982,48.21026708581596,335</coordinates>
@@ -498,7 +498,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Klopka</name>
-					<description><![CDATA[<img src="files/image00008.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00008.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle38</styleUrl>
 					<Point>
 						<coordinates>17.12036630619295,48.21024900862799,335</coordinates>
@@ -506,7 +506,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Vlnky</name>
-					<description><![CDATA[<img src="files/image00009.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00009.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle27</styleUrl>
 					<Point>
 						<coordinates>17.1203791335451,48.21020113501976,334</coordinates>
@@ -514,7 +514,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Šlapeme</name>
-					<description><![CDATA[<img src="files/image00010.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00010.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle34</styleUrl>
 					<Point>
 						<coordinates>17.12027548928515,48.21005410813856,332</coordinates>
@@ -522,7 +522,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Klopka</name>
-					<description><![CDATA[<img src="files/image00011.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00011.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle41</styleUrl>
 					<Point>
 						<coordinates>17.11994234520053,48.20969079039019,329</coordinates>
@@ -530,7 +530,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Double</name>
-					<description><![CDATA[<img src="files/image00012.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00012.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle30</styleUrl>
 					<Point>
 						<coordinates>17.11986005629554,48.20956615553067,327</coordinates>
@@ -538,7 +538,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Šlapeme, Vlnky</name>
-					<description><![CDATA[<img src="files/image00013.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00013.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle24</styleUrl>
 					<Point>
 						<coordinates>17.119797,48.20935500000001,325</coordinates>
@@ -546,7 +546,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Hop, Hop, Klopka</name>
-					<description><![CDATA[<img src="files/image00014.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00014.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle24</styleUrl>
 					<Point>
 						<coordinates>17.120078,48.209134,322</coordinates>
@@ -554,7 +554,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Klopka, nizka a rozbyta</name>
-					<description><![CDATA[<img src="files/image00015.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00015.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle29</styleUrl>
 					<Point>
 						<coordinates>17.1202072877334,48.2090675568669,319</coordinates>
@@ -562,7 +562,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Položený switch back</name>
-					<description><![CDATA[<img src="files/image00016.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00016.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle19</styleUrl>
 					<Point>
 						<coordinates>17.11957893724894,48.20909426934828,319.9999999999999</coordinates>
@@ -570,7 +570,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Šlapeme</name>
-					<description><![CDATA[<img src="files/image00017.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00017.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle24</styleUrl>
 					<Point>
 						<coordinates>17.11989,48.208866,319</coordinates>
@@ -578,7 +578,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Pozor spojnica, odbočka na Krasňanský trail originál</name>
-					<description><![CDATA[<img src="files/image00018.jpg" width=1024 height=768 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00018.jpg" width=1024 height=768 />]]></description>
 					<styleUrl>#camerastyle24</styleUrl>
 					<Point>
 						<coordinates>17.119999,48.208734,317</coordinates>
@@ -586,7 +586,7 @@ and manually Cleaned Up.
 				</Placemark>
 				<Placemark>
 					<name>Pivo....</name>
-					<description><![CDATA[<img src="files/image00019.jpg" width=768 height=1024 />]]></description>
+					<description><![CDATA[<img src="https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/image00019.jpg" width=768 height=1024 />]]></description>
 					<styleUrl>#camerastyle24</styleUrl>
 					<Point>
 						<coordinates>17.120473,48.20848100000001,305</coordinates>
