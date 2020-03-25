@@ -1,6 +1,12 @@
 # Work Log
  
 --------------------------------------------------------------------
+## 25.03.2020
+- Select Lines within a Polygon <https://gis.stackexchange.com/questions/255100/select-lines-within-a-polygon>
+- Create “mean” line from multiple lines using QGIS <https://gis.stackexchange.com/questions/123731/create-mean-line-from-multiple-lines-using-qgis>
+- merge points <https://gis.stackexchange.com/questions/77043/merge-point-features-within-a-given-radius>
+
+--------------------------------------------------------------------
 ## 24.03.2020
 
 Digging deeper in animated tracks idea:

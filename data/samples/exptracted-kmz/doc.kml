@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>ExactTrails-KrasnanskyTrail-Bottom.kmz</name>
+	<StyleMap id="lineStyle">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#lineStyle1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#lineStyle0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="lineStyle0">
+		<LineStyle>
+			<color>99ffac59</color>
+			<width>6</width>
+		</LineStyle>
+	</Style>
+	<Style id="lineStyle1">
+		<LineStyle>
+			<color>99ffac59</color>
+			<width>6</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>My Places</name>
+		<open>1</open>
+		<Style>
+			<ListStyle>
+				<listItemType>check</listItemType>
+				<ItemIcon>
+					<state>open</state>
+					<href>files/mysavedplaces_open.png</href>
+				</ItemIcon>
+				<ItemIcon>
+					<state>closed</state>
+					<href>files/mysavedplaces_closed.png</href>
+				</ItemIcon>
+				<bgColor>00ffffff</bgColor>
+				<maxSnippetLines>2</maxSnippetLines>
+			</ListStyle>
+		</Style>
+		<Placemark>
+			<name>ExactTrack-KrasnanskyTrail-Bottom</name>
+			<description>Recorder Track with high density of points
+and manually Cleaned Up.
+</description>
+			<styleUrl>#lineStyle</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					17.120213,48.211683,350.12 17.120203,48.211669,349.86 17.120197,48.211662,349.42 17.120204,48.211649,349.2 17.12021,48.211638,348.71 17.120212,48.211619,347.91 17.120207,48.21160699999999,347.59 17.120212,48.211587,347.17 17.120218,48.21157099999999,346.48 17.120223,48.211552,345.85 17.120226,48.211542,345.14 17.120226,48.21153600000001,344.72 17.120225,48.211519,344.51 17.120224,48.21150300000001,343.94 17.120215,48.211484,343.39 17.120214,48.211474,342.78 17.120214,48.211455,341.79 17.120214,48.21144000000001,341.43 17.120209,48.211433,341.17 17.120209,48.211373,339.45 17.120222,48.211362,339.35 17.120236,48.211348,339.16 17.120252,48.211334,338.91 17.120261,48.21132,338.59 17.120269,48.211305,338.34 17.120287,48.21129,338.12 17.12029,48.211279,338.05 17.120264,48.211271,337.88 17.120268,48.211257,337.37 17.120282,48.21124699999999,337.26 17.120288,48.211229,337.11 17.120297,48.211216,336.89 17.120307,48.211206,336.79 17.120321,48.211202,336.76 17.120323,48.21118899999999,336.84 17.120332,48.211174,336.68 17.120348,48.211164,336.54 17.120351,48.21116,336.57 17.12037,48.211157,336.57 17.120372,48.211156,336.74 17.120365,48.21113999999999,336.78 17.120368,48.211125,336.55 17.120387,48.211112,336.78 17.120405,48.211103,336.96 17.120416,48.21109100000001,337.23 17.120429,48.211078,337.44 17.120455,48.21106,337.64 17.120472,48.211046,338.06 17.120472,48.211034,338.16 17.120471,48.211024,338.16 17.120452,48.21102200000001,338.14 17.120452,48.211007,338.06 17.120462,48.21099,338.12 17.120467,48.21097,338.26 17.120472,48.210958,338.27 17.120476,48.210955,338.29 17.120482,48.210945,338.3 17.120476,48.210938,338.32 17.120463,48.210928,338.32 17.120445,48.210914,338.36 17.120429,48.21091,338.44 17.12041,48.210914,338.51 17.120391,48.21091500000001,338.55 17.120377,48.21091500000001,338.6 17.12036,48.210907,338.71 17.12035,48.210902,338.86 17.120345,48.21090099999999,338.88 17.120333,48.210896,338.91 17.120327,48.21089000000001,339.01 17.120313,48.210878,339.11 17.120309,48.21086,339.33 17.120305,48.21085399999999,339.6 17.12031,48.210842,339.61 17.120306,48.210835,339.5 17.120296,48.210826,339.47 17.120276,48.210826,339.48 17.120267,48.210811,339.61 17.120265,48.210809,339.57 17.12025,48.21079099999999,339.56 17.120247,48.210782,339.55 17.120243,48.21077,339.52 17.120243,48.210759,339.46 17.120254,48.210741,339.29 17.120259,48.210726,339.1 17.120266,48.210714,338.99 17.120268,48.21070599999999,338.9 17.120272,48.21068700000001,338.74 17.120277,48.21068,338.67 17.120299,48.21065899999999,338.54 17.120313,48.210644,338.29 17.120343,48.21063,338.09 17.120348,48.21062,337.78 17.120353,48.21060200000001,337.65 17.120369,48.210594,337.49 17.120373,48.21057,337.32 17.120365,48.210548,337.12 17.120372,48.21053300000001,337.01 17.120357,48.210522,336.86 17.120345,48.210507,336.88 17.120341,48.21049200000001,336.78 17.120335,48.210479,336.72 17.12034,48.21046699999999,336.64 17.120351,48.210458,336.61 17.120361,48.210441,336.37 17.120355,48.21043400000001,336.27 17.120341,48.210427,336.26 17.120321,48.21041999999999,336.3 17.120293,48.210414,336.4 17.120274,48.210401,336.55 17.12025,48.210393,336.6 17.120234,48.210382,336.71 17.120216,48.21037400000001,336.75 17.120202,48.210366,336.77 17.120189,48.21035699999999,336.74 17.120173,48.210347,336.63 17.120168,48.210336,336.55 17.120159,48.21032399999999,336.46 17.120156,48.210314,336.43 17.120152,48.210303,336.38 17.120148,48.210298,336.31 17.12013,48.210287,336.22 17.120118,48.21027,336.14 17.120109,48.21025300000001,336.04 17.120115,48.210251,336.04 17.120134,48.210259,335.99 17.120151,48.21026400000001,335.97 17.120179,48.210269,335.95 17.120202,48.210273,335.92 17.120215,48.210276,335.91 17.120226,48.210271,335.87 17.120236,48.210263,335.79 17.120252,48.21025300000001,335.46 17.120277,48.210248,335.35 17.120289,48.210248,335.11 17.120307,48.210244,335.01 17.120333,48.210241,334.81 17.120343,48.210244,334.62 17.120389,48.21025499999999,334.56 17.120403,48.210251,334.41 17.120403,48.210234,333.86 17.120393,48.210215,333.83 17.120388,48.210204,333.76 17.120376,48.21019,333.62 17.120391,48.210179,333.56 17.120391,48.210166,333.31 17.120403,48.21015700000001,333.12 17.120401,48.210143,332.82 17.120394,48.21013399999999,332.72 17.120374,48.210126,332.51 17.120362,48.210115,332.64 17.120354,48.210104,332.54 17.120336,48.210089,332.46 17.120334,48.210086,332.41 17.120322,48.210079,332.37 17.12032,48.21007700000001,332.36 17.120298,48.210065,332.34 17.120285,48.210055,332.33 17.12028,48.21005000000001,332.29 17.120265,48.210048,332.33 17.120264,48.210031,332.2 17.120272,48.210018,331.96 17.120282,48.210008,331.87 17.120295,48.20999999999999,331.69 17.120306,48.20999,331.49 17.120295,48.209976,331.31 17.120285,48.209961,331.2 17.120288,48.209949,331.07 17.120289,48.209938,330.91 17.120292,48.209932,330.76 17.120299,48.209922,330.67 17.120294,48.20991,330.52 17.120287,48.209897,330.4 17.120278,48.209884,330.26 17.120263,48.20987100000001,330.14 17.120247,48.209861,330.01 17.120231,48.209852,329.92 17.120219,48.20984299999999,329.84 17.120207,48.209831,329.75 17.120202,48.20982200000001,329.6499999999999 17.120183,48.209812,329.58 17.120163,48.209801,329.6499999999999 17.12015,48.20979,329.68 17.12014,48.20978499999999,329.62 17.120111,48.209778,329.61 17.120051,48.209771,329.72 17.12001,48.20975799999999,330.05 17.11998,48.209744,330.09 17.119961,48.20973599999999,330.03 17.119954,48.20972600000001,330.04 17.119955,48.209716,329.97 17.119949,48.20970100000001,329.72 17.119949,48.209694,329.6499999999999 17.11995,48.209684,329.44 17.119954,48.209661,329.4 17.11995,48.209647,329.09 17.119954,48.209638,328.9 17.119956,48.209625,328.75 17.119942,48.20962,328.57 17.119929,48.20961,328.54 17.11992,48.20960700000001,328.38 17.119905,48.209603,328.3 17.119893,48.2096,328.2 17.11988,48.209596,328.12 17.119867,48.209579,327.91 17.119855,48.20957099999999,327.75 17.11984,48.209563,327.56 17.119831,48.209563,327.5 17.119819,48.20955499999999,327.47 17.119798,48.209537,327.37 17.119776,48.209526,327.15 17.119758,48.209523,326.99 17.119703,48.20953299999999,326.93 17.119671,48.209537,326.93 17.119648,48.209538,326.91 17.119603,48.209512,326.49 17.119614,48.209496,326.37 17.119634,48.209465,326.18 17.119634,48.209464,326.14 17.119647,48.209453,326.13 17.119655,48.209438,325.97 17.11967,48.209427,325.87 17.119682,48.209416,325.8 17.119695,48.209405,325.65 17.119706,48.209397,325.49 17.119726,48.209391,325.37 17.119737,48.209383,325.29 17.11975,48.209373,325.11 17.119762,48.20938200000001,325.04 17.119776,48.20937900000001,325.14 17.119785,48.20936600000001,325.11 17.119786,48.209358,324.94 17.119802,48.20934,324.82 17.119824,48.20932699999999,324.58 17.119843,48.209317,324.39 17.119861,48.2093,324.23 17.119866,48.209285,324 17.119882,48.209266,323.79 17.119887,48.209246,323.52 17.119895,48.20923299999999,323.24 17.119907,48.20922300000001,323.04 17.119915,48.209217,322.91 17.119938,48.209202,322.67 17.119952,48.209193,322.59 17.119982,48.209182,322.47 17.120007,48.209171,322.37 17.12002,48.209163,322.17 17.120035,48.209149,322 17.120078,48.209129,321.94 17.120105,48.20909899999999,321.66 17.120124,48.20907699999999,320.25 17.120136,48.209065,320.25 17.120151,48.209053,320.11 17.120163,48.20905199999999,319.96 17.120176,48.209049,319.85 17.120189,48.20905,319.7 17.120192,48.209051,319.46 17.120203,48.20905199999999,319.41 17.120205,48.209049,319.52 17.120171,48.209023,319.44 17.12015,48.209012,319.24 17.120135,48.209009,319.21 17.120121,48.209012,319.3 17.120108,48.209013,319.55 17.120098,48.20900600000001,319.6 17.12007,48.208986,319.6 17.120062,48.208972,319.53 17.120045,48.208968,319.51 17.120025,48.208961,319.63 17.120002,48.20895,319.78 17.119985,48.208943,319.94 17.119971,48.20894800000001,320.19 17.119964,48.20894800000001,320.31 17.119952,48.208955,320.4 17.119935,48.20895900000001,320.59 17.119917,48.208961,320.75 17.119887,48.208962,320.68 17.119872,48.208966,320.52 17.119861,48.208972,320.45 17.11982,48.208979,320.44 17.119768,48.20899,320.29 17.119731,48.20901599999999,320.2 17.119722,48.209023,320.33 17.119711,48.20903100000001,320.3 17.119697,48.209038,320.4 17.119673,48.209047,320.39 17.119574,48.209078,320.27 17.119562,48.209065,319.8 17.119562,48.209037,319.37 17.119574,48.209022,319.08 17.119582,48.209011,319.01 17.119598,48.208996,318.91 17.119607,48.20898400000001,318.88 17.119613,48.208974,318.79 17.119634,48.208977,318.73 17.119641,48.208972,318.99 17.119651,48.208966,319.02 17.119673,48.208954,319.08 17.119683,48.20894499999999,319.12 17.119697,48.208938,319.06 17.11972,48.208928,319.05 17.119743,48.208918,319.14 17.119774,48.208914,319.12 17.119787,48.20890899999999,319.23 17.119803,48.208902,319.25 17.119823,48.20889600000001,319.22 17.11983,48.208894,319.23 17.11984,48.208891,319.28 17.119852,48.20889,319.26 17.11986,48.20888699999999,319.31 17.119871,48.208888,319.31 17.119885,48.208877,319.39 17.119882,48.208864,319.27 17.119892,48.208855,319 17.119898,48.208843,318.85 17.119903,48.208836,318.64 17.119917,48.20883000000001,318.54 17.119925,48.208814,318.39 17.119919,48.208803,318.23 17.119917,48.20878900000001,317.96 17.119926,48.208772,317.47 17.119939,48.208762,317.24 17.119941,48.208758,317.19 17.119953,48.208748,317.11 17.119969,48.208732,316.65 17.119999,48.208707,316.44 17.120029,48.208688,315.87 17.120048,48.208676,315.44 17.120053,48.20865700000001,315.18 17.120049,48.208647,314.88 17.12005,48.208636,314.7 17.120055,48.208625,314.54 17.120065,48.208615,314.39 17.120076,48.208606,314.25 17.120089,48.20859,313.97 17.120115,48.208583,313.86 17.120123,48.208581,313.69 17.120136,48.20857700000001,313.62 17.120149,48.208568,313.51 17.120164,48.208564,313.18 17.12018,48.208555,313.15 17.120194,48.208552,312.95 17.120207,48.208547,312.83 17.120218,48.208545,312.67 17.120237,48.208544,312.55 17.12025,48.208542,312.01 17.120267,48.208541,311.2 17.120292,48.208542,310.94 17.120306,48.20853799999999,310.26 17.12033,48.208531,309.7 17.120341,48.208534,308.84 17.120359,48.20853,308.5 17.120381,48.20852800000001,307.87 17.120394,48.208524,307.16 17.120408,48.208513,306.24 17.120418,48.208502,305.39 17.120422,48.208499,304.94 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Document>
+			<name>Walk-2020-03-25</name>
+			<open>1</open>
+			<Style id="camerastyle">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle0">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle1">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle2">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle5</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle20</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle3">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+				<ListStyle>
+				</ListStyle>
+			</Style>
+			<Style id="camerastyle4">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle5">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle6">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle39</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle13</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle7">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle10</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle21</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle8">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle32</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle3</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle9">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle44</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle22</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle10">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle11">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle12">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle13">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle14">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle15">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle16">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle17">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle18">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle19">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle33</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle40</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle20">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle21">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle22">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle23">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle24">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle25">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle37</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle35</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle26">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle23</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle27">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle17</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle43</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle28">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle29">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle12</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle1</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle30">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle0</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle16</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle31">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle32">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+				<ListStyle>
+				</ListStyle>
+			</Style>
+			<Style id="camerastyle33">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle34">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle4</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle15</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle35">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle36">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle37">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle38">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle18</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle28</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle39">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle40">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<StyleMap id="camerastyle41">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle36</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle31</styleUrl>
+				</Pair>
+			</StyleMap>
+			<StyleMap id="camerastyle42">
+				<Pair>
+					<key>normal</key>
+					<styleUrl>#camerastyle11</styleUrl>
+				</Pair>
+				<Pair>
+					<key>highlight</key>
+					<styleUrl>#camerastyle14</styleUrl>
+				</Pair>
+			</StyleMap>
+			<Style id="camerastyle43">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Style id="camerastyle44">
+				<IconStyle>
+					<Icon>
+						<href>http://www.mytracks4mac.com/kml/shapes/kml_camera.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<Folder>
+				<name>Photos</name>
+				<open>1</open>
+				<Placemark>
+					<name>Alternativny začiatok</name>
+					<description><![CDATA[<img src="files/image00000.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle8</styleUrl>
+					<Point>
+						<coordinates>17.12007665076346,48.21180536546078,352</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Doľava</name>
+					<description><![CDATA[<img src="files/image00001.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle6</styleUrl>
+					<Point>
+						<coordinates>17.1202107976274,48.21137226774893,340</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Hop, Hop, Klopka</name>
+					<description><![CDATA[<img src="files/image00002.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle26</styleUrl>
+					<Point>
+						<coordinates>17.12036979230135,48.21115671465351,336</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Klopka</name>
+					<description><![CDATA[<img src="files/image00003.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle42</styleUrl>
+					<Point>
+						<coordinates>17.12046745742146,48.21097057623624,338</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Klopka</name>
+					<description><![CDATA[<img src="files/image00004.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle7</styleUrl>
+					<Point>
+						<coordinates>17.12026515396031,48.21081031225241,339</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Lavica</name>
+					<description><![CDATA[<img src="files/image00005.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle2</styleUrl>
+					<Point>
+						<coordinates>17.12028711551571,48.21066945344486,338</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Hop Hop Hop Klopka</name>
+					<description><![CDATA[<img src="files/image00006.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle9</styleUrl>
+					<Point>
+						<coordinates>17.12032020667144,48.21041693595524,336</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Double</name>
+					<description><![CDATA[<img src="files/image00007.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle25</styleUrl>
+					<Point>
+						<coordinates>17.12021417964982,48.21026708581596,335</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Klopka</name>
+					<description><![CDATA[<img src="files/image00008.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle38</styleUrl>
+					<Point>
+						<coordinates>17.12036630619295,48.21024900862799,335</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Vlnky</name>
+					<description><![CDATA[<img src="files/image00009.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle27</styleUrl>
+					<Point>
+						<coordinates>17.1203791335451,48.21020113501976,334</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Šlapeme</name>
+					<description><![CDATA[<img src="files/image00010.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle34</styleUrl>
+					<Point>
+						<coordinates>17.12027548928515,48.21005410813856,332</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Klopka</name>
+					<description><![CDATA[<img src="files/image00011.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle41</styleUrl>
+					<Point>
+						<coordinates>17.11994234520053,48.20969079039019,329</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Double</name>
+					<description><![CDATA[<img src="files/image00012.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle30</styleUrl>
+					<Point>
+						<coordinates>17.11986005629554,48.20956615553067,327</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Šlapeme, Vlnky</name>
+					<description><![CDATA[<img src="files/image00013.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle24</styleUrl>
+					<Point>
+						<coordinates>17.119797,48.20935500000001,325</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Hop, Hop, Klopka</name>
+					<description><![CDATA[<img src="files/image00014.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle24</styleUrl>
+					<Point>
+						<coordinates>17.120078,48.209134,322</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Klopka, nizka a rozbyta</name>
+					<description><![CDATA[<img src="files/image00015.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle29</styleUrl>
+					<Point>
+						<coordinates>17.1202072877334,48.2090675568669,319</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Položený switch back</name>
+					<description><![CDATA[<img src="files/image00016.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle19</styleUrl>
+					<Point>
+						<coordinates>17.11957893724894,48.20909426934828,319.9999999999999</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Šlapeme</name>
+					<description><![CDATA[<img src="files/image00017.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle24</styleUrl>
+					<Point>
+						<coordinates>17.11989,48.208866,319</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Pozor spojnica, odbočka na Krasňanský trail originál</name>
+					<description><![CDATA[<img src="files/image00018.jpg" width=1024 height=768 />]]></description>
+					<styleUrl>#camerastyle24</styleUrl>
+					<Point>
+						<coordinates>17.119999,48.208734,317</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>Pivo....</name>
+					<description><![CDATA[<img src="files/image00019.jpg" width=768 height=1024 />]]></description>
+					<styleUrl>#camerastyle24</styleUrl>
+					<Point>
+						<coordinates>17.120473,48.20848100000001,305</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+		</Document>
+	</Folder>
+</Document>
+</kml>

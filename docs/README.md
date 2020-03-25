@@ -5,13 +5,14 @@ Just experiments with geo data, and additional infos (tests) and additional obje
 Topics of interest
 
 - Authoring Maps
-- Punlishing Maps
+- Publishing Maps
 - Embeding Maps
 - Exporting/Importing Data
 - ...
 - More Complex Processing Pipelines
 
 -------------
+
 # Authoring Maps
 
 Creating your own maps, sharing maps, contributing to global maps.
@@ -21,8 +22,24 @@ Creating your own maps, sharing maps, contributing to global maps.
 - [Google Earth Web]
 - [Google Earth Studio]
 - [Google Earth Pro]
+- [ArcGIS Online]
 - [QGis]
 - ...
+
+# Publishing Maps
+
+General:
+
+- [Google MyMaps]
+- [Google Earth Web]
+- [Google Earth Studio]
+
+Sports specific:
+
+- [ayvri]
+- [Relive]
+
+
 
 # Exporting/Importing Data
 
@@ -320,6 +337,7 @@ References:
 [Google Earth Studio]: https://earth.google.com/studio/
 [QGis]: https://qgis.org/
 [Google Earth Pro]: https://www.google.com/earth/versions/
+[[ArcGIS Online]: https://maps.arcgis.com/index.html
 
 [Cesium]:https://cesium.com/
 [Cesium-Viewer]:https://cesium.com/cesiumjs/cesium-viewer
@@ -328,6 +346,7 @@ References:
 [cesium-ion]: https://cesium.com/cesium-ion/
 
 [Relive]: https://relive.cc
+[ayvri]: https://ayvri.com/
 
 [KML]: https://developers.google.com/kml
 [CZML]: https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
