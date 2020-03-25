@@ -5,7 +5,7 @@ const viewer = new Cesium.Viewer('cesiumContainer', {
   terrainProvider: Cesium.createWorldTerrain(),
 });
 
-const promise = Cesium.KmlDataSource.load("../../../gis-projects/data/others/roland/skalica/activity_4192640906.kml", {
+const promise = Cesium.KmlDataSource.load("../../data/samples/animated/2Tracks/2Tracks-OnePath2.kml", {
   camera: viewer.scene.camera,
   canvas: viewer.scene.canvas,
   clampToGround: true
