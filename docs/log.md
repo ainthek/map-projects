@@ -6,6 +6,8 @@
 - Create “mean” line from multiple lines using QGIS <https://gis.stackexchange.com/questions/123731/create-mean-line-from-multiple-lines-using-qgis>
 - merge points <https://gis.stackexchange.com/questions/77043/merge-point-features-within-a-given-radius>
 
+ a nejake hratky z ArcGis Online (caciatky), uz len preto ze ich pouziva Relive
+
 --------------------------------------------------------------------
 ## 24.03.2020
 

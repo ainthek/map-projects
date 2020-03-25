@@ -32,11 +32,11 @@
 				<listItemType>check</listItemType>
 				<ItemIcon>
 					<state>open</state>
-					<href>files/mysavedplaces_open.png</href>
+					<href>https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/mysavedplaces_open.png</href>
 				</ItemIcon>
 				<ItemIcon>
 					<state>closed</state>
-					<href>files/mysavedplaces_closed.png</href>
+					<href>https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/exptracted-kmz/files/mysavedplaces_closed.png</href>
 				</ItemIcon>
 				<bgColor>00ffffff</bgColor>
 				<maxSnippetLines>2</maxSnippetLines>
