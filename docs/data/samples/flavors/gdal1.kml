@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document id="root_doc">
+    <Folder>
+      <name>waypoints</name>
+    </Folder>
+    <Folder>
+      <name>routes</name>
+    </Folder>
+    <Folder>
+      <name>tracks</name>
+      <Placemark>
+        <name>Bratislava Horské bicyklovanie</name>
+        <Style>
+          <LineStyle>
+            <color>ff0000ff</color>
+          </LineStyle>
+          <PolyStyle>
+            <fill>0</fill>
+          </PolyStyle>
+        </Style>
+        <ExtendedData>
+          <SchemaData schemaUrl="#tracks">
+            <SimpleData name="type">mountain_biking</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <MultiGeometry>
+          <LineString>
+            <coordinates>17.1443313360214,48.1994058005512 17.1441652905196,48.1986905727535 17.1441324334592,48.1986629962921</coordinates>
+          </LineString>
+        </MultiGeometry>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>route_points</name>
+    </Folder>
+    <Folder>
+      <name>track_points</name>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#track_points">
+            <SimpleData name="track_fid">0</SimpleData>
+            <SimpleData name="track_seg_id">0</SimpleData>
+            <SimpleData name="track_seg_point_id">0</SimpleData>
+            <SimpleData name="ele">193.800003051758</SimpleData>
+            <SimpleData name="time">2020/03/26 14:27:00+00</SimpleData>
+            <SimpleData name="ns3_TrackPointExtension">&lt;ns3:atemp&gt;19.0&lt;/ns3:atemp&gt;            &lt;ns3:hr&gt;106&lt;/ns3:hr&gt;            &lt;ns3:cad&gt;44&lt;/ns3:cad&gt;          </SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>17.1443313360214,48.1994058005512</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#track_points">
+            <SimpleData name="track_fid">0</SimpleData>
+            <SimpleData name="track_seg_id">0</SimpleData>
+            <SimpleData name="track_seg_point_id">1</SimpleData>
+            <SimpleData name="ele">194.199996948242</SimpleData>
+            <SimpleData name="time">2020/03/26 14:27:24+00</SimpleData>
+            <SimpleData name="ns3_TrackPointExtension">&lt;ns3:atemp&gt;19.0&lt;/ns3:atemp&gt;            &lt;ns3:hr&gt;103&lt;/ns3:hr&gt;            &lt;ns3:cad&gt;44&lt;/ns3:cad&gt;          </SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>17.1441652905196,48.1986905727535</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <ExtendedData>
+          <SchemaData schemaUrl="#track_points">
+            <SimpleData name="track_fid">0</SimpleData>
+            <SimpleData name="track_seg_id">0</SimpleData>
+            <SimpleData name="track_seg_point_id">2</SimpleData>
+            <SimpleData name="ele">194.399993896484</SimpleData>
+            <SimpleData name="time">2020/03/26 14:27:25+00</SimpleData>
+            <SimpleData name="ns3_TrackPointExtension">&lt;ns3:atemp&gt;19.0&lt;/ns3:atemp&gt;            &lt;ns3:hr&gt;105&lt;/ns3:hr&gt;            &lt;ns3:cad&gt;44&lt;/ns3:cad&gt;          </SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>17.1441324334592,48.1986629962921</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Schema name="tracks" id="tracks">
+      <SimpleField name="cmt" type="string"/>
+      <SimpleField name="desc" type="string"/>
+      <SimpleField name="src" type="string"/>
+      <SimpleField name="link1_href" type="string"/>
+      <SimpleField name="link1_text" type="string"/>
+      <SimpleField name="link1_type" type="string"/>
+      <SimpleField name="link2_href" type="string"/>
+      <SimpleField name="link2_text" type="string"/>
+      <SimpleField name="link2_type" type="string"/>
+      <SimpleField name="number" type="int"/>
+      <SimpleField name="type" type="string"/>
+    </Schema>
+    <Schema name="track_points" id="track_points">
+      <SimpleField name="track_fid" type="int"/>
+      <SimpleField name="track_seg_id" type="int"/>
+      <SimpleField name="track_seg_point_id" type="int"/>
+      <SimpleField name="ele" type="float"/>
+      <SimpleField name="time" type="string"/>
+      <SimpleField name="magvar" type="float"/>
+      <SimpleField name="geoidheight" type="float"/>
+      <SimpleField name="cmt" type="string"/>
+      <SimpleField name="desc" type="string"/>
+      <SimpleField name="src" type="string"/>
+      <SimpleField name="link1_href" type="string"/>
+      <SimpleField name="link1_text" type="string"/>
+      <SimpleField name="link1_type" type="string"/>
+      <SimpleField name="link2_href" type="string"/>
+      <SimpleField name="link2_text" type="string"/>
+      <SimpleField name="link2_type" type="string"/>
+      <SimpleField name="sym" type="string"/>
+      <SimpleField name="type" type="string"/>
+      <SimpleField name="fix" type="string"/>
+      <SimpleField name="sat" type="int"/>
+      <SimpleField name="hdop" type="float"/>
+      <SimpleField name="vdop" type="float"/>
+      <SimpleField name="pdop" type="float"/>
+      <SimpleField name="ageofdgpsdata" type="float"/>
+      <SimpleField name="dgpsid" type="int"/>
+      <SimpleField name="ns3_TrackPointExtension" type="string"/>
+    </Schema>
+  </Document>
+</kml>

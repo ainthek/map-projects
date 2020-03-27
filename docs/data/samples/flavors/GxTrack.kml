@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Placemark>
+    <name>My Line</name>
+    <description>This is the location of my office.</description>
+    <gx:Track>
+      <tessellate>1</tessellate>
+      <altitudeMode>clampToGround</altitudeMode>
+      <when>2016-03-30T13:15:15Z</when>
+      <when>2016-03-30T13:15:17Z</when>
+      <when>2016-03-30T13:15:20Z</when>
+      <gx:coord>17.120258 48.210472</gx:coord>
+      <gx:coord>17.12005 48.211716</gx:coord>
+      <gx:coord>17.120134 48.21172000000001</gx:coord>
+      <gx:coord>17.120205 48.211685</gx:coord>
+    </gx:Track>
+  </Placemark>
+</kml>

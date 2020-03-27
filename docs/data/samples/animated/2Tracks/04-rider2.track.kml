@@ -9,7 +9,7 @@
 				<IconStyle>
 					<scale>1</scale>
 					<Icon>
-						<href>http://maps.google.com/mapfiles/kml/shapes/track.png</href>
+						<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
 					</Icon>
 				</IconStyle>
 				<LineStyle>
@@ -24,7 +24,7 @@
 				<IconStyle>
 					<scale>1.33</scale>
 					<Icon>
-						<href>http://maps.google.com/mapfiles/kml/shapes/track.png</href>
+						<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
 					</Icon>
 				</IconStyle>
 				<LineStyle>

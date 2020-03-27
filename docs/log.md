@@ -1,5 +1,41 @@
 # Work Log
- 
+
+## 27.03.2020
+
+LineString works 
+
+  https://sandcastle.cesium.com/index.html#c=bVRtT9swEP4rVr80lTKn6XipSgjTQOzDQCC12j4skzDOtbVw7Mh2Wgriv++cN1pYVTW95557vwvXyjqyEbAFQ86Jgi25BCuqgv6qsWDIa/FSK8eEAjMMyWumCHFgDAL3Rm9EDmbWmXEDzMFvbWS+aCjBKMzU2+gsUxtmiC6dwJgY65V4P4RwVoBhZNZmQS0HBbRBw56DxvYzx6NhS5GsKBf6h9GVymfEmQow7Blpwr5oXSyYWYHrkKdCYhIPycUz/tmAsZjWeTaI6TgbEFBc50KtEKjc8ss0G1ykmUq8DdKVRXztXDmLou12S3UJaiUsVeAipEQTOkEfNXG2ej7krrReSUxdFzUVnl1DT30Vyb1kHApmntKmqERhG9LbHbnB3idRLbWaHCw3ou5mulgLS/Dr1kCk5syDRC9JscPfpeBAk2if37rwTufOYJ0tgpgDa0FKnGEaJ9Ge1DOYdMJVOdzqHNKDrifRga634Fob7CZ6sWl8SuPJeHI8DY+mdBKPj04npMHGxw0Un8YnLRR/Peow1DefuNVNev7J9DiJ9mP0gaMPFSbRfoMTPwF8PrSrWTJj+yu4uru9r+Wg29zS6EJYQH276j8LecUcm+vKYIelZnnQuKD14xr5TewA4+AmD5yfNq5FNhiF3SGM/D62DrdrUEEbJiTLSnFPCfI+yKg/mvYO3lWWsjzfp561zPfNx8zf9RQUjkqg3YbJCuyf8V9v8VbbZWrOVM6Zdbiq6HehtXxk5nvlHOYzvJY74jTpezncS/ZTiku5W+iuqtFZFFHny0Tiefp/Tp3CW0iGrgk7RGAQDhLrdrLbqm+iKLVxpDIyoBT3tCj9ltroseJP4Ci31s8tiTqjJBcbInI8xg8vNLxUXGLrT3pZSTkXL4DXiPciNgdmfr44yzt8VUi285R1nN40IKV4YCh+tmpL2PP4Dw
+
+gx:Track does not work, banner os OK but track line is underground
+
+  https://sandcastle.cesium.com/index.html#c=jZT7T9swEMf/Fau/tJWK8+BRVEKYBmI/DARSo03aMgmTXFsLx65spw8Q//vOeVHWTaOKmvjuc77z43uZksaSFYc1aHJOJKzJJRheFvRbZRv0s2p4qaRlXILuj8hLKgmxoDUa7rVa8Rz0pA3LNDAL35UWeVIjg+Eola/Ds1SumCZqaTnmxFwvxM1DSMYK0IxMmiqoyUACra2jjsFgs88466hBBCuWifqiVSnzCbG6BEx7Ruq0z0oVCdNzsK3lqRBYxEN0scGPFWiDZZ2nvYD6aY+AzFTO5RwNpZ0dnKa9iziVkYtBXBq0L6xdTjxvvV5TtQQ554ZKsB4iXkhDnKMCJ/PNe3au1Fxg6aqoUNjYGo/dKqJ7wTIomH6K60VFErchvt2SG9z7yKtGjScHk2le7WacLLgh+NgFEKEy5oxEzUixxf8Zz4BG3i7fTDHfTBLNsjYZWiwYA0LgCcZB5O2MOoIJy22Zw63KIX6355H3ztdFrBcg49APTg78w4NDPwkOJ8ExPj8ir3L9Dxx/EAz9PRAXmCml8zgY0yD0w+NTcnRKw8A/GoeR13n/xfvHNR6Mg5MP4MHhUctjbP0LPhAXdnlOTo/3+MrwdkyRt3tHIneJ8P3QqGvJtOmEfHV3e1+NB634lloV3AD6G7V+LcQVs2yqSo2XRCiWD+opaPW6Rn5qNQphgHlQjD3rLize7LQ3HLVaHjpJNRO6/R80aUZkVsrMIYO8SzLsdN9I+c1lKMvzXfSsId/Ei5W/+SlIvG8c41ZMlGB++r9cxGsVl8opk3nGjEW14byJUuKR6c+ltVhP/1psiVWk28v+TrF7Jc7ENlHtqobUujUidR7/Hajyv45I39Y5+2jojXqRsVvR6uITL5ZKW1JqMaAUlVYsnc6M91hmT2BpZow7tMhrg6KcrwjPsZn80ZCx06AMjWtJs1KIKX8G7Caod756F+YOFw/yDludYFuHLIL4pjZSig0Ch/tRzRJ2ZvwN
+
+
+Cesium from Sources Development:
+
+  - https://stackoverflow.com/questions/31186819/what-is-the-lightest-possible-method-of-using-cesium
+  - https://blog.isquaredsoftware.com/2017/03/declarative-earth-part-1-cesium-webpack/
+  - https://github.com/CesiumGS/cesium-webpack-example/tree/master/src
+
+
+## 26.03.2020
+
+Playing with xslt and xml tools
+
+Removing all tags from other than GPX namespace:
+
+  data/samples/animated/2Tracks/02-rider2.selected-points.gpx  
+  tools/xslt/gpx-only.xslt
+
+
+Napespaces in GPS files:
+
+  xmlns="http://www.topografix.com/GPX/1/1"
+
+Links:
+  - xslt-30 <https://www.w3.org/TR/xslt-30/>
+  - JXON <https://developer.mozilla.org/en-US/docs/Archive/JXON#The_Parker_Convention>  
+
 --------------------------------------------------------------------
 ## 25.03.2020
 - Select Lines within a Polygon <https://gis.stackexchange.com/questions/255100/select-lines-within-a-polygon>
@@ -98,6 +134,7 @@ Zaujimave je ze CESIUm vie prehrat Tracks.kml. Chyba sice path a ikonka, ale je 
 Treba sa pohrat z customizaciu viewera, 
 kedze vcera som zistil ze veci v [sandcastle] chodia a v [Cesium Viewer] nie.
 
+- https://cesium.com/blog/2019/10/31/cesiumjs-es6/
 - https://cesium.com/blog/2016/04/04/an-introduction-to-cesium-desktop-apps-with-electron/
 - https://www.electronjs.org/docs/tutorial/first-app
 - https://groups.google.com/forum/#!topic/cesium-dev/DMeBWr1LVbY

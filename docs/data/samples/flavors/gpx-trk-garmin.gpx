@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Garmin Connect" version="1.1" 
+    xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd" 
+    xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" 
+    xmlns="http://www.topografix.com/GPX/1/1" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:ns2="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+  <metadata>
+    <link href="connect.garmin.com">
+    <text>Garmin Connect</text>
+    </link>
+    <time>2020-03-26T14:26:54.000Z</time>
+  </metadata>
+  <trk>
+    <name>Bratislava Horské bicyklovanie</name>
+    <type>mountain_biking</type>
+    <trkseg>
+      <trkpt lat="48.1994058005511760711669921875" lon="17.14433133602142333984375">
+        <ele>193.8000030517578125</ele>
+        <time>2020-03-26T14:27:00.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>19.0</ns3:atemp>
+            <ns3:hr>106</ns3:hr>
+            <ns3:cad>44</ns3:cad>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.19869057275354862213134765625" lon="17.14416529051959514617919921875">
+        <ele>194.1999969482421875</ele>
+        <time>2020-03-26T14:27:24.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>19.0</ns3:atemp>
+            <ns3:hr>103</ns3:hr>
+            <ns3:cad>44</ns3:cad>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="48.1986629962921142578125" lon="17.14413243345916271209716796875">
+        <ele>194.399993896484375</ele>
+        <time>2020-03-26T14:27:25.000Z</time>
+        <extensions>
+          <ns3:TrackPointExtension>
+            <ns3:atemp>19.0</ns3:atemp>
+            <ns3:hr>105</ns3:hr>
+            <ns3:cad>44</ns3:cad>
+          </ns3:TrackPointExtension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

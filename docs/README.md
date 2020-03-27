@@ -11,6 +11,9 @@ Topics of interest
 - ...
 - More Complex Processing Pipelines
 
+Comparison:
+
+- ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
 -------------
 
 # Authoring Maps
@@ -26,6 +29,14 @@ Creating your own maps, sharing maps, contributing to global maps.
 - [QGis]
 - ...
 
+
+
+## [ArcGIS Online]
+
+Cons:
+- slow, unresponsive, crashing
+- incorrect images URL resolving from KML
+
 # Publishing Maps
 
 General:
@@ -39,7 +50,12 @@ Sports specific:
 - [ayvri]
 - [Relive]
 
+# Authoring Stories/Videos/Presentations
 
+## [Google Earth Pro] 
+
+- <https://developers.google.com/kml/documentation/touring>
+- <https://uwaterloo.ca/library/geospatial/sites/ca.library.geospatial/files/uploads/files/google_earth_2016_1.pdf>
 
 # Exporting/Importing Data
 
@@ -89,7 +105,7 @@ Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.117977768647275%2C48.21516358587874%2C553.5685019284648%2C281.525245591343%2C-21.391550202590636%2C359.79865247344674">
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/doc/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.117977768647275%2C48.21516358587874%2C553.5685019284648%2C281.525245591343%2C-21.391550202590636%2C359.79865247344674">
 </iframe>	
 
 ## [Relive]
@@ -138,6 +154,10 @@ When exporting relativeToGround it looks like this:
 		<coordinates>17.8344385075128,48.8283710884721,0</coordinates>
 	</Point>
 
+## KML Support in [Cesium]
+
+<https://github.com/CesiumGS/cesium/issues/873>
+
 ## Hierarchical KML
 
 Google Earth Pro as well as Google MyMaps, display all features in tree view.
@@ -168,6 +188,13 @@ XML imported to MyMaps and then exported to KML:
 
 Actually this 2 level structure is more logical and it does not contain 
 useless level 2 "MyPlaces" Folder in KML.	
+
+## Tesellate
+
+KML requires <tessellate>1</tessellate> be set on line strings in order for them to conform to terrain. 
+None of the strings in the file you posted have this set. I updated the file and now it loads as expected in Cesium.
+
+from: <https://github.com/CesiumGS/cesium/issues/873>
 
 # CZML
 
