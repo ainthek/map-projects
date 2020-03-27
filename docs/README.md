@@ -245,6 +245,17 @@ Gdal:
 
 # Workflows
 
+GDAL gdal-cheat-sheet <https://github.com/dwtkns/gdal-cheat-sheet>
+
+## Cliping GPX files
+
+- https://gis.stackexchange.com/questions/258518/how-to-clip-very-large-shapefile-in-qgis-using-ogr2ogr
+
+	ogr2ogr -clipsrc c.shp y.shp x.shp/track_points.shp
+
+	
+
+
 ## Testing [CZML] files 
 
 Just open [Cesium-Viewer] and drag and drop file from local disk.
@@ -353,6 +364,11 @@ Ani jedno z tohot mi nejde:
 zatial sa mi zda ze mi to ide z gpkg ktory je multiline string
 
 	ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/test.gpx 01-access-road-70-157.gpkg
+
+
+# Node.js GEO libs
+
+- https://www.npmjs.com/package/ogr2ogr
 
 -------------------------------------
 
