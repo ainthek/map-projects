@@ -2,14 +2,30 @@
 
 ## 27.03.2020
 
-LineString works 
+<https://github.com/CesiumGS/cesium/issues/873> toto som zareportoval:
 
-  https://sandcastle.cesium.com/index.html#c=bVRtT9swEP4rVr80lTKn6XipSgjTQOzDQCC12j4skzDOtbVw7Mh2Wgriv++cN1pYVTW95557vwvXyjqyEbAFQ86Jgi25BCuqgv6qsWDIa/FSK8eEAjMMyWumCHFgDAL3Rm9EDmbWmXEDzMFvbWS+aCjBKMzU2+gsUxtmiC6dwJgY65V4P4RwVoBhZNZmQS0HBbRBw56DxvYzx6NhS5GsKBf6h9GVymfEmQow7Blpwr5oXSyYWYHrkKdCYhIPycUz/tmAsZjWeTaI6TgbEFBc50KtEKjc8ss0G1ykmUq8DdKVRXztXDmLou12S3UJaiUsVeAipEQTOkEfNXG2ej7krrReSUxdFzUVnl1DT30Vyb1kHApmntKmqERhG9LbHbnB3idRLbWaHCw3ou5mulgLS/Dr1kCk5syDRC9JscPfpeBAk2if37rwTufOYJ0tgpgDa0FKnGEaJ9Ge1DOYdMJVOdzqHNKDrifRga634Fob7CZ6sWl8SuPJeHI8DY+mdBKPj04npMHGxw0Un8YnLRR/Peow1DefuNVNev7J9DiJ9mP0gaMPFSbRfoMTPwF8PrSrWTJj+yu4uru9r+Wg29zS6EJYQH276j8LecUcm+vKYIelZnnQuKD14xr5TewA4+AmD5yfNq5FNhiF3SGM/D62DrdrUEEbJiTLSnFPCfI+yKg/mvYO3lWWsjzfp561zPfNx8zf9RQUjkqg3YbJCuyf8V9v8VbbZWrOVM6Zdbiq6HehtXxk5nvlHOYzvJY74jTpezncS/ZTiku5W+iuqtFZFFHny0Tiefp/Tp3CW0iGrgk7RGAQDhLrdrLbqm+iKLVxpDIyoBT3tCj9ltroseJP4Ci31s8tiTqjJBcbInI8xg8vNLxUXGLrT3pZSTkXL4DXiPciNgdmfr44yzt8VUi285R1nN40IKV4YCh+tmpL2PP4Dw
+  Hi there I hace palyed more with the KMLs based on your samples
+  and have another issue
 
-gx:Track does not work, banner os OK but track line is underground
+  Let's have 4 points and 2 flavors of KML, one as LineString and one as gx:Track
 
-  https://sandcastle.cesium.com/index.html#c=jZT7T9swEMf/Fau/tJWK8+BRVEKYBmI/DARSo03aMgmTXFsLx65spw8Q//vOeVHWTaOKmvjuc77z43uZksaSFYc1aHJOJKzJJRheFvRbZRv0s2p4qaRlXILuj8hLKgmxoDUa7rVa8Rz0pA3LNDAL35UWeVIjg+Eola/Ds1SumCZqaTnmxFwvxM1DSMYK0IxMmiqoyUACra2jjsFgs88466hBBCuWifqiVSnzCbG6BEx7Ruq0z0oVCdNzsK3lqRBYxEN0scGPFWiDZZ2nvYD6aY+AzFTO5RwNpZ0dnKa9iziVkYtBXBq0L6xdTjxvvV5TtQQ554ZKsB4iXkhDnKMCJ/PNe3au1Fxg6aqoUNjYGo/dKqJ7wTIomH6K60VFErchvt2SG9z7yKtGjScHk2le7WacLLgh+NgFEKEy5oxEzUixxf8Zz4BG3i7fTDHfTBLNsjYZWiwYA0LgCcZB5O2MOoIJy22Zw63KIX6355H3ztdFrBcg49APTg78w4NDPwkOJ8ExPj8ir3L9Dxx/EAz9PRAXmCml8zgY0yD0w+NTcnRKw8A/GoeR13n/xfvHNR6Mg5MP4MHhUctjbP0LPhAXdnlOTo/3+MrwdkyRt3tHIneJ8P3QqGvJtOmEfHV3e1+NB634lloV3AD6G7V+LcQVs2yqSo2XRCiWD+opaPW6Rn5qNQphgHlQjD3rLize7LQ3HLVaHjpJNRO6/R80aUZkVsrMIYO8SzLsdN9I+c1lKMvzXfSsId/Ei5W/+SlIvG8c41ZMlGB++r9cxGsVl8opk3nGjEW14byJUuKR6c+ltVhP/1psiVWk28v+TrF7Jc7ENlHtqobUujUidR7/Hajyv45I39Y5+2jojXqRsVvR6uITL5ZKW1JqMaAUlVYsnc6M91hmT2BpZow7tMhrg6KcrwjPsZn80ZCx06AMjWtJs1KIKX8G7Caod756F+YOFw/yDludYFuHLIL4pjZSig0Ch/tRzRJ2ZvwN
+  LineString works 
 
+    https://sandcastle.cesium.com/index.html#c=bVRtT9swEP4rVr80lTKn6XipSgjTQOzDQCC12j4skzDOtbVw7Mh2Wgriv++cN1pYVTW95557vwvXyjqyEbAFQ86Jgi25BCuqgv6qsWDIa/FSK8eEAjMMyWumCHFgDAL3Rm9EDmbWmXEDzMFvbWS+aCjBKMzU2+gsUxtmiC6dwJgY65V4P4RwVoBhZNZmQS0HBbRBw56DxvYzx6NhS5GsKBf6h9GVymfEmQow7Blpwr5oXSyYWYHrkKdCYhIPycUz/tmAsZjWeTaI6TgbEFBc50KtEKjc8ss0G1ykmUq8DdKVRXztXDmLou12S3UJaiUsVeAipEQTOkEfNXG2ej7krrReSUxdFzUVnl1DT30Vyb1kHApmntKmqERhG9LbHbnB3idRLbWaHCw3ou5mulgLS/Dr1kCk5syDRC9JscPfpeBAk2if37rwTufOYJ0tgpgDa0FKnGEaJ9Ge1DOYdMJVOdzqHNKDrifRga634Fob7CZ6sWl8SuPJeHI8DY+mdBKPj04npMHGxw0Un8YnLRR/Peow1DefuNVNev7J9DiJ9mP0gaMPFSbRfoMTPwF8PrSrWTJj+yu4uru9r+Wg29zS6EJYQH276j8LecUcm+vKYIelZnnQuKD14xr5TewA4+AmD5yfNq5FNhiF3SGM/D62DrdrUEEbJiTLSnFPCfI+yKg/mvYO3lWWsjzfp561zPfNx8zf9RQUjkqg3YbJCuyf8V9v8VbbZWrOVM6Zdbiq6HehtXxk5nvlHOYzvJY74jTpezncS/ZTiku5W+iuqtFZFFHny0Tiefp/Tp3CW0iGrgk7RGAQDhLrdrLbqm+iKLVxpDIyoBT3tCj9ltroseJP4Ci31s8tiTqjJBcbInI8xg8vNLxUXGLrT3pZSTkXL4DXiPciNgdmfr44yzt8VUi285R1nN40IKV4YCh+tmpL2PP4Dw
+
+  gx:Track, "banner" is OK but "track line" is underground
+
+    https://sandcastle.cesium.com/index.html#c=jVX7b9s2EP5Xbv7FNuBQjzzhKOq2Fu2GNU1QCxuwaUAZ6WwToUiDpOy4Rf73HfWKs3RYBMIy777v7vj4ToVW1sFW4A4NXIHCHbxFK+qK/d7YJuOimb7VynGh0Ixn8C1XAEEA2S+/LsCP69ubz9lPnzL4AbiUYBErCwa5RFeC0+DQGCLDHYqVAk3s5vFhOtet0VtRopn32QuiO/xDG1lmLWQyneXqcXqZqy03oDdOUOlU8rcmDkDBKzQc5t1imC1QIWutswFDZPsS462zDiJ5tcn0B6NrVc7BmRop7SW0ab9qXWXcrND1lvtKUhFfkjcP9GeLxlJZV/koYmE+AlSFLoVakaF2y6OLfPQmzVXiOQRXluxr5zbzINjtdkxvUK2EZQpdQJAgZjHFaIDz1cNz7ErrlaTSddVA8cG18NSvIrmVvMCKm/u0XVSiaBvS6z18pCNMgmbWeUq0hRHNbqbZWlig4dYIUhfcG0EvodrT71IUyJLgEN+FWD3MM8OLPhlZHFqLUtIJplESHMwGBJdOuLrEa11i+mzPk+CZb2Ds1qjSOIzOjsLjo+Mwi47n0SmNP5Ogcf0f8PyVwDh8DTAOvweknSi0NmUanbMoDuPTCzi5YHEUnpzHSTB4/wsfnrbw6Dw6ewU8Oj7p8cRtn+gVvHjIc3Zx+gLfGJ7OMwkOL1Pibxu9v3Qy3HBjh8bx7ub6tplPepVujK6ERfJ3sv6tku+44wtdG7pNUvNy0oZgzes94RfOkGImlIdUO3L+ZpME8tF01ot+6rXXBfT7P+nSzGBZq8JDJuWQZDo0iE7zTy7LeFkeQi875JPKqfInP0NFF1MQb8tljfav8G/PeGx4uVpwVRbcOpIlxc20lnfc/Fw7R/WM38u974TDXo4Pin1R4lLuM92vasqcXyOhrtLvA5r8jzMYuzbnmAyj2Sixbi97Af0oqo02DmojJ4yRJKuNF6QN7uriHh0rrPWHlgQ9KSnFFkRJXedfHwBqSaRX63vXspZyIb4itR1qDGL7jOYPlw7yhnqi5HsPWUfpx9bIGHUSmr5kdUs4iPgP
+   
+  When no terraiin is specified, also gx:Track works
+    
+    https://sandcastle.cesium.com/index.html#c=jZX7b9s2EMf/lZt/sQ041CNPOIq6rUW7YU0T1MIGbBpQRjrbRCjSICk7bpH/fUe94iwdFkOwzOPnHnx8z4VW1sFW4A4NXIHCHbxFK+qK/d7YJuOiGb7VynGh0Ixn8C1XAEEA2S+/LsA/17c3n7OfPmXwA3ApwSJWFgxyia4Ep8GhMeQMdyhWCjR5N582TDd5a/RWlGjmff6CAjj8QxtZZi0ymc5y9Ti9zNWWG9AbJ6h4KvpbEwmg4BUaDvNuOcwWqJC11tnAkLN9yXjrrEMkrzaZ/mB0rco5OFMjpb2ENu1XrauMmxW63nJfSSriS/LmgX5s0Vgq6yofRSzMR4Cq0KVQKzLUbnl0kY/epLlKvA/hypJ97dxmHgS73Y7pDaqVsEyhCwgJYhZTjAacrx6esyutV5JK11WD4oNr8dSvIrmVvMCKm/u0XVSiaBvS6z18pENMgmbUzZRoCyOa3UyztbBAj1sjSF1wbwS9hGpP30tRIEuCQ74LsXqYZ4YXfTKyOLQWpaQTTKMkOBgNBJdOuLrEa11i+mzPk+DZ3OCxW6NK4zA6OwqPj47DLDqeR6f0/JkEzdT/geevBOPwNWAcfg+knSi0NmUanbMoDuPTCzi5YHEUnpzHSTDM/hcfnrZ4dB6dvQKPjk96nnzbT/QKv3jIc3Zx+oJvDE/nmQSHlynxt43eXzoZbrixQ+t4d3N924wnvUo3RlfCIs13sv6tku+44wtdG7pNUvNy0oZgzes98QtnSDETykOqHTl/s0kC+Wg660U/9drrAvr9n3RpZrCsVeGRSTkkmQ4NotP805RlvCwP0cuOfFI5Vf40z1DRxRTkt+WyRvtX+Lf3eGz8crXgqiy4dSRLiptpLe+4+bl2juoZv5d73wuHvRwfFPuixKXcZ7pf1ZQ5v0airtLvA03+xxmMXZtzTIbRbJRYt5e9gH4U1UYbB7WRE8ZIktXGC9IGd3Vxj44V1vpDS4LeKSnFFkRJXedffwHUkkiv1veuZS3lQnxFajvUGMT2mZs/XDrIG+qJku89so7Sj62RMeokNHzp1S3hIOI/
+
+  How to fix samples to make gx:Track and their respecitive lines to work with terrainProvider ON ?
+
+  Thanx a lot
+
+------------------------------
 
 Cesium from Sources Development:
 
@@ -17,6 +33,7 @@ Cesium from Sources Development:
   - https://blog.isquaredsoftware.com/2017/03/declarative-earth-part-1-cesium-webpack/
   - https://github.com/CesiumGS/cesium-webpack-example/tree/master/src
 
+-------------------------------
 
 ## 26.03.2020
 
@@ -127,6 +144,52 @@ Ani po drag and drop do [Cesium-Viewer] nie.
 
 Zaujimave je ze CESIUm vie prehrat Tracks.kml. Chyba sice path a ikonka, ale je to celkom fajn.
 
+Debugging KML building for LIne and track
+
+Track: JSON.stringify(coordinates)
+  
+  "[
+    {
+      "x": 4069607.90135563,
+      "y": 1253550.1027781987,
+      "z": 4732503.934593956
+    },
+    {
+      "x": 4069513.8855786445,
+      "y": 1253504.9681603748,
+      "z": 4732596.113307932
+    },
+    {
+      "x": 4069511.730902964,
+      "y": 1253510.8367535013,
+      "z": 4732596.409698932
+    }
+  ]"
+
+  "[
+  {
+    "x": 4069607.90135563,
+    "y": 1253550.1027781987,
+    "z": 4732503.934593956
+  },
+  {
+    "x": 4069513.8855786445,
+    "y": 1253504.9681603748,
+    "z": 4732596.113307932
+  },
+  {
+    "x": 4069511.730902964,
+    "y": 1253510.8367535013,
+    "z": 4732596.409698932
+  }
+]"
+
+_value: Array(4)
+0: Cartesian3 {x: 4069607.90135563, y: 1253550.1027781987, z: 4732503.934593956}
+1: Cartesian3 {x: 4069513.8855786445, y: 1253504.9681603748, z: 4732596.113307932}
+2: Cartesian3 {x: 4069511.730902964, y: 1253510.8367535013, z: 4732596.409698932}
+3: Cartesian3 {x: 4069512.950766929, y: 1253516.7338429564, z: 4732593.816276912}
+length: 4
 
 
 ## 23.03.2020
