@@ -4,17 +4,17 @@
 const viewer = new Cesium.Viewer('cesiumContainer', {
   terrainProvider: Cesium.createWorldTerrain(),
 });
-// viewer.extend(Cesium.viewerCesiumInspectorMixin);
-// //viewer.scene.globe.depthTestAgainstTerrain = false;
-// const promise = Cesium.KmlDataSource.load("../../docs/data/samples/animated/2Tracks/2Tracks-OnePath2.kml", {
-//   camera: viewer.scene.camera,
-//   canvas: viewer.scene.canvas,
-//   clampToGround: true
-// });
+viewer.extend(Cesium.viewerCesiumInspectorMixin);
+//viewer.scene.globe.depthTestAgainstTerrain = false;
+const promise = Cesium.KmlDataSource.load("../../docs/data/samples/animated/2Tracks/2Tracks-OnePath2.kml", {
+  camera: viewer.scene.camera,
+  canvas: viewer.scene.canvas,
+  clampToGround: true
+});
 
-// Cesium.when(promise, function(dataSource) {
-//   viewer.dataSources.add(dataSource);
+Cesium.when(promise, function(dataSource) {
+  viewer.dataSources.add(dataSource);
   
-//   viewer.flyTo(promise);
+  viewer.flyTo(promise);
   
-// });
+});
