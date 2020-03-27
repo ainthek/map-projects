@@ -1,0 +1,24 @@
+#!/bin/bash
+
+## CLI for XSLT3 transformations
+## Version:
+##     0.1	
+## Usage: 
+##
+## Samples:
+## 
+##	tools/xslt/xslt3 tools/xslt/gpx-only.xslt <  data/samples/animated/2Tracks/02-rider2.selected-points.gpx
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] || ([ -t 0 ] && [ "$#" == 0 ])
+then 
+	perl -ne "/^## ?/ && s/^## ?//g && print" "${BASH_SOURCE[0]}"
+	exit 1
+fi
+
+## http://www.saxonica.com/download/download_page.xml
+filename=$(tmpf "xslt")
+cat > "$filename"
+java -classpath "${0%/*}/SaxonHE9-9-1-7J/saxon9he.jar" net.sf.saxon.Transform "$filename" "$@"
+echo
+rm "$filename"
+		
