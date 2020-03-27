@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Cesium Viewer</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.67/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.67/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+</head>
+//
+
+<body style="background: #000;">
+  <div id="cesiumContainer" class="fullWindow"></div>
+  <div id="loadingIndicator" class="loadingIndicator"></div>
+  <script>
+  //const data = "../data/samples/animated/2Tracks/2Tracks-OnePath2.kml";
+  const data = "../data/samples/flavors/cesium-gxtrack.kml";
+  const view = "17.113221753317553%2C48.228236078283636%2C1018.1769923183939%2C191.0222494528553%2C-27.751288845646116%2C359.95874797663123"
+
+  const { Cartesian3, Math: CesiumMath } = Cesium;
+
+  const viewer = new Cesium.Viewer('cesiumContainer', {
+    terrainProvider: Cesium.createWorldTerrain(),
+  });
+  //viewer.scene.globe.depthTestAgainstTerrain = false;
+  viewer.extend(Cesium.viewerCesiumInspectorMixin);
+  const promise = Cesium.KmlDataSource.load(data, {
+    camera: viewer.scene.camera,
+    canvas: viewer.scene.canvas,
+    clampToGround: true
+  });
+
+
+  Cesium.when(promise, function(dataSource) {
+    viewer.dataSources.add(dataSource);
+
+    console.log("loaded")
+
+
+
+
+
+  });
+
+  //viewer.flyTo(promise);
+  const {
+    longitude,
+    latitude,
+    height,
+    heading,
+    pitch,
+    roll
+  } = parseView(decodeURIComponent(view));
+  viewer.camera.setView({
+    destination: Cartesian3.fromDegrees(longitude, latitude, height),
+    orientation: {
+      heading: heading,
+      pitch: pitch,
+      roll: roll
+    }
+  });
+
+
+  function parseView(view) {
+
+    // from viewer code
+    var splitQuery = view.split(/[ ,]+/);
+    if (splitQuery.length > 1) {
+      var longitude = !isNaN(+splitQuery[0]) ? +splitQuery[0] : 0.0;
+      var latitude = !isNaN(+splitQuery[1]) ? +splitQuery[1] : 0.0;
+      var height = ((splitQuery.length > 2) && (!isNaN(+splitQuery[2]))) ? +splitQuery[2] : 300.0;
+      var heading = ((splitQuery.length > 3) && (!isNaN(+splitQuery[3]))) ? CesiumMath.toRadians(+splitQuery[3]) : undefined;
+      var pitch = ((splitQuery.length > 4) && (!isNaN(+splitQuery[4]))) ? CesiumMath.toRadians(+splitQuery[4]) : undefined;
+      var roll = ((splitQuery.length > 5) && (!isNaN(+splitQuery[5]))) ? CesiumMath.toRadians(+splitQuery[5]) : undefined;
+    }
+    return {
+      longitude,
+      latitude,
+      height,
+      heading,
+      pitch,
+      roll
+    }
+  }
+  </script>
+</body>
+
+</html>
