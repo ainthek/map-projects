@@ -1,5 +1,43 @@
 # Work Log
 
+## 30.03.2020
+
+Playing with Strava Segments.
+
+- using strava API, donwloading Segments
+- decoding segments from Encoded Polyline Algorithm Format <https://developers.google.com/maps/documentation/utilities/polylinealgorithm>
+- segment to GPX
+
+  curl \
+  -H "Authorization: Bearer ${YOURACCESSTOKEN}" \
+  -X GET \
+  https://www.strava.com/api/v3/segments/explore?bounds=47.9973%2C16.7871%2C48.2722%2C17.4435
+
+
+  curl \
+  -H "Authorization: Bearer ${YOURACCESSTOKEN}" \
+  -X GET \
+  https://www.strava.com/api/v3/segments/explore?bounds=48.1921%2C17.0990%2C48.2092%2C17.1400
+
+
+  curl -H "Authorization: Bearer ${YOURACCESSTOKEN}" -X GET https://www.strava.com/api/v3/segments/7363237 | jsontool
+
+Result:
+
+  mame tooling segment2gpx ;-)
+
+  // https://www.npmjs.com/package/strava-v3
+  // https://www.npmjs.com/package/xmlbuilder2
+  // review: https://stackoverflow.com/questions/49075631/xml-stream-writer-library-in-node-js
+
+
+## 28.03.2020
+
+naive disk base geospacial serach ;-)))
+
+  ls -ld -1 ../gis-projects/data/others/runtastic-marcus/rides-exports/export-20200206-000/Sport-sessions/GPS-data/*.gpx | while read f; do ./tools/clip/clip-gpx.sh ../gis-projects/qgis/clips/krasnansky-trail-original.shp $f > test/$(basename $f); done
+  grep -c trkpt test/*.gpx | grep -v ":0$" | cut -d":" -f1 | while read f; do cp ../gis-projects/data/others/runtastic-marcus/rides-exports/export-20200206-000/Sport-sessions/GPS-data/$(basename $f) test/krasnansky-trail-original/; done
+
 ## 27.03.2020
 
 <https://github.com/CesiumGS/cesium/issues/873> toto som zareportoval:

@@ -139,6 +139,10 @@ Articles:
 
 # KML
 
+## flat line labels
+
+<https://groups.google.com/forum/#!topic/kml-support-getting-started/JHFbwg2g49Y>
+
 ## altitudeMode
 <https://developers.google.com/kml/documentation/altitudemode>
 
