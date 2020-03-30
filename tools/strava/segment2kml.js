@@ -49,13 +49,18 @@ fetch(`https://www.strava.com/api/v3/segments/${SEGMENT_ID}`, { //TODO: sanitize
       .ele("kml", { xmlns: 'http://www.opengis.net/kml/2.2' })
       .ele("Document")
       .ele("name", fullname).up()
-      //.ele("description", `https://www.strava.com/segments/${SEGMENT_ID}`).up()
+      //s.ele("description", `https://www.strava.com/segments/${SEGMENT_ID}`).up()
       //.ele("Folder")
       //.ele("name", fullname).up()
       .ele("Placemark")
       .ele("name", `${fullname}`).up()
       .ele("LineString")
       .ele("coordinates", coordinates).up()
+      // for cesium to work
+      // <tessellate>1</tessellate>
+      // <altitudeMode>clampToGround</altitudeMode>
+      .ele("tessellate",1).up()
+      .ele("altitudeMode","clampToGround").up()
       .up()
       .up()
 
@@ -63,6 +68,8 @@ fetch(`https://www.strava.com/api/v3/segments/${SEGMENT_ID}`, { //TODO: sanitize
       .ele("styleUrl", "#start_segment").up()
       .ele("name", `START - ${fullname}`).up()
       .ele("Point")
+      .ele("tessellate",1).up()
+      .ele("altitudeMode","clampToGround").up()
       .ele("coordinates", start_latlng.reverse().join(",")).up()
       .up()
       .up()
@@ -72,6 +79,8 @@ fetch(`https://www.strava.com/api/v3/segments/${SEGMENT_ID}`, { //TODO: sanitize
       .ele("styleUrl", "#end").up()
       .ele("name", `END -${fullname}`).up()
       .ele("Point")
+      .ele("tessellate",1).up()
+      .ele("altitudeMode","clampToGround").up()
       .ele("coordinates", end_latlng.reverse().join(","))
       .up()
       .up()
