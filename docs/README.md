@@ -14,6 +14,7 @@ Topics of interest
 Comparison:
 
 - ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
+- Comparison of bicycle route planning websites <https://en.wikipedia.org/wiki/Comparison_of_bicycle_route_planning_websites>
 -------------
 
 # Authoring Maps
@@ -372,6 +373,9 @@ zatial sa mi zda ze mi to ide z gpkg ktory je multiline string
 
 	ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES _exports/test.gpx 01-access-road-70-157.gpkg
 
+toto sa zda ze IDE:
+
+	gpsbabel -i gpx -f ../gis-projects/qgis/banik/clip-orig-elev.gpx  -x transform,trk=wpt -x nuketypes,waypoints -o gpx -F output.track.gpx
 
 # Node.js GEO libs
 

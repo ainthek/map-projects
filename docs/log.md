@@ -13,7 +13,7 @@ New toy , suunto spartan watch, new problems FIT format.
 - <https://gis.stackexchange.com/questions/259697/split-a-vector-layer-based-on-attribute-value>
 
 ### Topics
-
+- !!! Add Raster Values to Point !!!
 - Climb along line
 - vector_attribute_data <https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/vector_attribute_data.html>
 - Split vector layer <https://gis.stackexchange.com/questions/259697/split-a-vector-layer-based-on-attribute-value>
