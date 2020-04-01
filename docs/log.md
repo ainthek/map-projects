@@ -1,5 +1,58 @@
 # Work Log
 
+## 1.4.2020
+
+New toy , suunto spartan watch, new problems FIT format.
+
+### Fit2gpx
+- <https://www.gpsvisualizer.com/>
+
+### Compare myTrack recording with Suntoo recording
+
+### Split based on elevation gain (uphils, flats, downhgils)
+- <https://gis.stackexchange.com/questions/259697/split-a-vector-layer-based-on-attribute-value>
+
+### Topics
+
+- Climb along line
+- vector_attribute_data <https://docs.qgis.org/3.4/en/docs/gentle_gis_introduction/vector_attribute_data.html>
+- Split vector layer <https://gis.stackexchange.com/questions/259697/split-a-vector-layer-based-on-attribute-value>
+
+Tools: 
+
+- https://www.potter.ca/Biking/smoother/gpxsmoother.html
+- http://www.trackreport.net/
+
+- Virtual Terrain Project http://vterrain.org/
+
+## nesedia kopce
+
+WKT
+PROJCS["S-JTSK / Krovak East North",
+  GEOGCS["S-JTSK",
+    DATUM["System_Jednotne_Trigonometricke_Site_Katastralni",
+      SPHEROID["Bessel 1841",6377397.155,299.1528128,AUTHORITY["EPSG","7004"]],
+      TOWGS84[589,76,480,0,0,0,0],
+      AUTHORITY["EPSG","6156"]],
+      PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],
+      UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4156"]],
+      PROJECTION["Krovak"],
+      PARAMETER["latitude_of_center",49.5],
+      PARAMETER["longitude_of_center",24.83333333333333],
+      PARAMETER["azimuth",30.28813972222222],
+      PARAMETER["pseudo_standard_parallel_1",78.5],
+      PARAMETER["scale_factor",0.9999],
+      PARAMETER["false_easting",0],
+      PARAMETER["false_northing",0],
+      UNIT["metre",1,AUTHORITY["EPSG","9001"]],
+      AXIS["X",EAST],AXIS["Y",NORTH],
+      AUTHORITY["EPSG","5514"]]
+Proj4
++proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs
+Extent
+12.09, 47.73, 22.56, 51.06
+
+
 ## 30.03.2020
 
 Playing with Strava Segments.

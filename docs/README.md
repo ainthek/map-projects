@@ -121,6 +121,8 @@ Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 ## TODO List
 - how to set Default View on embeded Google MyMap
 
+# FIT
+TODO:
 
 # GPX
 
@@ -135,7 +137,7 @@ Articles:
 - [Routes, Tracks and Waypoints - The Other RTW](http://www.globeriders.com/article_pages/article08_RTW/article08_rtw.shtml)
 - [Garmin, Differences Between Routes and Tracks](https://support.garmin.com/en-US/?faq=v0rJAHy2hq3prHjRlxdRw5)
 - [GDAL, GPX driver](https://gdal.org/drivers/vector/gpx.html)
-
+- A QGIS plugin to visualize GPX-data as line-segments between track points <https://www.salzburgresearch.at/blog/a-qgis-plugin-to-visualize-gpx-data-as-line-segments-between-track-points/>
 
 # KML
 
@@ -146,7 +148,7 @@ Articles:
 ## altitudeMode
 <https://developers.google.com/kml/documentation/altitudemode>
 
-When exporting clamped, the [Google Earth Pro] does not export anything:
+When exporting clamped, the [Google Earth Pro] does not export anything:QGis 
 
 	<Point>
 		<coordinates>17.8344385075128,48.8283710884721,0</coordinates>
