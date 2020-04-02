@@ -366,7 +366,6 @@ Ani jedno z tohot mi nejde:
 - https://www.gpsvisualizer.com 
 - gpsbabel -i gpx -f 03-rider1.selected-points.wpt.gpx -x transform,wpt=trk,del,rptdigits=2 -o gpx -F route.gpx 
 
-
 - https://issues.qgis.org/issues/11542
 
 zatial sa mi zda ze mi to ide z gpkg ktory je multiline string

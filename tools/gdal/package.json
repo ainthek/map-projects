@@ -1,0 +1,18 @@
+{
+  "name": "elev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gpxElevation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "htmlparser2": "^4.1.0",
+    "split2": "^3.1.1",
+    "xml2js": "^0.4.23",
+    "xmlreader": "^0.2.3"
+  }
+}

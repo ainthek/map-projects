@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ogr2ogr -f KML /vsistdout/ "${1}"
+ogr2ogr -f KML /vsistdout/ "${1}" 

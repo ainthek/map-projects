@@ -1,5 +1,11 @@
 # Work Log
 
+## 2.4.2020
+
+Comparing elevation profiles continued
+
+
+
 ## 1.4.2020
 
 New toy , suunto spartan watch, new problems FIT format.

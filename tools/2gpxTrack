@@ -1,3 +1,3 @@
 #!/bin/bash
 
-GPX_ELE_AS_25D=YES ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES  "${1}.gdal.gpx" "${1}"
+GPX_ELE_AS_25D=YES ogr2ogr -f GPX -lco FORCE_GPX_TRACK=YES -dsco GPX_USE_EXTENSIONS=YES  "${1}.gdal.gpx" "${1}"
