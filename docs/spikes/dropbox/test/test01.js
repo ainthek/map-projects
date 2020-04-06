@@ -3,7 +3,7 @@ import { gpx } from "../lib/gpx.js";
 import assert from "assert";
 import { promises as fs } from "fs";
 import xml2js from "xml2js";
-const { Parser,Builder } = xml2js;
+const { Parser, Builder } = xml2js;
 import { dirname, filename } from 'dirname-filename-esm';
 
 /* beautify preserve:start */
@@ -34,5 +34,5 @@ it("addAutostops", async function() {
   g1.addAutostops();
   const xml = new Builder().buildObject(g1.valueOf()).toString();
 
-  await fs.writeFile(`${__dirname}/data/time.autostops.gpx`,xml);
+  await fs.writeFile(`${__dirname}/data/time.autostops.gpx`, xml);
 });

@@ -79500,87 +79500,87 @@
   </trk>
   <wpt>
     <wpt lat="48.20744932629168" lon="17.121258387342095">
-      <name>0.0.1266 - pause for 130000 ms</name>
+      <name>0.0.1266 - pause for 2 m, 10 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.207449913024902" lon="17.121195187792182">
-      <name>0.0.1268 - pause for 62000 ms</name>
+      <name>0.0.1268 - pause for 1 m, 2 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.207457205280662" lon="17.121314713731408">
-      <name>0.0.1302 - pause for 132000 ms</name>
+      <name>0.0.1302 - pause for 2 m, 12 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.210378969088197" lon="17.120206290856004">
-      <name>0.0.2601 - pause for 72000 ms</name>
+      <name>0.0.2601 - pause for 1 m, 12 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.23230049572885" lon="17.110486133024096">
-      <name>1.0.1108 - pause for 170000 ms</name>
+      <name>1.0.1108 - pause for 2 m, 50 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.232276607304811" lon="17.110447911545634">
-      <name>1.0.1111 - pause for 102000 ms</name>
+      <name>1.0.1111 - pause for 1 m, 42 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.232258670032024" lon="17.110427711158991">
-      <name>1.0.1115 - pause for 132000 ms</name>
+      <name>1.0.1115 - pause for 2 m, 12 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.222770523279905" lon="17.104161232709885">
-      <name>1.0.1504 - pause for 69000 ms</name>
+      <name>1.0.1504 - pause for 1 m, 9 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183660479262471" lon="17.099150866270065">
-      <name>1.0.3216 - pause for 61000 ms</name>
+      <name>1.0.3216 - pause for 1 m, 1 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183885281905532" lon="17.099250024184585">
-      <name>1.0.3242 - pause for 89000 ms</name>
+      <name>1.0.3242 - pause for 1 m, 29 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.18386466242373" lon="17.099248599261045">
-      <name>1.0.3243 - pause for 112000 ms</name>
+      <name>1.0.3243 - pause for 1 m, 52 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183875139802694" lon="17.099209204316139">
-      <name>1.0.3244 - pause for 234000 ms</name>
+      <name>1.0.3244 - pause for 3 m, 54 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183881677687168" lon="17.099220184609294">
-      <name>1.0.3246 - pause for 87000 ms</name>
+      <name>1.0.3246 - pause for 1 m, 27 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183864075690508" lon="17.099228566512465">
-      <name>1.0.3247 - pause for 119000 ms</name>
+      <name>1.0.3247 - pause for 1 m, 59 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183868434280157" lon="17.099206522107124">
-      <name>1.0.3255 - pause for 65000 ms</name>
+      <name>1.0.3255 - pause for 1 m, 5 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183873631060123" lon="17.099235691130161">
-      <name>1.0.3256 - pause for 118000 ms</name>
+      <name>1.0.3256 - pause for 1 m, 58 s</name>
     </wpt>
   </wpt>
   <wpt>
     <wpt lat="48.183877822011709" lon="17.099206438288093">
-      <name>1.0.3257 - pause for 110000 ms</name>
+      <name>1.0.3257 - pause for 1 m, 50 s</name>
     </wpt>
   </wpt>
 </gpx>

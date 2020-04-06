@@ -9,8 +9,8 @@ class Gpx {
     trk.forEach(trk => trk.trkseg.forEach(trkseg => trkseg.trkpt.forEach(addTimeStats)));
 
   }
-  valueOf(){
-  	return this.js;
+  valueOf() {
+    return this.js;
   }
   addAutostops() {
 
@@ -25,7 +25,7 @@ class Gpx {
         wpt.push({
           wpt: {
             "$": { lat, lon },
-            "name": `${trk_id}.${trkseq_id}.${i} - pause for ${trkpt.time_stats.time_delta} ms`
+            "name": `${trk_id}.${trkseq_id}.${i} - pause for ${formatDelta(trkpt.time_stats.time_delta)}`
           }
         })
       }
@@ -98,6 +98,17 @@ function addTimeStats(trkpt, i, trkpts) {
   Object.defineProperty(trkpt, "time_stats", { value: { time_mils, time_delta } });
 }
 
+function formatDelta(milliSecondsIn) {
+
+  let secsIn = ~~(milliSecondsIn / 1000),
+    ms = milliSecondsIn % 1000,
+    h = ~~(secsIn / 3600),
+    remainder = secsIn % 3600,
+    m = ~~(remainder / 60),
+    s = remainder % 60;
+
+  return Object.entries({ h, m, s, ms }).filter(([k, v]) => v).map(([k, v]) => `${v} ${k}`).join(", ");
+}
 
 
 export { gpx };
