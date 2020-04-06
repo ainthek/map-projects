@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "dropbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.8",
+    "browserify": "^16.5.1",
+    "dirname-filename-esm": "^1.0.1",
+    "live-server": "^1.2.1",
+    "mocha": "^7.1.1"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  }
+}
