@@ -3,17 +3,36 @@
 
 <head>
   <title>Demo For drag and Drop</title>
+  <link href="./gpx-smoother/css/smoother.css" rel="stylesheet" type="text/css">
+  <script src="./gpx-smoother/js/d3.v5.min.js" charset="utf-8"></script>
+  <script src="./gpx-smoother/js/jquery.v2.0.3.min.js"></script>
+  <script src="./gpx-smoother/js/utilities.js"></script>
+  <script src="./gpx-smoother/js/gpxFile.js"></script>
+  <script src="./gpx-smoother/js/VincentyFormula.js"></script>
+  <script src="./gpx-smoother/js/areaGraph.js"></script>
   <script src="./lib/xml2js.js"></script>
 </head>
 
-<body>
-  <div id="dropbox" style="height:200px;width:200px;border:1px solid black;">
+<body class="gpxSmoother">
+  <!--<div id="dropbox" style="height:200px;width:200px;border:1px solid black;">
     drag your files here
+  </div>-->
+  <div id="chart"></div>
+  <div class="instruct legend">
+    <div class="original">
+      <span class="swatch"></span>
+      <div class="checkbox inline show-original" title="Show or Hide Original">
+        <input id="show-original" type="checkbox" checked/>
+        <label for="show-original">Original</label>
+      </div>
+    </div>
+    <span class="modified"><span class="swatch"></span><span>New</span></span>
+    <div class="slope-legend-wrapper">
+      <span class="slope-legend"></span><span>Slope</span>
+    </div>
   </div>
-
-  
+  <div class="average">Average Slope:<span class="avg"></span></div>
   <script src="./index.js" type="module"></script>
-	
 </body>
 
 </html>

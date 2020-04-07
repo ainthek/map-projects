@@ -1,5 +1,13 @@
 # Work Log
 
+## 8.4.2020
+
+Pozri komity
+
++ http://wiki.freemap.sk/HomePage toto ozaj treba zacat citat.
+
+
+
 ## 2.4.2020
 
 Comparing elevation profiles continued
