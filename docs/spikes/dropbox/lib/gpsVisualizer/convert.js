@@ -1,13 +1,14 @@
 // https://stackoverflow.com/questions/44021538/how-to-send-a-file-in-request-node-fetch-or-node
 
+export { convert };
+
 import fetch from "node-fetch";
 import FormData from "form-data";
-import fs from "fs";
 import { parseLinks } from "./parseLinks.js";
-
+import url from "url";
 const BASE = "https://www.gpsvisualizer.com";
 
-const params = {
+const DEFAULTS = {
   convert_format: "gpx",
   convert_delimiter: "tab",
   units: "metric",
@@ -18,38 +19,54 @@ const params = {
   add_elevation: "auto",
   show_trk: 1
 };
+function convert(params, files) {
 
-const formData = new FormData();
-formData.append('uploaded_file_1',
-  fs.readFileSync("test/data/simple.gpx"), { filename: 'simple.gpx', contentType: 'application/octet-stream' }
-);
-for (const p in params) {
-  formData.append(p, params[p])
+  params = Object.assign({}, DEFAULTS, params);
+
+  const formData = new FormData();
+
+  files.forEach((file, i) => {
+    formData.append(`uploaded_file_${i+1}`, file, {
+      filename: `sample${i+1}.gpx`,
+      contentType: 'application/octet-stream'
+    })
+  })
+  for (const p in params) {
+    formData.append(p, params[p])
+  }
+  return fetch(`${BASE}/convert?output`, {
+      "body": formData,
+      //	
+      "credentials": "include",
+      "headers": {
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15",
+        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+        "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+        "cache-control": "no-cache",
+        "pragma": "no-cache",
+        "sec-fetch-dest": "document",
+        "sec-fetch-mode": "navigate",
+        "sec-fetch-site": "same-origin",
+        "sec-fetch-user": "?1",
+        "upgrade-insecure-requests": "1"
+      },
+      "referrer": `$BASEconvert_input?convert_format=gpx`,
+      "referrerPolicy": "no-referrer-when-downgrade",
+      "method": "POST",
+      "mode": "cors"
+    })
+    .then((response) => {
+      return parseLinks(response.body);
+    })
+    .then((links) => links.map((link) => url.resolve(BASE, link)))
+    .then((links) => {
+      const done = links.map((link) => {
+        return fetch(link)
+          .then(response => response.text());
+      })
+      return Promise.all(done);
+    })
 }
-
-fetch(`${BASE}/convert?output`, {
-  "body": formData,
-  //	
-  "credentials": "include",
-  "headers": {
-    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-    "cache-control": "no-cache",
-    "pragma": "no-cache",
-    "sec-fetch-dest": "document",
-    "sec-fetch-mode": "navigate",
-    "sec-fetch-site": "same-origin",
-    "sec-fetch-user": "?1",
-    "upgrade-insecure-requests": "1"
-  },
-  "referrer": `$BASEconvert_input?convert_format=gpx`,
-  "referrerPolicy": "no-referrer-when-downgrade",
-  "method": "POST",
-  "mode": "cors"
-}).then((response) => {
-  return parseLinks(response.body);
-}).then(console.log);
 
 // https://stackoverflow.com/questions/44021538/how-to-send-a-file-in-request-node-fetch-or-node
 

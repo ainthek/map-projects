@@ -1,0 +1,21 @@
+<gpx version="1.0" creator="GPS Visualizer https://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+  <trk>
+    <name>Bratislava Horské bicyklovanie</name>
+    <trkseg>
+      <trkpt lat="48.201424666" lon="17.144238129">
+        <ele>146.096</ele>
+        <time>2020-03-31T14:22:52Z</time>
+      </trkpt>
+      <trkpt lat="48.20144101" lon="17.144193789">
+        <ele>146.169</ele>
+        <time>2020-03-31T14:22:53Z</time>
+        <speed>3.76</speed>
+      </trkpt>
+      <trkpt lat="48.201455763" lon="17.144153556">
+        <ele>146.277</ele>
+        <time>2020-03-31T14:22:54Z</time>
+        <speed>3.41</speed>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
