@@ -2,6 +2,7 @@
 
 Just experiments with geo data, and additional infos (tests) and additional objects (3d models) and various engines and frameworks.
 
+
 Topics of interest
 
 - Authoring Maps
@@ -20,7 +21,7 @@ Comparison:
 # Authoring Maps
 
 Creating your own maps, sharing maps, contributing to global maps.
-
+- [freemap.sk]
 - [Google MyMaps]
 - [uMap]
 - [Google Earth Web]
@@ -383,7 +384,7 @@ toto sa zda ze IDE:
 -------------------------------------
 
 References:
-
+[freemap.sk]: http://wiki.freemap.sk/HomePage
 [uMap]: https://umap.openstreetmap.fr
 [Google MyMaps]: https://google.com/mymaps
 [Google Earth Web]: https://earth.google.com/web/
