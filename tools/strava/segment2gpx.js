@@ -45,4 +45,10 @@ fetch(`https://www.strava.com/api/v3/segments/${SEGMENT_ID}`, { //TODO: sanitize
     xml.end();
   })
 
+  const { Transform } = require("stream");
+  
+  
+  
+  
+
 
