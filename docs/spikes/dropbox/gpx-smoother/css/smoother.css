@@ -218,11 +218,11 @@ rect.pane {
   fill: transparent;
 }
 .line1 {
-  stroke: blue;
+  stroke: gray;
   fill: transparent;
 }
 .line2 {
-  stroke: green;
+  stroke: blue;
   fill: transparent;
 }
 .line3 {
@@ -231,6 +231,10 @@ rect.pane {
 }
 .line4 {
   stroke: yellow;
+  fill: transparent;
+}
+.line5 {
+  stroke: green;
   fill: transparent;
 }
 

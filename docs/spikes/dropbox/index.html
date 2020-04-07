@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Demo For drag and Drop</title>
+  <title>Compare GPX elevation profiles</title>
   <link href="./gpx-smoother/css/smoother.css" rel="stylesheet" type="text/css">
   <script src="./gpx-smoother/js/d3.v5.min.js" charset="utf-8"></script>
   <script src="./gpx-smoother/js/jquery.v2.0.3.min.js"></script>
@@ -14,11 +14,13 @@
 </head>
 
 <body class="gpxSmoother">
+  <h1>Compare GPX elevation profiles</h1>
+  Drag multiple files on the page (1-5 supported now)
   <!--<div id="dropbox" style="height:200px;width:200px;border:1px solid black;">
     drag your files here
   </div>-->
   <div id="chart"></div>
-  <div class="instruct legend">
+  <div class="instruct legend" style="visibility:hidden">
     <div class="original">
       <span class="swatch"></span>
       <div class="checkbox inline show-original" title="Show or Hide Original">
@@ -31,7 +33,7 @@
       <span class="slope-legend"></span><span>Slope</span>
     </div>
   </div>
-  <div class="average">Average Slope:<span class="avg"></span></div>
+  <div style="visibility:hidden" class="average">Average Slope:<span class="avg"></span></div>
   <script src="./index.js" type="module"></script>
 </body>
 
