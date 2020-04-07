@@ -6,10 +6,11 @@ import * as _fs from "fs";
 
 import xml2js from "xml2js";
 const { Parser, Builder } = xml2js;
-import {tracks as mergeTracks} from "../lib/gpsVisualizer/merge.js";
+import { tracks as mergeTracks } from "../lib/gpsVisualizer/merge.js";
 
 import { dirname, filename } from 'dirname-filename-esm';
 import { parseLinks } from "../lib/gpsVisualizer/parseLinks.js";
+import { stats } from "../lib/statsXmlIml.js";
 
 import deepmerge from "deepmerge";
 
@@ -18,6 +19,12 @@ import deepmerge from "deepmerge";
 const __dirname = dirname(import.meta);
 const __filename = filename(import.meta);
 /* beautify preserve:end */
+
+it("xml stats", () => {
+  const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
+  const js = await new Parser().parseStringPromise(strXML);
+  console.log(JSON.stringify(stats(), null, 2));
+});
 
 it("merge", async () => {
   const original = '<?xml version="1.0" encoding="UTF-8"?>\n' +
