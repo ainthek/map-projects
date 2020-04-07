@@ -6,10 +6,11 @@ import * as _fs from "fs";
 
 import xml2js from "xml2js";
 const { Parser, Builder } = xml2js;
+import {tracks as mergeTracks} from "../lib/gpsVisualizer/merge.js";
 
 import { dirname, filename } from 'dirname-filename-esm';
 import { parseLinks } from "../lib/gpsVisualizer/parseLinks.js";
-import {tracks as mergeTracks} from "../lib/gpsVisualizer/merge.js";
+
 import deepmerge from "deepmerge";
 
 
