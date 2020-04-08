@@ -10,22 +10,30 @@ import { tracks as mergeTracks } from "../lib/gpsVisualizer/merge.js";
 
 import { dirname, filename } from 'dirname-filename-esm';
 import { parseLinks } from "../lib/gpsVisualizer/parseLinks.js";
-import { stats } from "../lib/statsXmlIml.js";
-
+//import { stats } from "../lib/statsXmlIml.js";
+import { str2dom } from "../lib/xmlReadFile.js";
 import deepmerge from "deepmerge";
-
+import jsdom from "jsdom";
 
 /* beautify preserve:start */
 const __dirname = dirname(import.meta);
 const __filename = filename(import.meta);
 /* beautify preserve:end */
 
-it("xml stats", () => {
-  const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
-  const js = await new Parser().parseStringPromise(strXML);
-  console.log(JSON.stringify(stats(), null, 2));
-});
 
+it("str2dom POC", async () => {
+  const { JSDOM } = jsdom;
+  let { DOMParser, XMLDocument, Document } = new JSDOM().window;
+  let test = new DOMParser().parseFromString("<aaa/>", "text/xml");
+  assert(test instanceof Document);
+  //.window.DOMParser;
+  str2dom("<aaa/>");
+});
+it("str2dom on GPX file", async () => {
+  const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
+  const dom = str2dom(strXML)
+  console.log(dom);
+});
 it("merge", async () => {
   const original = '<?xml version="1.0" encoding="UTF-8"?>\n' +
     '<gpx creator="Garmin Connect" version="1.1"\n' +
@@ -132,7 +140,7 @@ it("parseLinks stream", () => {
 
 });
 
-it("test", async function() {
+it("test", async function () {
   assert(true);
   //const strXML = await fs.readFile(`${__dirname}/data/multi.gpx`);
   const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
@@ -144,7 +152,7 @@ it("test", async function() {
 
 });
 
-it("addAutostops", async function() {
+it("addAutostops", async function () {
 
   //const strXML = await fs.readFile(`${__dirname}/data/multi.gpx`);
   const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);

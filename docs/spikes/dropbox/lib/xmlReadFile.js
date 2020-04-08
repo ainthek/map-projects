@@ -1,4 +1,9 @@
 export { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js };
+
+// for browser this is resolved as window.* for node it is polyfilled
+import { DOMParser, Document, ProcessingInstruction } from "./DomParser.js"
+
+
 // TODO: full streaming support where possible, 
 // but it seems impossible form xml2js and
 // for DOMParser myst investigate 
@@ -8,7 +13,7 @@ export { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js };
 function readFileAsString(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onloadend = function() {
+    reader.onloadend = function () {
       const { result, error } = this;
       if (error) return reject(error);
       return resolve(result);
@@ -32,12 +37,13 @@ function str2dom(src) {
   let key = `a` + Math.random().toString(32);
   let parser = new DOMParser;
   let doc = null;
+  debugger;
   try {
     doc = parser.parseFromString(
       src + `<?${key}?>`, `application/xml`);
-  } catch (_) {}
-
-  if (!(doc instanceof XMLDocument)) {
+  } catch (_) { }
+ 
+  if (!(doc instanceof Document)) {
     throw new Error("Failed to parse xml");
   }
 
@@ -57,9 +63,9 @@ function str2dom(src) {
     try {
       errDoc = parser.parseFromString(
         src + `<?`, `application/xml`);
-    } catch (_) {}
+    } catch (_) { }
 
-    if (!(errDoc instanceof XMLDocument) ||
+    if (!(errDoc instanceof Document) ||
       errDoc.documentElement.getElementsByTagName(`parsererror`).length === errElemCount) {
       throw new Error("Failed to parse xml");
     }

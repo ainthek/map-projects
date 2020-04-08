@@ -1,6 +1,24 @@
 # Work Log
-
 ## 8.4.2020
+
+Going to rewrite chart and choose and learn some charting library
+Also going to play wit VS Code on mac and see how it compares to my Zero Style in sublibe
+
+- https://www.freecodecamp.org/news/how-to-set-up-vscode-to-improve-your-productivity-fb14c81d4991/
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+
+- https://dev.to/kirillkonshin/react-jsx-es-module-imports-dynamic-too-in-browser-without-webpack-2pbi
+- https://learningd3.com/blog/using-es6-with-d3/
+
+- https://observablehq.com/@observablehq/a-taste-of-observable
+
+- https://www.data-to-viz.com/caveat/spaghetti.html
+
+- http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html
+
+- https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/
+
+## 7.4.2020
 
 Pozri komity
 

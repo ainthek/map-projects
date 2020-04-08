@@ -1,3 +1,6 @@
+// unfinisher reimplementation of gpxFile in JS
+// seems ugly and terrible with JS, so gpxXmlImpl.js started
+
 class Gpx {
   constructor(js) {
 
