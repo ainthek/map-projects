@@ -1,7 +1,7 @@
 export { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js };
 
 // for browser this is resolved as window.* for node it is polyfilled
-import { DOMParser, Document, ProcessingInstruction } from "./DomParser.js"
+import { DOMParser, Document, ProcessingInstruction } from "./DOMParser.js"
 
 
 // TODO: full streaming support where possible, 
