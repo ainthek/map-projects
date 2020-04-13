@@ -5,19 +5,27 @@
 </head>
 
 <body>
-  <h1>Compare GPS files</h1>
-  Drag your files from disk anywhere on the screen
+  <h1>GPX Compare</h1>
+  Drag your files from disk anywhere on the screen,
+  to see chart of your tracks.
 
-  <div id="chart"></div>
-  <div id="legend"></div>
+  <section id="examples" class="compare">
+    <h2>Sample chart</h2>
+
+  </section>
+
 </body>
 <script type="module">
   import parseTrackpoints from "../lib/parseTrackpoints.js";
-  import drawChart from "../lib/chart.js";
+  import { drawChart, drawLegend } from "../lib/chart.js";
 
   const fileNames = [
+    "./samples/00-gps.gpx",
     "./samples/01-srtm1.gpx",
-    "./samples/02-dem3_5.gpx"
+    "./samples/02-dmr3_5.gpx",
+    "./samples/03-dmr5.gpx",
+    //"./samples/04-dem5-simplified.gpx"
+
   ];
   const data = fileNames.map(fileName =>
     d3.xml(fileName)
@@ -27,12 +35,30 @@
         trackPoints,
       }))
   );
-  Promise.all(data).then(drawChart);
+  Promise.all(data).then((data) => {
+    drawChart(data, d3.select("#examples").append("div"));
+    drawLegend(data, d3.select("#examples").append("div"));
+  });
 
   import { dropbox } from "../lib/dropbox.js";
+  import { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js } from "../lib/xmlReadFile.js";
   dropbox(document.getElementsByTagName("html")[0], handleFiles);
-  function handleFiles(){
-    console.log("handleFiles");
+  function handleFiles(files) {
+    console.log("files", files)
+    const data = Array.from(files).map(file =>
+      readFileAsDom(file)
+        .then(parseTrackpoints)
+        .then(trackPoints => ({
+          fileName: file.name,
+          trackPoints,
+        }))
+    );
+    Promise.all(data).then((data) => {
+      const s = d3.select("body").append("section");
+      s.append("h2").html(`Chart ${d3.selectAll("section").size()}`)
+      drawChart(data, s.append("div"));
+      drawLegend(data, s.append("div"));
+    });
   }
 
 </script>

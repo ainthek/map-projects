@@ -23,11 +23,11 @@ function readFileAsString(file) {
 }
 
 function readFileAsDom(file) {
-  return readFileAsString().then(str2xml);
+  return readFileAsString(file).then(str2dom);
 }
 
 function readFileAsJs(file) {
-  return readFileAsString().then(str2js);
+  return readFileAsString(file).then(str2js);
 }
 
 function str2dom(src) {
@@ -37,7 +37,7 @@ function str2dom(src) {
   let key = `a` + Math.random().toString(32);
   let parser = new DOMParser;
   let doc = null;
-  debugger;
+  //debugger;
   try {
     doc = parser.parseFromString(
       src + `<?${key}?>`, `application/xml`);

@@ -1,9 +1,10 @@
 import distVincenty from "./distVincenty.js";
+const MISSING_ELE = { textContent: 0 };
 const trkpt2js = (point, i, points) => ({
     lat: +point.getAttribute("lat"),
     lon: +point.getAttribute("lat"),
     time: Date.parse(point.getElementsByTagName("time")[0].textContent),
-    ele: +point.getElementsByTagName("ele")[0].textContent
+    ele: +(point.getElementsByTagName("ele")[0] || MISSING_ELE).textContent
 });
 const addDistance = (point, i, points) => {
     const previous = points[i - 1];

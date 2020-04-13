@@ -1,6 +1,6 @@
-export default drawChart;
+export { drawChart, drawLegend };
 
-function drawChart(data) {
+function drawChart(data, element) {
 
   const xDomain = d3.extent(
     data.map(({ trackPoints }) => trackPoints).flat(),
@@ -14,7 +14,7 @@ function drawChart(data) {
 
   const chartWidth = 860;
   const chartHeight = 300;
-  const chartMargins = { top: 10, right: 100, bottom: 50, left: 50 };
+  const chartMargins = { top: 10, right: 10, bottom: 50, left: 50 };
   const width = chartWidth - chartMargins.right - chartMargins.left;
   const height = chartHeight - chartMargins.top - chartMargins.bottom;
 
@@ -29,7 +29,7 @@ function drawChart(data) {
 
 
   // UI
-  const svg = d3.select('#chart').append('svg')
+  const svg = element.append('svg')
     .attr('width', chartWidth)
     .attr('height', chartHeight);
 
@@ -66,9 +66,10 @@ function drawChart(data) {
       .attr("r", 1)
       .attr("fill", d3.schemeCategory10[i])
   })
-
+}
+function drawLegend(data,element) {
   //create unordered list
-  var legend = d3.select("#legend")
+  var legend = element
     .append("ul")
     .attr("class", "legend");
 
