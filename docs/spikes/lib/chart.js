@@ -31,7 +31,7 @@ function drawChart(data, element) {
   // UI
   const svg = element.append('svg')
     .attr("viewBox", [0, 0, chartWidth, chartHeight])
-    //.attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
+  //.attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
 
 
   const gChart = svg.append('g')
@@ -79,9 +79,9 @@ function drawChart(data, element) {
   })
 
   // TODO: zoom 
+  // http://codexe.net/d3/d3-zoomable-line-chart.html
   // https://observablehq.com/@d3/zoomable-scatterplot
-
-  //https://bl.ocks.org/EfratVil/d956f19f2e56a05c31fb6583beccfda7
+  // https://bl.ocks.org/EfratVil/d956f19f2e56a05c31fb6583beccfda7
 
   // var clip = svg.append("defs")
   //   .append("svg:clipPath")
