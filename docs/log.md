@@ -1,6 +1,7 @@
 # Work Log
 
 ## 13.4.2020
+- https://www.freecodecamp.org/news/get-ready-to-zoom-and-pan-like-a-pro-after-reading-this-in-depth-tutorial-5d963b0a153e/
 - http://dimplejs.org/
 - https://observablehq.com/@d3/multi-line-chart
 - https://www.knoyd.com/blog/2017/7/4/traveling-the-world-in-d3-part-3

@@ -10,9 +10,9 @@ function drawChart(data, element) {
     data.map(({ trackPoints }) => trackPoints).flat(),
     point => point.ele
   );
-  console.log({ xDomain, yDomain });
+  //clip.log({ xDomain, yDomain });
 
-  const chartWidth = 860;
+  const chartWidth = 600;
   const chartHeight = 300;
   const chartMargins = { top: 10, right: 50, bottom: 50, left: 50 };
   const width = chartWidth - chartMargins.right - chartMargins.left;
@@ -30,10 +30,13 @@ function drawChart(data, element) {
 
   // UI
   const svg = element.append('svg')
-    .attr("viewBox", [0, 0, chartWidth, chartHeight]);
+    .attr("viewBox", [0, 0, chartWidth, chartHeight])
+    //.attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
+
 
   const gChart = svg.append('g')
     .attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
+
 
   // const gX = svg.append("g");
   // const gY = svg.append("g");
@@ -63,41 +66,48 @@ function drawChart(data, element) {
   }
   const gDot = gChart.append('g')
     .attr("fill", "none")
-    .attr("stroke-linecap", "round");
+    .attr("stroke-linecap", "round")
   // draw data
   data.forEach(({ trackPoints }, i) => {
-    // gDots.selectAll("dot")
-    //   .data(trackPoints)
-    //   .enter()
-    //   .append("circle")
-    //   .attr("cx", (d) => xScale(d.distance.total))
-    //   .attr("cy", (d) => yScale(d.ele))
-    //   .attr("r", 1)
-    //   .attr("fill", d3.schemeCategory10[i])
     gDot.selectAll("tracks")
       .data(trackPoints)
       .enter()
       .append("path")
-      .attr("d", d => (console.log(d), `M${xScale(d.distance.total)},${yScale(d.ele)}h0`))
+      .attr("d", d => `M${xScale(d.distance.total)},${yScale(d.ele)}h0`)
       .attr("stroke-width", 1)
       .attr("stroke", d3.schemeCategory10[i]);
   })
 
   // TODO: zoom 
   // https://observablehq.com/@d3/zoomable-scatterplot
+
+  //https://bl.ocks.org/EfratVil/d956f19f2e56a05c31fb6583beccfda7
+
+  // var clip = svg.append("defs")
+  //   .append("svg:clipPath")
+  //   .attr("id", "clip")
+  //   .append("svg:rect")
+  //   .attr("width", width)
+  //   .attr("height", height)
+  //   .attr("x",chartMargins.left)
+
+
+  //   gDot.attr("clip-path", "url(#clip)");
+
   const zoom = d3.zoom()
-    //.scaleExtent([0.5, 32])
     .on("zoom", zoomed);
 
   function zoomed() {
     const transform = d3.event.transform;
-    console.log("zoomed", transform);
+
     const zx = transform.rescaleX(xScale).interpolate(d3.interpolateRound);
     const zy = transform.rescaleY(yScale).interpolate(d3.interpolateRound);
-    gDot.attr("transform", transform);//.attr("stroke-width", 1);;
     gAxisX.call(xAxis, zx);
     gAxisY.call(yAxis, zy);
-    //gGrid.call(grid, zx, zy);
+
+    gDot.attr("transform", transform);//.attr("stroke-width", 1);;
+
+
   }
   svg.call(zoom).call(zoom.transform, d3.zoomIdentity);
 
