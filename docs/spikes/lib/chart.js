@@ -1,9 +1,9 @@
 export { drawChart, drawLegend };
 
 function drawChart(data, element) {
-  const chartWidth = 600;
-  const chartHeight = 300;
-  var margin = { top: 20, right: 20, bottom: 50, left: 70 };
+  const chartWidth = 1000;
+  const chartHeight = 400;
+  var margin = { top: 20, right: 20, bottom: 20, left: 20 };
   var width = chartWidth - margin.left - margin.right;
   var height = chartHeight - margin.top - margin.bottom;
 
@@ -24,11 +24,13 @@ function drawChart(data, element) {
 
   const xScale = d3.scaleLinear()
     .range([0, width])
-    .domain(xDomain);
+    .domain(xDomain)
+    .nice();
 
   const yScale = d3.scaleLinear()
     .range([height, 0])
-    .domain(yDomain);
+    .domain(yDomain)
+    .nice();
 
   var lineGroup = svg.append("g")
   var line = d3.line()
@@ -71,7 +73,7 @@ function drawChart(data, element) {
     yAxisGroup.call(yAxis.scale(d3.event.transform.rescaleY(yScale)));//rescaleY - change the yScale domain with the transforming info
   }
   element.select("svg").call(zoom);
-
+  //svg.call(zoom).call(zoom.transform, d3.zoomIdentity);
   //add clip path to the svg
 
   d3.select("svg").append("defs").append("clipPath").attr("id", "clip")
