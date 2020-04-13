@@ -93,6 +93,7 @@ AreaGraph = function() {
         " " + xScale(datum.previous.totalDistance) + "," + yScale(datum.previous.ele) +
         " " + xScale(datum.previous.totalDistance) + "," + yScale(yScale.domain()[0]);
     });
+    
     miniSvg.select(".x.axis").call(miniXAxis);
     miniSvg.select(".y.axis").call(miniYAxis);
     miniSvg.selectAll("path.elevation").attr("d", miniElevationLine);

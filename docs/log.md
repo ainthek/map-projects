@@ -1,4 +1,24 @@
 # Work Log
+
+## 13.4.2020
+- http://dimplejs.org/
+- https://observablehq.com/@d3/multi-line-chart
+- https://www.knoyd.com/blog/2017/7/4/traveling-the-world-in-d3-part-3
+- <https://d3fc.io/>
+- Kalman filter https://stackoverflow.com/questions/1134579/smooth-gps-data
+- http://dimplejs.org/advanced_examples_viewer.html?id=advanced_interactive_legends
+
+
+## 12.4.2020
+- https://observablehq.com/@d3/focus-context?collection=@d3/d3-brush
+
+- https://www.intothevoid.io/data-visualization/understanding-d3-data-vs-datum/
+
+- https://developer.here.com/blog/visualizing-large-scale-terrain-with-open-source-tool-tin-terrain
+- https://blog.mastermaps.com/2013/11/showing-gps-tracks-in-3d-with-threejs.html
+
+- https://softwareengineering.stackexchange.com/questions/293525/is-there-any-practical-way-for-a-linked-node-structure-to-be-immutable
+
 ## 8.4.2020
 
 Going to rewrite chart and choose and learn some charting library

@@ -14,12 +14,42 @@ import { parseLinks } from "../lib/gpsVisualizer/parseLinks.js";
 import { str2dom } from "../lib/xmlReadFile.js";
 import deepmerge from "deepmerge";
 import jsdom from "jsdom";
+import distVincenty from "../lib/distVincenty.js";
+import immutable from "immutable";
+const { List } = immutable;
 
 /* beautify preserve:start */
 const __dirname = dirname(import.meta);
 const __filename = filename(import.meta);
 /* beautify preserve:end */
 
+
+
+it("immutable POC", async () => {
+  const arr = [{ v: 0 }, { v: 1 }, { v: 2 }]
+  // const arr1=arr.map((a,i,arr)=>({
+  //   ...a,
+  //   get d(){
+  //     const previous=arr[i-1];
+  //     return this.v-previous.v;
+  //   }
+  // }));
+  // assert.equal(arr1[2].d,1);
+  // const arr2=arr1.filter((_,i)=>i!=1);
+  // assert.equal(arr2[1].d,2);
+
+  // const list = List(arr).map((a, i, iter) => ({
+  //   ...a,
+  //   get d() {
+  //     console.log(iter);
+  //     const previous=iter.get(i-1);
+  //     return this.v-previous.v;
+  //   }
+  // }))
+  // const list2=list.filter((_,i)=>i!=1);
+  // console.log(list2.get(1).d)
+
+});
 
 it("str2dom POC", async () => {
   const { JSDOM } = jsdom;
@@ -30,13 +60,48 @@ it("str2dom POC", async () => {
   str2dom("<aaa/>");
 });
 it("str2dom on GPX file", async () => {
-  const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
+  const strXML = await fs.readFile(`${__dirname}/../../compare-profiles/samples/01-srtm1.gpx`);
   const dom = str2dom(strXML)
-  console.log(dom);
+  // var xpathResult = document.evaluate(
+  //   xpathExpression,
+  //   contextNode,
+  //   namespaceResolver,
+  //   resultType,
+  //   result
+  // );
+  const trkpt2js = (point, i, points) => ({
+    lat: point.getAttribute("lat"),
+    lon: +point.getAttribute("lat"),
+    ele: +point.getElementsByTagName("ele")[0].textContent
+  });
+  const addDistance = (point, i, points) => {
+    const previous = points[i - 1];
+    const delta = previous ? distVincenty(previous.lat, previous.lon, point.lat, point.lon) : 0;
+    const total = previous ? previous.distance.total + delta : 0;
+    return Object.assign(points[i], {
+      distance: { delta, total }
+    });
+  };
+  const addSlope = (point, i, points) => {
+    const previous = points[i - 1];
+
+    const delta = previous && point.distance.delta ? (point.ele - previous.ele) / point.distance.delta : 0;
+    const total = previous ? previous.slope.total + delta : 0;
+    return Object.assign(points[i], {
+      slope: { delta, total }
+    });
+  }
+  const trkpts = Array.from(dom.getElementsByTagName("trkpt"))
+    .map(trkpt2js)
+    .map(addDistance)
+    .map(addSlope)
+
+    console.log(trkpts);
 });
+
 it("merge", async () => {
-  const original = '<?xml version="1.0" encoding="UTF-8"?>\n' +
-    '<gpx creator="Garmin Connect" version="1.1"\n' +
+  const original = '<?xml version="1.0" encoding="UTF-8"?>\n'
+  '<gpx creator="Garmin Connect" version="1.1"\n' +
     '  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/11.xsd"\n' +
     '  xmlns:ns3="http://www.garmin.com/xmlschemas/TrackPointExtension/v1"\n' +
     '  xmlns="http://www.topografix.com/GPX/1/1"\n' +

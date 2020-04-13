@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+  <h1>Compare GPS files</h1>
+  Drag your files from disk anywhere on the screen
+
+  <div id="chart"></div>
+  <div id="legend"></div>
+</body>
+<script type="module">
+  import parseTrackpoints from "./lib/parseTrackpoints.js";
+  import drawChart from "./lib/chart.js";
+
+  const fileNames = [
+    "./samples/01-srtm1.gpx",
+    "./samples/02-dem3_5.gpx"
+  ];
+  const data = fileNames.map(fileName =>
+    d3.xml(fileName)
+      .then(parseTrackpoints)
+      .then(trackPoints => ({
+        fileName,
+        trackPoints,
+      }))
+  );
+  Promise.all(data).then(drawChart);
+
+  import { dropbox } from "./lib/dropbox.js";
+  dropbox(document.getElementsByTagName("html")[0], handleFiles);
+  function handleFiles(){
+    console.log("handleFiles");
+  }
+
+</script>
+
+</html>
