@@ -1,6 +1,17 @@
 export { drawChart, drawLegend };
 
 function drawChart(data, element) {
+  const chartWidth = 600;
+  const chartHeight = 300;
+  var margin = { top: 20, right: 20, bottom: 50, left: 70 };
+  var width = chartWidth - margin.left - margin.right;
+  var height = chartHeight - margin.top - margin.bottom;
+
+
+  var svg = element.append("svg")
+    .attr("viewBox", [0, 0, chartWidth, chartHeight])
+    .append("g")  //add group to leave margin for axis
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   const xDomain = d3.extent(
     data.map(({ trackPoints }) => trackPoints).flat(),
@@ -10,13 +21,6 @@ function drawChart(data, element) {
     data.map(({ trackPoints }) => trackPoints).flat(),
     point => point.ele
   );
-  //clip.log({ xDomain, yDomain });
-
-  const chartWidth = 600;
-  const chartHeight = 300;
-  const chartMargins = { top: 10, right: 50, bottom: 50, left: 50 };
-  const width = chartWidth - chartMargins.right - chartMargins.left;
-  const height = chartHeight - chartMargins.top - chartMargins.bottom;
 
   const xScale = d3.scaleLinear()
     .range([0, width])
@@ -26,90 +30,56 @@ function drawChart(data, element) {
     .range([height, 0])
     .domain(yDomain);
 
+  var lineGroup = svg.append("g")
+  var line = d3.line()
+    .x(function (d) { return xScale(d.distance.total); })
+    .y(function (d) { return yScale(d.ele); })
+    .curve(d3.curveBasis);//default is d3.curveLinear
 
 
-  // UI
-  const svg = element.append('svg')
-    .attr("viewBox", [0, 0, chartWidth, chartHeight])
-  //.attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
 
-
-  const gChart = svg.append('g')
-    .attr('transform', "translate(" + chartMargins.left + "," + chartMargins.top + ")");
-
-
-  // const gX = svg.append("g");
-  // const gY = svg.append("g");
-  // const gDot = svg.append("g");
-
-  const gAxisX = gChart.append('g')
-  const gAxisY = gChart.append('g')
-
-  const xAxis = (g, scale) => {
-    g.call(d3.axisBottom(scale))
-      .attr('transform', `translate(0, ${height})`)
-      .append('text')
-      .attr('fill', '#333')
-      .attr('y', 35)
-      .attr('x', width / 2)
-      .text('Distance (m)');
-  }
-  const yAxis = (g, scale) => {
-    g.call(d3.axisLeft(scale))
-      .append('text')
-      .attr('fill', '#333')
-      .attr('transform', 'rotate(-90)')
-      .attr('y', -35)
-      .attr('x', -height / 2)
-      .attr('text-anchor', 'end')
-      .text('Height (m)');
-  }
-  const gDot = gChart.append('g')
-    .attr("fill", "none")
-    .attr("stroke-linecap", "round")
-  // draw data
-  data.forEach(({ trackPoints }, i) => {
-    gDot.selectAll("tracks")
-      .data(trackPoints)
-      .enter()
-      .append("path")
-      .attr("d", d => `M${xScale(d.distance.total)},${yScale(d.ele)}h0`)
-      .attr("stroke-width", 1)
-      .attr("stroke", d3.schemeCategory10[i]);
+  data.forEach(({ trackPoints },i) => {
+    var linePath = lineGroup.append("path")
+      .attr("d", line(trackPoints))
+      .attr("fill", "none")
+      .attr("stroke",d3.schemeCategory10[i] )
+      .attr("stroke-width", "1px")
   })
 
-  // TODO: zoom 
-  // http://codexe.net/d3/d3-zoomable-line-chart.html
-  // https://observablehq.com/@d3/zoomable-scatterplot
-  // https://bl.ocks.org/EfratVil/d956f19f2e56a05c31fb6583beccfda7
 
-  // var clip = svg.append("defs")
-  //   .append("svg:clipPath")
-  //   .attr("id", "clip")
-  //   .append("svg:rect")
-  //   .attr("width", width)
-  //   .attr("height", height)
-  //   .attr("x",chartMargins.left)
+  //add line to svg. use path-->to know svg path
+  //must add css class line, you can try to remove it and see the result
 
 
-  //   gDot.attr("clip-path", "url(#clip)");
 
-  const zoom = d3.zoom()
+
+  //add x and y axis
+  var yAxis = d3.axisLeft(yScale).tickSize(-width);
+  var yAxisGroup = svg.append("g").call(yAxis);
+
+  var xAxis = d3.axisBottom(xScale).tickSize(-height);/*.tickFormat("");remove tick label*/
+  var xAxisGroup = svg.append("g").call(xAxis).attr("transform", "translate(0," + height + ")");
+  //add zoom
+  var zoom = d3.zoom()
+    .scaleExtent([1, 30])// less than 1 means can resize smaller than  original size
+    //.translateExtent([[-width, -height], [2 * width, 2 * height]])
     .on("zoom", zoomed);
-
-  function zoomed() {
-    const transform = d3.event.transform;
-
-    const zx = transform.rescaleX(xScale).interpolate(d3.interpolateRound);
-    const zy = transform.rescaleY(yScale).interpolate(d3.interpolateRound);
-    gAxisX.call(xAxis, zx);
-    gAxisY.call(yAxis, zy);
-
-    gDot.attr("transform", transform);//.attr("stroke-width", 1);;
-
-
+  
+    function zoomed() {
+    lineGroup.selectAll("path").attr("transform", d3.event.transform);//move bar chart because we dont want to change the tick scale
+    xAxisGroup.call(xAxis.scale(d3.event.transform.rescaleX(xScale)));//rescaleX - change the xScale domain with the transforming info
+    yAxisGroup.call(yAxis.scale(d3.event.transform.rescaleY(yScale)));//rescaleY - change the yScale domain with the transforming info
   }
-  svg.call(zoom).call(zoom.transform, d3.zoomIdentity);
+  element.select("svg").call(zoom);
+
+  //add clip path to the svg
+
+  d3.select("svg").append("defs").append("clipPath").attr("id", "clip")
+    .append("rect").attr("width", width).attr("height", height);
+  lineGroup.attr("clip-path", "url(#clip)");//line group is in a fixed position and the path will be moved
+
+
+
 
 }
 function drawLegend(data, element) {
