@@ -12,8 +12,8 @@
   <div id="legend"></div>
 </body>
 <script type="module">
-  import parseTrackpoints from "./lib/parseTrackpoints.js";
-  import drawChart from "./lib/chart.js";
+  import parseTrackpoints from "../lib/parseTrackpoints.js";
+  import drawChart from "../lib/chart.js";
 
   const fileNames = [
     "./samples/01-srtm1.gpx",
@@ -29,7 +29,7 @@
   );
   Promise.all(data).then(drawChart);
 
-  import { dropbox } from "./lib/dropbox.js";
+  import { dropbox } from "../lib/dropbox.js";
   dropbox(document.getElementsByTagName("html")[0], handleFiles);
   function handleFiles(){
     console.log("handleFiles");

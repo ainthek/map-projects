@@ -1,4 +1,4 @@
-import { gpx } from "../lib/gpx.js";
+import { gpx } from "../../lib/gpx.js";
 
 import assert from "assert";
 import { promises as fs } from "fs";
@@ -6,15 +6,15 @@ import * as _fs from "fs";
 
 import xml2js from "xml2js";
 const { Parser, Builder } = xml2js;
-import { tracks as mergeTracks } from "../lib/gpsVisualizer/merge.js";
-
+import { tracks as mergeTracks } from "../../lib/gpsVisualizer/merge.js";
+import { parseLinks } from "../../lib/gpsVisualizer/parseLinks.js";
 import { dirname, filename } from 'dirname-filename-esm';
-import { parseLinks } from "../lib/gpsVisualizer/parseLinks.js";
+
 //import { stats } from "../lib/statsXmlIml.js";
-import { str2dom } from "../lib/xmlReadFile.js";
-import deepmerge from "deepmerge";
+import { str2dom } from "../../lib/xmlReadFile.js";
+
 import jsdom from "jsdom";
-import distVincenty from "../lib/distVincenty.js";
+import distVincenty from "../../lib/distVincenty.js";
 import immutable from "immutable";
 const { List } = immutable;
 
@@ -151,7 +151,7 @@ it("merge", async () => {
     '      </trkpt>\n' +
     '    </trkseg>\n' +
     '  </trk>\n' +
-    '</gpx><!-- test -->\n';
+    '</gpx>';
   const enhanced = '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n' +
     '<gpx version="1.0" creator="GPS Visualizer https://www.gpsvisualizer.com/" xmlns="http://www.topografix.com/GPX/1/0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">\n' +
     '<trk>\n' +
@@ -178,10 +178,11 @@ it("merge", async () => {
   const o = await new Parser().parseStringPromise(original);
   const e = await new Parser().parseStringPromise(enhanced);
 
+ 
   mergeTracks(o, e);
 
   const x = new Builder().buildObject(o).toString()
-  console.log(x);
+  //console.log(x);
 
 
 });
@@ -211,7 +212,7 @@ it("test", async function () {
   const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
   const js = await new Parser().parseStringPromise(strXML);
   const g1 = gpx(js);
-  console.log(JSON.stringify(g1.stats, null, 2));
+  //console.log(JSON.stringify(g1.stats, null, 2));
   // const x = [{ name: 1 }, { name: 2 }].reduce((r,v,k) => (r[`track-${k}`] = v, r), {});
   // console.log(JSON.stringify(x, null, 2));
 
@@ -223,7 +224,7 @@ it("addAutostops", async function () {
   const strXML = await fs.readFile(`${__dirname}/data/time.gpx`);
   const js = await new Parser().parseStringPromise(strXML);
   const g1 = gpx(js);
-  console.log(JSON.stringify(g1.stats, null, 2));
+  //console.log(JSON.stringify(g1.stats, null, 2));
   g1.addAutostops();
   const xml = new Builder().buildObject(g1.valueOf()).toString();
 

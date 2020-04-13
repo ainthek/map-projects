@@ -1,9 +1,8 @@
 {
   "type": "module",
-  "name": "dropbox",
+  "name": "spikes",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "sample applications",
   "directories": {
     "lib": "lib"
   },

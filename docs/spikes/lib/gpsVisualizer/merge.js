@@ -11,7 +11,7 @@ function tracks(original, enhanced) {
       })
     )
   )
-  console.log()
+ 
   original.gpx.$.creator = [original.gpx.$.creator, enhanced.gpx.$.creator, "@aintek/map-projects"]
     .filter(Boolean).join(" + ")
   

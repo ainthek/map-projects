@@ -1,5 +1,5 @@
-import { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js } from "./lib/xmlReadFile.js";
-import { dropbox } from "./lib/dropbox.js";
+import { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js } from "../lib/xmlReadFile.js";
+import { dropbox } from "../lib/dropbox.js";
 
 main();
 
