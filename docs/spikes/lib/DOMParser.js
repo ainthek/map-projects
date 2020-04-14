@@ -11,21 +11,21 @@
 // zatial som to polepil takto zda sa ze take moduly idu aj v browsri aj v node
 // see also: https://www.npmjs.com/package/node-window-polyfill
 
-export let DOMParser, XMLDocument, Document, ProcessingInstruction;
+export let DOMParser, XMLDocument, Document, ProcessingInstruction,XMLSerializer;
 
 if (globalThis.DOMParser === undefined) {
     import("jsdom").then(module => {
         const { JSDOM } = module.default;
 
         const jsDomInstance = new JSDOM().window;
-        ({ DOMParser, XMLDocument, Document, ProcessingInstruction } = jsDomInstance);
+        ({ DOMParser, XMLDocument, Document, ProcessingInstruction, XMLSerializer } = jsDomInstance);
         // XMLDocument = jsDomInstance.XMLDocument;
         // Document = jsDomInstance.Document;
         // ProcessingInstruction = jsDomInstance.ProcessingInstruction;
     })
 }
 else {
-    ({ DOMParser, XMLDocument, Document, ProcessingInstruction } = globalThis);
+    ({ DOMParser, XMLDocument, Document, ProcessingInstruction,XMLSerializer } = globalThis);
 }
 
 //https://stackoverflow.com/questions/39583958/conditional-expot-in-es2015
