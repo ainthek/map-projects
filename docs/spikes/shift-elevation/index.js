@@ -11,6 +11,7 @@ async function main() {
         
         const input = document.getElementById("input");
         const output = document.getElementById("output");
+        const reference = document.getElementById("reference");
         const shift = document.getElementById("shift");
 
         const inputDom = str2dom(input.value);
@@ -26,6 +27,12 @@ async function main() {
             fileName: `shifted ${Number(shift.value)}`,
             trackPoints: outputTrackpints
         }];
+        if(reference.value){
+            data.push({
+                fileName: "reference", 
+                trackPoints: parseTrackpoints(str2dom(reference.value))
+            })
+        }
         d3.select("#chart").html("");
         d3.select("#legend").html("");
         
@@ -47,6 +54,12 @@ async function main() {
         const str = await readFileAsString(file);
         document.getElementById("input").value = str;
         calculate();
+    })
+    dropbox(document.getElementById("reference"), async function (files) {
+        const file = files[0];
+        const str = await readFileAsString(file);
+        document.getElementById("reference").value = str;
+        //calculate();
     })
 }
 main();

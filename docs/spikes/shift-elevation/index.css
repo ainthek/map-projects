@@ -2,3 +2,9 @@ textarea {
     width:30%;
     height:200px;
 }
+.chart {
+    width:100%
+}
+button{
+    background-color: lightgreen
+}

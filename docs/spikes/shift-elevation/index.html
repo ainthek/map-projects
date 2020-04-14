@@ -6,11 +6,14 @@
 
 <body>
     <h1>Shift Elevation</h1>
-    <textarea placeholder="enter your GPX data here. Copy paset or DRAG file" id="input"></textarea>
+    <textarea placeholder="[optional] if you have reference data, drag here" id="reference"></textarea>
+    <textarea placeholder="[input mandatory] enter your GPX data here. Copy paset or DRAG file" id="input"></textarea>
+    <textarea placeholder="[result] will be here" id="output" readonly></textarea>
+    
+    <br>
     <input placeholder="enter elevation shift in m" id="shift" value="-20" type="number" />
-    <button id="calculate">Shift elevation</button>
-    <textarea placeholder="result will be here" id="output"></textarea>
-    <section >
+    <button id="calculate">Shift elevation</button> 
+    <section class="chart">
         <div id="chart"></div>
         <div id="legend"></div>
     </section>
