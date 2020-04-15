@@ -1,4 +1,6 @@
 # Work Log
+## 15.4.2020
+- https://gis.stackexchange.com/questions/337793/profile-tool-and-gps-data-in-qgis
 
 ## 13.4.2020
 - https://www.freecodecamp.org/news/get-ready-to-zoom-and-pan-like-a-pro-after-reading-this-in-depth-tutorial-5d963b0a153e/
