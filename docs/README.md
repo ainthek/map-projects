@@ -4,7 +4,7 @@ Just experiments with geo data, and additional infos (tests) and additional obje
 
 
 Topics of interest
-
+ 
 - Authoring Maps
 - Publishing Maps
 - Embeding Maps
