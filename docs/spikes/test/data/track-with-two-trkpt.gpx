@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="Garmin" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" >
+  <trk>
+    <name>2 points</name>
+    <type>mountain_biking</type>
+    <trkseg>
+      <trkpt lat="48.201424665749073028564453125" lon="17.14423812925815582275390625">
+        <ele>151.399993896484375</ele>
+        <time>2020-03-31T14:22:52.000Z</time>
+      </trkpt>
+      <trkpt lat="48.20144101046025753021240234375" lon="17.14419378899037837982177734375">
+        <ele>151.600006103515625</ele>
+        <time>2020-03-31T14:22:53.000Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

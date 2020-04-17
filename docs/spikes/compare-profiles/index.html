@@ -19,7 +19,7 @@
 
 </body>
 <script type="module">
-  import parseTrackpoints from "../lib/parseTrackPoints.js";
+  import parseTrackPoints from "../lib/parseTrackPoints.js";
   import { drawChart, drawLegend } from "../lib/chart.js";
 
   const fileNames = [
@@ -32,7 +32,7 @@
   ];
   const data = fileNames.map(fileName =>
     d3.xml(fileName)
-      .then(parseTrackpoints)
+      .then(parseTrackPoints)
       .then(trackPoints => ({
         fileName,
         trackPoints,
@@ -50,7 +50,7 @@
     console.log("files", files)
     const data = Array.from(files).map(file =>
       readFileAsDom(file)
-        .then(parseTrackpoints)
+        .then(parseTrackPoints)
         .then(trackPoints => ({
           fileName: file.name,
           trackPoints,

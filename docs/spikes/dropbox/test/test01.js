@@ -15,8 +15,10 @@ import { str2dom } from "../../lib/xmlReadFile.js";
 
 import jsdom from "jsdom";
 import distVincenty from "../../lib/distVincenty.js";
-import immutable from "immutable";
-const { List } = immutable;
+
+
+
+
 
 /* beautify preserve:start */
 const __dirname = dirname(import.meta);
@@ -25,31 +27,9 @@ const __filename = filename(import.meta);
 
 
 
-it("immutable POC", async () => {
-  const arr = [{ v: 0 }, { v: 1 }, { v: 2 }]
-  // const arr1=arr.map((a,i,arr)=>({
-  //   ...a,
-  //   get d(){
-  //     const previous=arr[i-1];
-  //     return this.v-previous.v;
-  //   }
-  // }));
-  // assert.equal(arr1[2].d,1);
-  // const arr2=arr1.filter((_,i)=>i!=1);
-  // assert.equal(arr2[1].d,2);
 
-  // const list = List(arr).map((a, i, iter) => ({
-  //   ...a,
-  //   get d() {
-  //     console.log(iter);
-  //     const previous=iter.get(i-1);
-  //     return this.v-previous.v;
-  //   }
-  // }))
-  // const list2=list.filter((_,i)=>i!=1);
-  // console.log(list2.get(1).d)
 
-});
+
 
 it("str2dom POC", async () => {
   const { JSDOM } = jsdom;
@@ -96,7 +76,7 @@ it("str2dom on GPX file", async () => {
     .map(addDistance)
     .map(addSlope)
 
-    console.log(trkpts);
+  console.log(trkpts);
 });
 
 it("merge", async () => {
@@ -178,7 +158,7 @@ it("merge", async () => {
   const o = await new Parser().parseStringPromise(original);
   const e = await new Parser().parseStringPromise(enhanced);
 
- 
+
   mergeTracks(o, e);
 
   const x = new Builder().buildObject(o).toString()

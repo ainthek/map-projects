@@ -15,18 +15,19 @@
   "devDependencies": {
     "bower": "^1.8.8",
     "browserify": "^16.5.1",
+    "deepmerge": "^4.2.2",
     "dirname-filename-esm": "^1.0.1",
     "live-server": "^1.2.1",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "traverse": "^0.6.6"
   },
   "dependencies": {
-    "deepmerge": "^4.2.2",
     "form-data": "^3.0.0",
     "htmlparser2": "^4.1.0",
     "immutable": "^4.0.0-rc.12",
     "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
-    "traverse": "^0.6.6",
+    "xlsx": "^0.15.6",
     "xml2js": "^0.4.23"
   }
 }

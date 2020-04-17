@@ -2,7 +2,7 @@ import { dropbox } from "../lib/dropbox.js"
 import { readFileAsString, str2dom } from "../lib/xmlReadFile.js";
 import { XMLSerializer } from "../lib/DOMParser.js";
 import { drawChart, drawLegend } from "../lib/chart.js";
-import parseTrackpoints from "../lib/parseTrackPoints.js";
+import parseTrackPoints from "../lib/parseTrackPoints.js";
 
 async function main() {
     document.getElementById("calculate").onclick = calculate;
@@ -15,10 +15,10 @@ async function main() {
         const shift = document.getElementById("shift");
 
         const inputDom = str2dom(input.value);
-        const inputTrackpints = parseTrackpoints(inputDom);
+        const inputTrackpints = parseTrackPoints(inputDom);
 
         const outputDom = shiftElevation(inputDom, Number(shift.value));
-        const outputTrackpints = parseTrackpoints(outputDom);
+        const outputTrackpints = parseTrackPoints(outputDom);
         output.value = new XMLSerializer().serializeToString(outputDom);
         const data=[{
             fileName: "original",
@@ -30,7 +30,7 @@ async function main() {
         if(reference.value){
             data.push({
                 fileName: "reference", 
-                trackPoints: parseTrackpoints(str2dom(reference.value))
+                trackPoints: parseTrackPoints(str2dom(reference.value))
             })
         }
         d3.select("#chart").html("");

@@ -9,25 +9,24 @@ import url from "url";
 const BASE = "https://www.gpsvisualizer.com";
 
 const DEFAULTS = {
-  convert_format: "gpx",
   convert_delimiter: "tab",
   units: "metric",
   convert_add_speed: 1,
   convert_add_slope: 1,
   convert_add_distance: 1,
   vmg_point: "",
-  add_elevation: "auto",
+  add_elevation: "",
   show_trk: 1
 };
-function convert(params, files) {
+function convert(params, inputs) {
 
   params = Object.assign({}, DEFAULTS, params);
 
   const formData = new FormData();
 
-  files.forEach((file, i) => {
-    formData.append(`uploaded_file_${i+1}`, file, {
-      filename: `sample${i+1}.gpx`,
+  inputs.forEach((input, i) => {
+    formData.append(`uploaded_file_${i + 1}`, input, {
+      filename: `sample${i + 1}.gpx`,
       contentType: 'application/octet-stream'
     })
   })
@@ -35,352 +34,32 @@ function convert(params, files) {
     formData.append(p, params[p])
   }
   return fetch(`${BASE}/convert?output`, {
-      "body": formData,
-      //	
-      "credentials": "include",
-      "headers": {
-        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15",
-        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-        "cache-control": "no-cache",
-        "pragma": "no-cache",
-        "sec-fetch-dest": "document",
-        "sec-fetch-mode": "navigate",
-        "sec-fetch-site": "same-origin",
-        "sec-fetch-user": "?1",
-        "upgrade-insecure-requests": "1"
-      },
-      "referrer": `$BASEconvert_input?convert_format=gpx`,
-      "referrerPolicy": "no-referrer-when-downgrade",
-      "method": "POST",
-      "mode": "cors"
-    })
-    .then((response) => {
-      return parseLinks(response.body);
-    })
+    "body": formData,
+    //	
+    "credentials": "include",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15",
+      "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+      "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "sec-fetch-dest": "document",
+      "sec-fetch-mode": "navigate",
+      "sec-fetch-site": "same-origin",
+      "sec-fetch-user": "?1",
+      "upgrade-insecure-requests": "1"
+    },
+    "referrer": `$BASEconvert_input?convert_format=gpx`,
+    "referrerPolicy": "no-referrer-when-downgrade",
+    "method": "POST",
+    "mode": "cors"
+  })
+    .then((response) => parseLinks(response.body))
+    // he never returns more links
+    //in fact all inputs are processed and returned as single result
+    //e.g multitrack GPX
     .then((links) => links.map((link) => url.resolve(BASE, link)))
-    .then((links) => {
-      const done = links.map((link) => {
-        return fetch(link)
-          .then(response => response.text());
-      })
-      return Promise.all(done);
-    })
+    .then((links) => links.map((link) => fetch(link).then(response => response.text())))
+    .then((responses) => Promise.all(responses))
 }
 
-// https://stackoverflow.com/questions/44021538/how-to-send-a-file-in-request-node-fetch-or-node
-
-
-// curl 'https://www.gpsvisualizer.com/convert?output' 
-// 	-X POST 
-// 	-H 'Connection: keep-alive' 
-// 	-H 'Content-Length: 9669' 
-// 	-H 'Pragma: no-cache' 
-// 	-H 'Cache-Control: no-cache' 
-// 	-H 'Origin: https://www.gpsvisualizer.com' 
-// 	-H 'Upgrade-Insecure-Requests: 1' 
-// 	-H 'Content-Type: multipart/form-data; boundary=----WebKitFormBoundarylATMXpmBKAGSK1jx' 
-// 	-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36' 
-// 	-H 'Sec-Fetch-Dest: document' 
-// 	-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' 
-// 	-H 'Sec-Fetch-Site: same-origin' 
-// 	-H 'Sec-Fetch-Mode: navigate' 
-// 	-H 'Sec-Fetch-User: ?1' 
-// 	-H 'Referer: https://www.gpsvisualizer.com/convert_input?convert_format=gpx' 
-// 	-H 'Accept-Language: en-GB,en-US;q=0.9,en;q=0.8' 
-// 	-H 'Cookie: _ga=GA1.2.1582085611.1582366493; waldo_country=SK; waldo_continent=EU; waldo_region=02; __gads=ID=a2eec9b1275cf9de:T=1582366495:S=ALNI_Ma7kdqdMLjk0DnUdX0dOBEGbkWpIQ; ip_key=59126; ip=85.216.159.126; euconsent=BOvKglIOvKglIABABAENC--AAAAMUAJABAiAAIBgQAgAAAgAAAAACAAAAAAAAEA; waldo-pbjs-pubCommonId=7e4966ad-d722-43e6-86f3-7ec76b5b95d1; _gid=GA1.2.965771636.1586124098; waldo-pbjs-unifiedid=%7B%22TDID%22%3A%2283442acd-bf31-4a2b-a20c-fca8b2139f36%22%2C%22TDID_LOOKUP%22%3A%22TRUE%22%2C%22TDID_CREATED_AT%22%3A%222020-03-04T21%3A20%3A03%22%7D; _gat_gtag_UA_64724077_1=1' --compressed
-
-/*
-
-	------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_format"
-
-gpx
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_1"; filename="simple.gpx"
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_2"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_3"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_4"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_5"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_6"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_7"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_8"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_9"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="uploaded_file_10"; filename=""
-Content-Type: application/octet-stream
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="submitted"
-
-Convert
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="data"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="force_type"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="remote_data"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="google_api_key"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_delimiter"
-
-tab
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="units"
-
-metric
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_add_speed"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_add_slope"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_add_distance"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="vmg_point"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="add_elevation"
-
-auto
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="show_trk"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="reverse"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="connect_segments"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_merge"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_distance_threshold"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_simplify"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_reorder"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_reorder_threshold"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="tickmark_interval"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_as_wpt"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_as_wpt_name"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_as_wpt_desc"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_gpx_styles"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_routes"
-
-t_aw
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_segment_time"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="add_timestamps"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="osm_filter"
-
-highway;
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_stats"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_elevation_gain"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_elevation_threshold"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="show_wpt"
-
-3
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="synthesize_name"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="synthesize_desc"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_name_filter"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="reference_point"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="reference_point_name"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_interpolate"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_interpolate_offset"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_repeat_headers"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="utm_output"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="time_offset"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="moving_average"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="special"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_add_climb"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="convert_add_slope_degrees"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="frequency_count"
-
-none
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="cumulative_distance"
-
-0
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="tickmark_zero"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wifi_mode"
-
-3
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="forerunner_laps"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="gps_altitude"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_preserve_attr"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_preserve_attr"
-
-1
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="padding"
-
-10
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_desc_filter"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="wpt_polygons"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu
-Content-Disposition: form-data; name="trk_interpolation"
-
-
-------WebKitFormBoundaryDWFXWxS4lsADA1Tu--
-*/
