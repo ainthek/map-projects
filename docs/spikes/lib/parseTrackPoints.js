@@ -33,7 +33,7 @@ const add3dDistance = (point, i, points) => {
 }
 const addSpeed = (point, i, points) => {
     const previous = points[i - 1];
-    const t =  previous && point.time - previous.time;
+    const t = previous && point.time - previous.time;
     const d = previous && point.distance.delta;
     return Object.assign(points[i], {
         speed: (d / t * 3600) || 0,
@@ -41,11 +41,21 @@ const addSpeed = (point, i, points) => {
     });
 }
 // TODO: refactor to pipe or one function
-const parseTrackpoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
+const parseTrackPoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
     .map(trkpt2js)
     .map(addDistance)
     .map(addSlope)
     .map(add3dDistance)
     .map(addSpeed)
 
-export default parseTrackpoints;  
+const statsTrackPoints = (trackpoints) => {
+    const lastPoint = trackpoints[trackpoints.length - 1];
+    return {
+        "trackpoints": trackpoints.length,
+        "distance (elipsoid)": lastPoint.distance.total,
+        "distance (terrain)": lastPoint.distance3d.total,
+        "distance (terrain Δ)": lastPoint.distance3d.total - lastPoint.distance.total
+    }
+}
+export default parseTrackPoints;
+export { parseTrackPoints, statsTrackPoints }

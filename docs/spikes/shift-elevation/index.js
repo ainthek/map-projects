@@ -1,7 +1,7 @@
 import { dropbox } from "../lib/dropbox.js"
 import { readFileAsString, str2dom } from "../lib/xmlReadFile.js";
 import { XMLSerializer } from "../lib/DOMParser.js";
-import { drawChart, drawLegend } from "../lib/chart.js";
+import { drawChart, drawLegend } from "../lib/ui/chart.js";
 import parseTrackPoints from "../lib/parseTrackPoints.js";
 
 async function main() {

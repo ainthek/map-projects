@@ -1,12 +1,11 @@
 export { drawChart, drawLegend };
 
 function drawChart(data, element) {
-  const chartWidth = 1000;
-  const chartHeight = 400;
+  const chartWidth = 1200;
+  const chartHeight = 300;
   var margin = { top: 20, right: 20, bottom: 20, left: 20 };
   var width = chartWidth - margin.left - margin.right;
   var height = chartHeight - margin.top - margin.bottom;
-
 
   var svg = element.append("svg")
     .attr("viewBox", [0, 0, chartWidth, chartHeight])
@@ -79,10 +78,6 @@ function drawChart(data, element) {
   d3.select("svg").append("defs").append("clipPath").attr("id", "clip")
     .append("rect").attr("width", width).attr("height", height);
   lineGroup.attr("clip-path", "url(#clip)");//line group is in a fixed position and the path will be moved
-
-
-
-
 }
 function drawLegend(data, element) {
   //create unordered list
@@ -98,3 +93,4 @@ function drawLegend(data, element) {
     .style("color", (d, i) => d3.schemeCategory10[i])
     .html(d => d.fileName)
 }
+

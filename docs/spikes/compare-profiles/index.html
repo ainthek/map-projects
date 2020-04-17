@@ -3,12 +3,12 @@
 <head>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <style>
-    
+
   </style>
 </head>
 
 <body>
-  <h1>GPX Compare (v 0.1)</h1>
+  <h1>GPX Compare (v 0.3)</h1>
   Drag your files from disk anywhere on the screen,
   to see chart of your tracks.
 
@@ -19,9 +19,9 @@
 
 </body>
 <script type="module">
-  import parseTrackPoints from "../lib/parseTrackPoints.js";
-  import { drawChart, drawLegend } from "../lib/chart.js";
-
+  import {parseTrackPoints, statsTrackPoints} from "../lib/parseTrackPoints.js";
+  import { drawChart, drawLegend } from "../lib/ui/chart.js";
+  import { drawStats } from "../lib/ui/stats.js";
   const fileNames = [
     "./samples/00-gps.gpx",
     "./samples/01-srtm1.gpx",
@@ -41,6 +41,11 @@
   Promise.all(data).then((data) => {
     drawChart(data, d3.select("#examples").append("div"));
     drawLegend(data, d3.select("#examples").append("div"));
+    const stats=data.map(({fileName,trackPoints})=>({
+      fileName,
+      statsTrackPoints: statsTrackPoints(trackPoints)
+    }))
+    drawStats(stats, d3.select("#examples").append("div"));
   });
 
   import { dropbox } from "../lib/dropbox.js";
@@ -58,10 +63,13 @@
     );
     Promise.all(data).then((data) => {
       const s = d3.select("body").append("section");
-      s.append("h2").html(`Chart ${d3.selectAll("section").size()-1}`)
+      s.append("h2").html(`Chart ${d3.selectAll("section").size() - 1}`)
       drawChart(data, s.append("div"));
       drawLegend(data, s.append("div"));
+      drawStats(data, s.append("div"));
     });
+
+
   }
 
 </script>
