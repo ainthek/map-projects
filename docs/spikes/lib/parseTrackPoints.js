@@ -50,11 +50,16 @@ const parseTrackPoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
 
 const statsTrackPoints = (trackpoints) => {
     const lastPoint = trackpoints[trackpoints.length - 1];
+    const elevationExtent = d3.extent(trackpoints, d => d.ele);
     return {
         "trackpoints": trackpoints.length,
         "distance (elipsoid)": lastPoint.distance.total,
         "distance (terrain)": lastPoint.distance3d.total,
-        "distance (terrain Δ)": lastPoint.distance3d.total - lastPoint.distance.total
+        "distance (terrain Δ)": lastPoint.distance3d.total - lastPoint.distance.total,
+        "elevation (extent)": elevationExtent,
+        "elevation Δ": elevationExtent[1] - elevationExtent[0],
+        "ascent": d3.sum(trackpoints, d => Math.max(0, d.slope.delta)),
+        "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.delta))
     }
 }
 export default parseTrackPoints;

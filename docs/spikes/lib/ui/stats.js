@@ -17,7 +17,7 @@ function drawStats(data, element) {
         .data(["", ...data])
         .enter()
         .append("th")
-        .style("color", (d, i) => d3.schemeCategory10[i-1])
+        .style("color", (d, i) => d3.schemeCategory10[i - 1])
         .html(d => d.fileName);
 
     const uniqueKeys = [
@@ -36,7 +36,12 @@ function drawStats(data, element) {
         .data(d => d)
         .enter()
         .append("td")
-        .text(d => typeof d === "number" ? d3.format(".2f")(d) : d)
+        .text(d => {
+            if (Array.isArray(d) && d.length === 2 && typeof d[0] === "number") {
+                return d3.format(".2f")(d[0]) + " - " + d3.format(".2f")(d[1])
+            }
+            return typeof d === "number" ? d3.format(".2f")(d) : d
+        })
 
 
 }
