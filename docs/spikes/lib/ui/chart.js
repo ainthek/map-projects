@@ -34,7 +34,7 @@ function drawChart(data, element) {
   var lineGroup = svg.append("g")
   var line = d3.line()
     .x(function (d) { return xScale(d.distance.total); })
-    .y(function (d) { return yScale(d.ele); })
+    .y(function (d) { return yScale(d.ele || 0); })
     .curve(d3.curveBasis);//default is d3.curveLinear
 
 
