@@ -1,4 +1,66 @@
 # Work Log
+
+## 18.4.2020
+https://training.gismentors.eu/open-source-gis/knihovny/gdal.html
+
+https://stackoverflow.com/questions/51592931/interpolated-results-from-gdallocationinfo
+
+  gdal_contour -b 1 -a ELEV -i 10.0 -f "ESRI Shapefile" /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/contour3_5_10.shp
+
+toto ma vyjst pod qProf aj podla vrstevnic takto:
+
+
+  <trkpt lon="17.123305423977005" lat="48.212882901930307" > 
+        <ele>280.053179</ele>
+  </trkpt>
+
+Nad original fajlom:
+
+  $ echo "17.123305423977005 48.21288290193030" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -wgs84
+  <Report pixel="1994" line="14116">
+    <BandReport band="1">
+      <Value>298.2509765625</Value>
+    </BandReport>
+  </Report>
+
+Nad transformnutym fajlom:
+
+  echo "17.123305423977005 48.21288290193030" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.epsg4326.tif -xml -wgs84
+  <Report pixel="3598" line="11540">
+    <BandReport band="1">
+      <Value>301.082794189453</Value>
+    </BandReport>
+  </Report>
+
+  <trkpt lon="17.123305423977005" lat="48.212882901930307" > 
+  POINT (17.1233054157346 48.2128828950226)
+  POINT (-571807.692870262 -1273330.6898739)
+
+BINGO ?
+  $ echo "-571807.692870262 -1273330.6898739" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514
+  
+  <Report pixel="2004" line="14112">
+    <BandReport band="1">
+      <Value>279.628295898438</Value>
+    </BandReport>
+  </Report>
+
+
+Ak to nejde takto skusme reprojectnut gpx
+
+TODO: ako toto spravit v jednom ktoku:
+
+  ogr2ogr -t_srs epsg:5514 ../gis-projects/qgis/elevation-profiles/okrajovka/suunto.5514.shp ../gis-projects/qgis/elevation-profiles/okrajovka/suunto.gpx
+  ogr2ogr -f CSV /vsistdout/ -sql 'select OGR_GEOM_WKT from track_points' ../gis-projects/qgis/elevation-profiles/okrajovka/suunto.5514.shp
+
+POINT (17.1233054157346 48.2128828950226)
+POINT (-571807.692870262 -1273330.6898739)
+
+
+RTFM ? :  
+- https://www.geoportal.sk/files/zbgis/lls/navod-pracu-dmr-qgis.pdf
+- https://www.geoportal.sk/files/gz/s-jtsk_jtsk03_v_qgis.pdf
+
 ## 15.4.2020
 - https://gis.stackexchange.com/questions/337793/profile-tool-and-gps-data-in-qgis
 

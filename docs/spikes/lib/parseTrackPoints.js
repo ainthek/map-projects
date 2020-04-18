@@ -53,7 +53,7 @@ const parseTrackPoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
 const statsTrackPoints = (trackpoints) => {
     const lastPoint = trackpoints[trackpoints.length - 1];
     const elevationExtent = d3.extent(trackpoints, d => d.ele);
-    console.log(trackpoints.map(({ deltaT }) => deltaT));
+    //console.log(trackpoints.map(({ deltaT }) => deltaT));
     return {
         "trackpoints": trackpoints.length,
         // biking stats
