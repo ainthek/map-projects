@@ -1,4 +1,5 @@
 import distVincenty from "./distVincenty.js";
+import { median, mean, mode } from "https://unpkg.com/simple-statistics@7.0.8/index.js?module"
 const MISSING_ELE = { textContent: 0 };
 const MISSING_TIME = { textContent: undefined };
 const trkpt2js = (point, i, points) => ({
@@ -33,11 +34,12 @@ const add3dDistance = (point, i, points) => {
 }
 const addSpeed = (point, i, points) => {
     const previous = points[i - 1];
-    const t = previous && point.time - previous.time;
+    const deltaT = previous && point.time - previous.time;
     const d = previous && point.distance.delta;
     return Object.assign(points[i], {
-        speed: (d / t * 3600) || 0,
-        spee3d: (d / t * 3600) || 0
+        deltaT,
+        speed: (d / deltaT * 3600) || 0,
+        spee3d: (d / deltaT * 3600) || 0
     });
 }
 // TODO: refactor to pipe or one function
@@ -51,8 +53,10 @@ const parseTrackPoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
 const statsTrackPoints = (trackpoints) => {
     const lastPoint = trackpoints[trackpoints.length - 1];
     const elevationExtent = d3.extent(trackpoints, d => d.ele);
+    console.log(trackpoints.map(({ deltaT }) => deltaT));
     return {
         "trackpoints": trackpoints.length,
+        // biking stats
         "distance (elipsoid)": lastPoint.distance.total,
         "distance (terrain)": lastPoint.distance3d.total,
         "distance (terrain Δ)": lastPoint.distance3d.total - lastPoint.distance.total,
@@ -60,9 +64,14 @@ const statsTrackPoints = (trackpoints) => {
         "elevation Δ": elevationExtent[1] - elevationExtent[0],
         "ascent": d3.sum(trackpoints, d => Math.max(0, d.slope.delta)),
         "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.delta)),
+        // data stats
         "<ele> missing": trackpoints.filter(p => p.ele == 0).length, //TODO: better keep as null and make getter
-        
+        "sample rate (median time s)": median(trackpoints.slice(1).map(({ deltaT }) => deltaT)) / 1000,
+        "sample rate (mean time s)": mean(trackpoints.slice(1).map(({ deltaT }) => deltaT)) / 1000,
+        "sample rate (median dist m)": median(trackpoints.slice(1).map(({ distance: { delta } }) => delta)),
+        "sample rate (mean dist m)": mean(trackpoints.slice(1).map(({ distance: { delta } }) => delta))
     }
+    
 }
 export default parseTrackPoints;
 export { parseTrackPoints, statsTrackPoints }

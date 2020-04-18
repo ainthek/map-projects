@@ -17,6 +17,13 @@ Comparison:
 - ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
 - Comparison of bicycle route planning websites <https://en.wikipedia.org/wiki/Comparison_of_bicycle_route_planning_websites>
 -------------
+# Data Sources
+
+## ZBGIS
+
+- https://www.geoportal.sk/sk/zbgis_smd/na-stiahnutie/
+- http://www.gku.sk/files/gku/produkty-sluzby/na-stiahnutie/gku_produkty.pdf
+
 
 # Authoring Maps
 
