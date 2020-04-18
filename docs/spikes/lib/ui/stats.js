@@ -2,7 +2,7 @@ export { drawStats };
 // using d3 mainly for math
 // but since already used, also for DOM building
 function drawStats(data, element) {
-    console.log(JSON.stringify(data, null, 2))
+    //console.log(JSON.stringify(data, null, 2))
     const table = element
         .append("table")
         .attr("border", "1");
@@ -26,7 +26,7 @@ function drawStats(data, element) {
     ];
     const keys = data.reduce(...uniqueKeys);
     const data2 = [...keys].map(k => [k, ...data.map(d => d.statsTrackPoints[k])])
-    console.log(JSON.stringify(data2, null, 2))
+    //console.log(JSON.stringify(data2, null, 2))
     // rotate 
     body.selectAll("tr")
         .data(data2)

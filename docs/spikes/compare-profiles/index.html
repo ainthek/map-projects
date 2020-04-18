@@ -52,7 +52,7 @@
   import { readFileAsString, readFileAsDom, readFileAsJs, str2dom, str2js } from "../lib/xmlReadFile.js";
   dropbox(document.getElementsByTagName("html")[0], handleFiles);
   function handleFiles(files) {
-    console.log("files", files)
+    //console.log("files", files)
     const data = Array.from(files).map(file =>
       readFileAsDom(file)
         .then(parseTrackPoints)
