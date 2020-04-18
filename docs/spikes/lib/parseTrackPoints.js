@@ -59,7 +59,9 @@ const statsTrackPoints = (trackpoints) => {
         "elevation (extent)": elevationExtent,
         "elevation Δ": elevationExtent[1] - elevationExtent[0],
         "ascent": d3.sum(trackpoints, d => Math.max(0, d.slope.delta)),
-        "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.delta))
+        "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.delta)),
+        "<ele> missing": trackpoints.filter(p => p.ele == 0).length, //TODO: better keep as null and make getter
+        
     }
 }
 export default parseTrackPoints;
