@@ -1,0 +1,18 @@
+## EPSG:15965 S-JTSK to WGS 84 (3)
+
+Description: (589.0, 76.0, 480.0, 0.0, 0.0, 0.0, 0.0)
+
+Geodetic CRS: S-JTSK
+Datum: System of the Unified Trigonometrical Cadastral Network
+Ellipsoid: Bessel 1841
+Prime meridian: Greenwich
+Data source: OGP
+Revision date: 2014-11-19
+Scope: For military purposes. Accuracy 4m, 2m and 3m in X, Y and Z axes.
+Method: Geocentric translations (geog2D domain)
+Area of use: Czechia; Slovakia.
+
+Information source: 
+    U.S. National Imagery and Mapping Agency TR8350.2 revision of October 1997; 
+    http://earth-info.nga.mil/GandG/tr8350/tr8350_2.html
+Remarks: Derived at 6 stations.

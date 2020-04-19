@@ -1,0 +1,14 @@
+## EPSG:4836 S-JTSK to WGS 84 (4)
+
+Geodetic CRS: S-JTSK
+Datum: System of the Unified Trigonometrical Cadastral Network
+Ellipsoid: Bessel 1841
+Prime meridian: Greenwich
+Data source: OGP
+Information source: OGP
+Revision date: 2010-02-09
+Scope: For applications to an accuracy of 1 metre.
+Remarks: Parameter values from S-JTSK to ETRS89 (4) (code 4827). Assumes ETRS89 and WGS 84 can be considered the same to within the accuracy of the transformation.
+Method: Position Vector transformation (geog2D domain)
+Area of use: Slovakia.
+Description: (485.0, 169.5, 483.8, 7.786, 4.398, 4.103, 0.0)

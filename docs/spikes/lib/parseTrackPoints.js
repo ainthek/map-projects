@@ -1,5 +1,8 @@
 import distVincenty from "./distVincenty.js";
+// TODO: this cannot be url, nide sill not wotk need dual module again ?
 import { median, mean, mode } from "https://unpkg.com/simple-statistics@7.0.8/index.js?module"
+//import { median, mean, mode } from .... TODO: node and browser version
+
 const MISSING_ELE = { textContent: 0 };
 const MISSING_TIME = { textContent: undefined };
 const trkpt2js = (point, i, points) => ({

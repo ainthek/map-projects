@@ -13,13 +13,14 @@ const source = (dmr) => {
   console.error("using", resolved);
   return resolved
 }
-const gdallocationinfo = (lines, dmr) => spawnP2("gdallocationinfo", [source(dmr), '-valonly', "-l_srs", "EPSG:5013"], {}, lines);
+const CRS_102065_4936 = "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs"
+const gdallocationinfo = (lines, dmr) => spawnP2("gdallocationinfo", [source(dmr), '-valonly', "-l_srs", CRS_102065_4936], {}, lines);
 const transform = (lines, s_srs, t_srs) => spawnP2("gdaltransform", ["-s_srs", s_srs, "-t_srs", t_srs], {}, lines);
 
 const eleDMR = async (lonLat, dmr) => {
   
   const lines = lonLat.map(({ lon, lat }) => `${lon} ${lat}`);
-  const longLatTranslated = await transform(lines, "EPSG:4326", "EPSG:5013");
+  const longLatTranslated = await transform(lines, "EPSG:4326", CRS_102065_4936);
   
   const longLatTranslated2=longLatTranslated.map(line => {
     const [lat, lon, _] = line.split(" ");

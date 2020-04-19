@@ -1,5 +1,16 @@
 # Work Log
+
+
+
 ## 19.4.2020
+
+  $ gdaltransform -s_srs EPSG:4326 -t_srs "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs" <<< "17.1457116678357   48.2006058376282"
+  -570291.915901557 -1274853.11301513 0.273295790888369
+
+
+  gdallocationinfo /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif  -xml -l_srs '+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs' -570291.915901557 -1274853.11301513
+
+  gdallocationinfo /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif  -xml -l_srs 'EPSG:5513' -570291.915901557 -1274853.11301513
 
 Takze finalna kombinacia je 
 
@@ -97,7 +108,10 @@ qProf vola nieco takto:
 A sme tu: Qgis vrati pre 102065 to iste co qProf.
 Takze otazka je inde ako donutit gdal aby vracal to iste co qGis.
 resp. aby pouzil tu istu transformaciu (5239 ?) co Qgis.
- 
+
+proj4j: vracia tiez "ine" udaje ako qGis, a sice zhodne z gdal a z epsg.io
+
+    -570393.4490760971, -1274896.1711079231
 
 
 ## 18.4.2020
