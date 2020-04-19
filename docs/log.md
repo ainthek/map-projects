@@ -1,4 +1,17 @@
 # Work Log
+## 19.4.2020
+
+Takze finalna kombinacia je 
+
+  gdaltransform
+  gdaltransform -s_srs EPSG:4326 -t_srs EPSG:5514 <<< "17.1233054157346 48.2128828950226"
+  -571807.692870265 -1273330.6898739
+
+a potom z tymito suradnicami:
+
+  echo "-571807.692870262 -1273330.6898739" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514
+  
+
 
 ## 18.4.2020
 https://training.gismentors.eu/open-source-gis/knihovny/gdal.html
@@ -32,18 +45,7 @@ Nad transformnutym fajlom:
     </BandReport>
   </Report>
 
-  <trkpt lon="17.123305423977005" lat="48.212882901930307" > 
-  POINT (17.1233054157346 48.2128828950226)
-  POINT (-571807.692870262 -1273330.6898739)
-
-BINGO ?
-  $ echo "-571807.692870262 -1273330.6898739" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514
   
-  <Report pixel="2004" line="14112">
-    <BandReport band="1">
-      <Value>279.628295898438</Value>
-    </BandReport>
-  </Report>
 
 
 Ak to nejde takto skusme reprojectnut gpx
@@ -55,6 +57,20 @@ TODO: ako toto spravit v jednom ktoku:
 
 POINT (17.1233054157346 48.2128828950226)
 POINT (-571807.692870262 -1273330.6898739)
+
+<trkpt lon="17.123305423977005" lat="48.212882901930307" > 
+  POINT (17.1233054157346 48.2128828950226)
+  POINT (-571807.692870262 -1273330.6898739)
+
+
+BINGO ?
+  $ echo "-571807.692870262 -1273330.6898739" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514
+  
+  <Report pixel="2004" line="14112">
+    <BandReport band="1">
+      <Value>279.628295898438</Value>
+    </BandReport>
+  </Report>
 
 
 RTFM ? :  

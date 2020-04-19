@@ -9,11 +9,25 @@ const source = (dmr) => {
   const resolved = sources[dmr];
 
   if (!resolved) throw new Error(`No DMR file for ${dmr}`);
-  console.error("using",resolved);
+  console.error("using", resolved);
   return resolved
 }
-const eleWGS84 = (lonLat, dmr) => spawnP2("gdallocationinfo", [source(dmr), '-valonly', '-wgs84'], {}, lonLat.map(({ lon, lat }) => `${lon} ${lat}`));
+const gdallocationinfo = (lines, dmr) => spawnP2("gdallocationinfo", [source(dmr), '-valonly', "-l_srs", "EPSG:5514"], {}, lines);
+const transform = (lines, s_srs, t_srs) => spawnP2("gdaltransform", ["-s_srs", s_srs, "-t_srs", t_srs], {}, lines);
 
+const eleDMR = async (lonLat, dmr) => {
+  
+  const lines = lonLat.map(({ lon, lat }) => `${lon} ${lat}`);
+  const longLatTranslated = await transform(lines, "EPSG:4326", "EPSG:5514");
+  
+  const longLatTranslated2=longLatTranslated.map(line => {
+    const [lat, lon, _] = line.split(" ");
+    return `${lat} ${lon}`;
+  });
+  const elevs = await gdallocationinfo(longLatTranslated2, dmr);
+  
+  return elevs;
+}
 const git = module.exports = {
-  eleWGS84
+  eleDMR, transform
 }

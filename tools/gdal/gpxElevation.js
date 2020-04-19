@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { Parser, Builder } = require("xml2js");
-const { eleWGS84 } = require("./lib/gdal.js");
+const { eleDMR } = require("./lib/gdal.js");
 
 main();
 
@@ -54,7 +54,7 @@ async function addElevation(gxpJs, dmr) {
   const done = [];
   const points = gxpJs.gpx.trk.map(({ trkseg }) => trkseg.map(({ trkpt }) => trkpt)).flat(Infinity);
   const coordinates = points.map(({ $: { lon, lat } }) => ({ lon, lat }));
-  const elevs = await eleWGS84(coordinates, dmr);
+  const elevs = await eleDMR(coordinates, dmr);
   points.forEach((point, i) => Object.assign(point, { ele: elevs[i] })); // mutating
 
   return gxpJs;
