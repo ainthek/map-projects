@@ -11,6 +11,93 @@ a potom z tymito suradnicami:
 
   echo "-571807.692870262 -1273330.6898739" | gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514
   
+stale je to buggy (vlnovky) v nasom profile: 
+
+  1444	17.130393488332629 48.219145098701119	
+  -571213.566280337 -1272690.87461819 -44.9562796745449	
+  302.969543457031 !!!
+  
+  $ gdallocationinfo ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif -xml -l_srs EPSG:5514 -571213.566280337 -1272690.87461819
+  <Report pixel="2064" line="14048">
+    <BandReport band="1">
+      <Value>302.969543457031</Value>
+    </BandReport>
+  </Report>
+
+- Construction of geological cross sections in QGIS <http://www.geokincern.com/?p=1452>
+
+Profile statistics:
+
+  2209, -572024.2791085298, -1273931.7483225565
+  2210, -572023.5335126772, -1273926.9805300739
+  2211, -572026.9730557203, -1273923.1006373854
+  2212, -572028.6441020364, -1273924.2055420373
+  2213, -572028.9182147635, -1273926.2949667943
+  2214, -572030.7579290094, -1273927.457742302
+
+uz pvy bod sa nam lisi v x,y suradniciach:
+
+1, -570290.5601189387, -1274853.9926249245
+2,	17.145711667835712 48.200605837628245	
+   -570287.898200626  -1274856.31739664 	
+   141.354400634766
+
+im vyde:
+    $ gdallocationinfo /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif  -xml -l_srs EPSG:5514 -570290.5601189387, -1274853.9926249245
+    
+    <Report pixel="2156" line="14264">
+      <BandReport band="1">
+        <Value>141.429962158203</Value>
+      </BandReport>
+    </Report>
+
+nam vyde:
+    $ gdallocationinfo /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif  -xml -l_srs EPSG:5514 -570287.898200626  -1274856.31739664
+
+  <Report pixel="2156" line="14265">
+    <BandReport band="1">
+      <Value>141.380096435547</Value>
+    </BandReport>
+  </Report>
+
+zgeneroval som statistiky z gdal transformacii:
+node tools/gdal/gpxElevation.js /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka/suunto.gpx 2>x.txt
+pre vsetky 3 variacie 5514, 5113 aj 102065
+a cez https://epsg.io/transform#s_srs=4326&t_srs=102065&x=17.1457117&y=48.2006058
+        17.1457116678357   48.2006058376282
+5514  	17.145711667835712 48.200605837628245	-570287.898200626  -1274856.31739664 
+5513    17.145711667835712 48.200605837628245	-570287.898200626  -1274856.31739664 
+102065  17.145711667835712 48.200605837628245	-570393.449076095  -1274896.17110791
+qProf                                         -570290.5601189387 -1274853.9926249245
+
+epsg.io 5513                                  -570287.90         -1274856.32
+epsg.io 102065                                -570393.44907905   -1274896.17111078                                   
+
+zda sa ze DMR 3.5_10 tiff NIE JE v 102065  
+lebo ked takto zgenerovany profil dame na mapu, nesedi 
+
+co za transformaciu pouzivaju v QProf ked im vude nieco ine ako nam ?
+qProf ide cez line string tam je prvy bod:
+
+  17.1457116678357   48.2006058376282
+
+$ gdaltransform -s_srs EPSG:4326 -t_srs EPSG:5513 <<< "17.1457116678357   48.2006058376282"
+    -570287.898200627 -1274856.31739664 -44.954596108757
+
+ale je to uplne jedno stale nevyslo to co qProfu
+qProf vola nieco takto:
+
+  QgsCoordinateTransform(QgsCoordinateReferenceSystem(4326), QgsCoordinateReferenceSystem(5513), QgsProject.instance()).transform(QgsPointXY(17.1457116678357,48.2006058376282))
+  <QgsPointXY: POINT(-570291.55374557932373136 -1274853.72448024642653763)>
+  QgsCoordinateTransform(QgsCoordinateReferenceSystem(4326), QgsCoordinateReferenceSystem(5514), QgsProject.instance()).transform(QgsPointXY(17.1457116678357,48.2006058376282))
+  <QgsPointXY: POINT(-570287.89820062729995698 -1274856.3173966403119266)>
+  QgsCoordinateTransform(QgsCoordinateReferenceSystem(4326), QgsCoordinateReferenceSystem(102065), QgsProject.instance()).transform(QgsPointXY(17.1457116678357,48.2006058376282))
+  <QgsPointXY: POINT(-570290.56011893984396011 -1274853.99262493057176471)>
+
+A sme tu: Qgis vrati pre 102065 to iste co qProf.
+Takze otazka je inde ako donutit gdal aby vracal to iste co qGis.
+resp. aby pouzil tu istu transformaciu (5239 ?) co Qgis.
+ 
 
 
 ## 18.4.2020
@@ -72,6 +159,7 @@ BINGO ?
     </BandReport>
   </Report>
 
+  gdal_translate -projwin -572937.6621641798 -1272373.507137574 -569019.9436355478 -1274938.320295993 -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /private/var/folders/vt/_wykfv197k55ys5ykh1880540000gn/T/processing_165848f5c2bf49f09b79fb31f553ffe9/35851446271e4cb5bee37c5adbe708bb/OUTPUT.tif
 
 RTFM ? :  
 - https://www.geoportal.sk/files/zbgis/lls/navod-pracu-dmr-qgis.pdf

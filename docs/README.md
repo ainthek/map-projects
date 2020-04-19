@@ -148,6 +148,17 @@ Articles:
 - [GDAL, GPX driver](https://gdal.org/drivers/vector/gpx.html)
 - A QGIS plugin to visualize GPX-data as line-segments between track points <https://www.salzburgresearch.at/blog/a-qgis-plugin-to-visualize-gpx-data-as-line-segments-between-track-points/>
 
+## GPX 'layers' (ogrinfo) 
+
+From gdal point of view GPX consists of layers:
+
+	1: waypoints (Point)
+	2: routes (Line String)
+	3: tracks (Multi Line String)
+	4: route_points (Point)
+	5: track_points (Point)
+
+
 # KML
 
 ## flat line labels
@@ -270,6 +281,15 @@ GDAL gdal-cheat-sheet <https://github.com/dwtkns/gdal-cheat-sheet>
 	ogr2ogr -clipsrc c.shp y.shp x.shp/track_points.shp
 
 
+## Getting geometry from GPX track (line)
+
+Command:
+
+	ogr2ogr -f CSV /vsistdout/ -sql 'select OGR_GEOM_WKT from tracks' docs/data/samples/animated/2Tracks/00-track.trailforks.gpx
+
+Will print something like this:
+
+	"MULTILINESTRING ((17.104864 48.222693,17.104869 48.222474,17.104993 48.222389,17.105576 48.222162,17.105701 48.222131,17.105682 48.222187,17.105583 48.222294,17.105517 48.222395,17.105496 48.222485,17.105595 48.222455,17.105789 48.222418,17.106073 48.222494,17.106363 48.222548,17.106602 48.222608,17.106802 48.222537,17.106903 48.22244,17.107055 48.222211....
 
 
 ## Testing [CZML] files 
