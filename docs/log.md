@@ -1,6 +1,19 @@
 # Work Log
 
+## 25.4.2020
 
+Converting FIIT from Suunto to GPX.
+
+https://github.com/mrihtar/Garmin-FIT (used also by GPSVisualizer)
+
+https://github.com/jimmykane/fit-parser
+
+
+## 21.4.2020
+
+https://gist.github.com/Rich-Harris/0b6f317657f5167663b493c722647221
+https://medium.com/@WebReflection/javascript-dynamic-import-export-b0e8775a59d4
+https://techsparx.com/nodejs/esnext/dynamic-import.html
 
 ## 19.4.2020
 

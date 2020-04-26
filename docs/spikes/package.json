@@ -22,13 +22,14 @@
     "traverse": "^0.6.6"
   },
   "dependencies": {
+    "fit-file-parser": "^1.6.18",
     "form-data": "^3.0.0",
     "htmlparser2": "^4.1.0",
     "immutable": "^4.0.0-rc.12",
     "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
     "proj4": "^2.6.1",
-    "simple-statistics": "^7.0.8",
+    "simple-statistics": "^7.0.9",
     "xlsx": "^0.15.6",
     "xml2js": "^0.4.23"
   }

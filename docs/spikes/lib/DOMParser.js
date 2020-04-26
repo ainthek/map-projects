@@ -3,13 +3,17 @@
 // so instead of writing new DOMParser
 // one must write import DOMParser from "./DOMParser.js" and then new DOMParser
 
-// REVIEW: not sure this is OK, considering asyn nature
+// REVIEW: not sure this is OK, considering asyn nature, 
 // nefunguje v browseroch import from "global" ? 
 // ako sa v brwsroch v ES6 moduloch maju pouzivat build-in ?
 // snad nie stale ako glovalky bez importu ? nic som k tomu nenasiel
 
 // zatial som to polepil takto zda sa ze take moduly idu aj v browsri aj v node
 // see also: https://www.npmjs.com/package/node-window-polyfill
+
+
+//IT IS NOT OK !!!! it works only by accident.
+// Exported DOMParser is null, when called imediatelly after import
 
 export let DOMParser, XMLDocument, Document, ProcessingInstruction,XMLSerializer;
 

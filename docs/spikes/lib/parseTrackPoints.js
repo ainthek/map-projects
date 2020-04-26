@@ -1,7 +1,14 @@
 import distVincenty from "./distVincenty.js";
+// TODO: d3 XS import ?
+// TODO: simple-statistic XS import ?
 // TODO: this cannot be url, nide sill not wotk need dual module again ?
-import { median, mean, mode } from "https://unpkg.com/simple-statistics@7.0.8/index.js?module"
-//import { median, mean, mode } from .... TODO: node and browser version
+//import { median, mean, mode } from "https://unpkg.com/simple-statistics@7.0.8/index.js?module"
+//let simple_statistics; (async ()=>simple_statistics=await import("./simple-statistics.js"))()
+//import { median, mean, mode } from "simple-statistics";
+//import { median, mean, mode } from "https://unpkg.com/simple-statistics@7.0.8/index.js?module";
+//const { median, mean, mode } = await import("simple-statistics");
+// this wotks but is far from ideal syntax
+import { median, mean, mode } from "../node_modules/simple-statistics/dist/simple-statistics.mjs";
 
 const MISSING_ELE = { textContent: 0 };
 const MISSING_TIME = { textContent: undefined };
@@ -71,10 +78,11 @@ const statsTrackPoints = (trackpoints) => {
         "<ele> missing": trackpoints.filter(p => p.ele == 0).length, //TODO: better keep as null and make getter
         "sample rate (median time s)": median(trackpoints.slice(1).map(({ deltaT }) => deltaT)) / 1000,
         "sample rate (mean time s)": mean(trackpoints.slice(1).map(({ deltaT }) => deltaT)) / 1000,
+        "sample rate (extent)": d3.extent(trackpoints, d => d.deltaT),
         "sample rate (median dist m)": median(trackpoints.slice(1).map(({ distance: { delta } }) => delta)),
         "sample rate (mean dist m)": mean(trackpoints.slice(1).map(({ distance: { delta } }) => delta))
     }
-    
+
 }
 export default parseTrackPoints;
 export { parseTrackPoints, statsTrackPoints }

@@ -1,7 +1,9 @@
 import { convert } from "../lib/gpsVisualizer/convert.js"
 import { parsePlainTextResponse } from "../lib/gpsVisualizer/parsePlainTextResponse.js"
-//import parseTrackPoints from "../lib/parseTrackPoints.js"
+import { parseTrackPoints, statsTrackPoints } from "../lib/parseTrackPoints.js"
 import proj4 from "proj4";
+import ffp from "fit-file-parser";
+const { default: FitParser } = ffp;
 
 import { str2dom } from "../lib/xmlReadFile.js"
 import { promises as fs } from "fs";
@@ -16,6 +18,43 @@ const __filename = filename(import.meta);
 import assert from "assert";
 import { assertContains } from "./lib/assert.js";
 
+describe("FIT tests", () => {
+  it("parser", (done) => {
+
+    const content = _fs.readFileSync(`${__dirname}/data/5e8f643992c05650c6e46aa3.fit`);
+
+    const fitParser = new FitParser({
+      force: true,
+      speedUnit: 'km/h',
+      lengthUnit: 'km',
+      temperatureUnit: 'kelvin',
+      elapsedRecordField: true,
+      mode: 'cascade',
+    });
+
+    // Parse your file
+    fitParser.parse(content, function (error, data) {
+      // Handle result of parse method
+      if (error) {
+        done(error);
+      } else {
+        // https://www.npmjs.com/package/fit-file-parser
+        // https://github.com/jimmykane/fit-parser (for of backfit/backfit)
+        // https://github.com/backfit/backfit
+
+        _fs.writeFileSync(`${__dirname}/data/5e8f643992c05650c6e46aa3.fit.json`, JSON.stringify(data, null, 2));
+        console.log("data.activity.sessions.length",data.activity.sessions.length);
+        console.log("data.activity.sessions[0].laps.length",data.activity.sessions[0].laps.length);
+        console.log("data.activity.sessions[0].laps[0].records.length",data.activity.sessions[0].laps[0].records.length);
+        console.log("data.activity.sessions[0].laps[1].records.length",data.activity.sessions[0].laps[1].records.length);
+        console.log("data.activity.sessions[0].laps[2].records.length",data.activity.sessions[0].laps[2].records.length);
+        done();
+      }
+
+    });
+  });
+});
+
 describe("proj4js tests", () => {
   it("test", () => {
 
@@ -29,13 +68,13 @@ describe("proj4js tests", () => {
     // QgsCoordinateReferenceSystem(102065).toProj()
     // '+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +units=m +no_defs'
 
-    const towgs84_4936 = '+towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0'  
+    const towgs84_4936 = '+towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0'
 
-    const CRS_4326 =   "+proj=longlat +datum=WGS84 +no_defs";
+    const CRS_4326 = "+proj=longlat +datum=WGS84 +no_defs";
     const CRS_102065 = "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +units=m +no_defs"
-    const CRS_5513 =   "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs'"
+    const CRS_5513 = "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs'"
     const CRS_102065_4936 = "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs"
-    
+
 
     const crs = { CRS_5513, CRS_102065, CRS_102065_4936 };
     Object.entries(crs).forEach(([name, crs_src]) => {
@@ -45,10 +84,11 @@ describe("proj4js tests", () => {
       console.log(p.forward(testPoint));
     })
     console.log("QGis 102065 + CRS_4326")
-    console.log([-570291.91537294839508832,-1274853.10787067096680403])
+    console.log([-570291.91537294839508832, -1274853.10787067096680403])
   });
 });
 describe("my libs test", () => {
+
   it("parseTrackPoints parses DOO and returns JS array of trackpints", () => {
     const gpxDom = str2dom(`<?xml version="1.0" encoding="UTF-8"?>
         <gpx creator="Garmin" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" >
@@ -89,8 +129,30 @@ describe("my libs test", () => {
         slope: { delta: 0.05313820590628321, total: 0.05313820590628321 }
       }
     )
-  })
-
+  });
+  it("statsTrackPoints", () => {
+    assert(typeof statsTrackPoints === "function");
+    const gpxDom = str2dom(`<?xml version="1.0" encoding="UTF-8"?>
+        <gpx creator="Garmin" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" >
+        <trk>
+            <name>2 points</name>
+            <type>mountain_biking</type>
+            <trkseg>
+            <trkpt lat="48.201424665749073028564453125" lon="17.14423812925815582275390625">
+                <ele>151.399993896484375</ele>
+                <time>2020-03-31T14:22:52.000Z</time>
+            </trkpt>
+            <trkpt lat="48.20144101046025753021240234375" lon="17.14419378899037837982177734375">
+                <ele>151.600006103515625</ele>
+                <time>2020-03-31T14:22:53.000Z</time>
+            </trkpt>
+            </trkseg>
+        </trk>
+        </gpx>
+    `);
+    const pointsJs = parseTrackPoints(gpxDom);
+    console.log(statsTrackPoints(pointsJs));
+  });
 });
 describe("gpsVisualizer tests", () => {
   it("accepts array of strings in input, output is array of string", async function () {

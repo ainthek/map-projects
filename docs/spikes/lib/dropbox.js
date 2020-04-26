@@ -25,6 +25,6 @@ function dropbox(element, cb) {
     const dt = e.dataTransfer;
     const files = dt.files;
 
-    cb(files);
+    cb(files,element);
   }
 }
