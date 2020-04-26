@@ -21,7 +21,7 @@ import { assertContains } from "./lib/assert.js";
 describe("FIT tests", () => {
   it("parser", (done) => {
 
-    const content = _fs.readFileSync(`${__dirname}/data/5e8f643992c05650c6e46aa3.fit`);
+    const content = _fs.readFileSync(`${__dirname}/data/5ea58343b1f3aa64febb544d.fit`);
 
     const fitParser = new FitParser({
       force: true,
@@ -42,12 +42,20 @@ describe("FIT tests", () => {
         // https://github.com/jimmykane/fit-parser (for of backfit/backfit)
         // https://github.com/backfit/backfit
 
-        _fs.writeFileSync(`${__dirname}/data/5e8f643992c05650c6e46aa3.fit.json`, JSON.stringify(data, null, 2));
-        console.log("data.activity.sessions.length",data.activity.sessions.length);
-        console.log("data.activity.sessions[0].laps.length",data.activity.sessions[0].laps.length);
-        console.log("data.activity.sessions[0].laps[0].records.length",data.activity.sessions[0].laps[0].records.length);
-        console.log("data.activity.sessions[0].laps[1].records.length",data.activity.sessions[0].laps[1].records.length);
-        console.log("data.activity.sessions[0].laps[2].records.length",data.activity.sessions[0].laps[2].records.length);
+        _fs.writeFileSync(`${__dirname}/data/5ea58343b1f3aa64febb544d.fit.json`, JSON.stringify(data, null, 2));
+        console.log("data.activity.sessions.length", data.activity.sessions.length);
+        console.log("data.activity.sessions[0].laps.length", data.activity.sessions[0].laps.length);
+        console.log("data.activity.sessions[0].laps[0].records.length", data.activity.sessions[0].laps[0].records.length);
+        console.log("data.activity.sessions[0].laps[1].records.length", data.activity.sessions[0].laps[1].records.length);
+        const records = [
+          ...data.activity.sessions[0].laps[0].records,
+          ...data.activity.sessions[0].laps[1].records
+        ];
+        console.log("all records:", records.length);
+        const longLat = records.filter(({ position_lat, position_long }) => position_lat && position_long);
+        console.log("lon,lat records:", longLat.length);
+        _fs.writeFileSync(`${__dirname}/data/points.json.txt`, longLat.map(p => p.timestamp.toISOString().replace(".000Z", "Z")).join("\n"));
+        // console.log("data.activity.sessions[0].laps[2].records.length",data.activity.sessions[0].laps[2].records.length);
         done();
       }
 
