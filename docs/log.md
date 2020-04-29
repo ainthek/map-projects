@@ -1,5 +1,111 @@
 # Work Log
 
+## 29.4.2020
+https://www.geoportal.sk/sk/geodeticke-zaklady/geodeticke-systemy-transformacie/
+
+http://www.geocomputation.org/1999/082/gc_082.htm
+
+https://www.sciencedirect.com/science/article/pii/S1110982313000276
+
+https://kokoalberti.com/articles/creating-elevation-profiles-with-gdal-and-two-point-equidistant-projection/
+
+https://gis.stackexchange.com/questions/173191/getting-elevation-readings-at-any-lat-lon-from-shapefile-with-scattered-irregula
+
+
+Mission:
+- ziskat extend z gpx-u
+- clipnut DMR podla neho
+- rescalnut DMR na 1m*1m kocky
+- spravit profile klasickym lookupom na pointy
+
+-------
+
+# Transformácia bodu, 29. 04. 2020, 20:37
+
+## 1) https://zbgis.skgeodesy.sk/rts/sk/Transform
+
+  ETRS89-LatLonh
+  λ: 17,1457116678357°
+  ϕ: 48,2006058376282°
+  S-JTSK (JTSK03)
+  Y: 570291,865 m
+  X: 1274853,148 m
+
+## 2) https://epsg.io/transform#s_srs=4326&t_srs=5513-4836&x=17.1457117&y=48.2006058
+
+  17.1457117
+  48.2006058
+
+  Output coordinates
+  
+  -570291.92
+  -1274853.11
+
+  Show position on a map
+  Unit: metre
+  Area of use: Slovakia.
+  Accuracy: 1 m
+
+## 3) gdaltransform CRS_5513_4836
+  
+with rounded nums
+
+  export CRS_5513_4836="+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485,169.5,483.8,7.786,4.398,4.103,0 +units=m +no_defs"
+  gdaltransform -s_srs EPSG:4326 -t_srs "$CRS_5513_4836" \
+    <<< "17.1457117 48.2006058"
+
+  -570291.913942695 
+  -1274853.11741814
+
+with original nums
+
+  gdaltransform -s_srs EPSG:4326 -t_srs "$CRS_5513_4836" \
+    <<< "17.1457116678357 48.2006058376282"
+
+  -570291.915901557 
+  -1274853.11301513
+
+## 3) gdaltransform CRS_5513
+
+  export CRS_5513="+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs"
+
+  gdaltransform -s_srs EPSG:4326 -t_srs "$CRS_5513"     <<< "17.1457116678357 48.2006058376282"
+
+  -570291.554164655 
+  -1274853.72734363 
+
+## 4) proj4js tests
+
+  test point
+  [ 17.1457116678357, 48.2006058376282 ]
+  
+  CRS_5513
+  +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=542.5,89.2,456.9,5.517,2.275,5.516,6.96 +pm=greenwich +units=m +no_defs'
+  [ -570291.5537455796, -1274853.724480256 ]
+  
+  CRS_102065
+  +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +units=m +no_defs
+  [ -570393.4490760971, -1274896.1711079231 ]
+  
+  CRS_102065_4836
+  +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs
+  [ -570291.9153729482, -1274853.1078706745 ]
+  
+  CRS_5513_4836
+  +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485,169.5,483.8,7.786,4.398,4.103,0 +units=m +no_defs
+  [ -570291.9153729482, -1274853.1078706745 ]
+  
+  CRS_5514_4836
+  +proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs
+  [ -570291.9153729482, -1274853.1078706745 ]
+
+
+
+## 28.4.2020
+
+back to qProf and our gpxElevation.js
+
+
 ## 25.4.2020
 
 Converting FIIT from Suunto to GPX.
@@ -17,7 +123,9 @@ https://techsparx.com/nodejs/esnext/dynamic-import.html
 
 ## 19.4.2020
 
-  $ gdaltransform -s_srs EPSG:4326 -t_srs "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs" <<< "17.1457116678357   48.2006058376282"
+  $ gdaltransform -s_srs EPSG:4326 -t_srs "+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs" \
+  <<< "17.1457116678357   48.2006058376282"
+
   -570291.915901557 -1274853.11301513 0.273295790888369
 
 
@@ -27,8 +135,8 @@ https://techsparx.com/nodejs/esnext/dynamic-import.html
 
 Takze finalna kombinacia je 
 
-  gdaltransform
   gdaltransform -s_srs EPSG:4326 -t_srs EPSG:5514 <<< "17.1233054157346 48.2128828950226"
+
   -571807.692870265 -1273330.6898739
 
 a potom z tymito suradnicami:
@@ -117,7 +225,7 @@ qProf vola nieco takto:
   <QgsPointXY: POINT(-570287.89820062729995698 -1274856.3173966403119266)>
   QgsCoordinateTransform(QgsCoordinateReferenceSystem(4326), QgsCoordinateReferenceSystem(102065), QgsProject.instance()).transform(QgsPointXY(17.1457116678357,48.2006058376282))
   <QgsPointXY: POINT(-570290.56011893984396011 -1274853.99262493057176471)>
-
+  
 A sme tu: Qgis vrati pre 102065 to iste co qProf.
 Takze otazka je inde ako donutit gdal aby vracal to iste co qGis.
 resp. aby pouzil tu istu transformaciu (5239 ?) co Qgis.
