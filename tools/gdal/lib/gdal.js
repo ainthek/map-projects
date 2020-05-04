@@ -6,7 +6,7 @@ const source = (dmr) => {
     "3.5.25m": `${__dirname}/../../../../gis-projects/data/zbgis/DMR3.5/25m/dmr3_5_25.tif`,
     "3.5.50m": `${__dirname}/../../../../gis-projects/data/zbgis/DMR3.5/50m/dmr3_5_50.tif`
   }
-  //return `${__dirname}/../../../../gis-projects/qgis/elevation-profiles/okrajovka/dmr-clip-resampled.tif`
+  return `${__dirname}/../../../../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.resize.tif`
   const resolved = sources[dmr];
 
   if (!resolved) throw new Error(`No DMR file for ${dmr}`);

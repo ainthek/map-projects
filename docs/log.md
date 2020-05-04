@@ -1,5 +1,136 @@
 # Work Log
 
+## 4.5.2020
+Zaver: na 2 kroky crop a resize
+na jeden krok to zatial neviem produkuje vyshiftovane 
+vysledky
+  //(-572050.052789, -1274853.113015) - (-569926.923109, -1272495.610625)
+  
+
+  gdal_translate \
+    -projwin -572124.3244690781 -1272433.6863660824 -569835.9694763866 -1274876.3701579568 \
+    -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.tif
+ 
+  gdal_translate -tr 1 1 -r bilinear \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.resize.tif
+
+
+-----
+rescale to 1m per pixel
+
+  gdalwarp -tr 1 1 -r bilinear -co COMPRESS=DEFLATE -co PREDICTOR=2 -co ZLEVEL=9 ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10_resampled_1m.tif
+
+get extent in WGS:
+
+  cat /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/suunto.gpx | ogrinfo -so /vsistdin/  track_points | grep Extent:
+
+get extent in CRS_5513_4836
+
+  ogr2ogr -t_srs "$CRS_5513_4836" -f GeoJSON /vsistdout/ /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/suunto.gpx track_points | ogrinfo -so /vsistdin/ track_points | grep ^Extent
+
+  Warning 1: The output driver does not natively support DateTime type for field time. Misconversion can happen. -mapFieldType can be used to control field type conversion.
+  Extent: (-572050.052789, -1274853.113015) - (-569926.923109, -1272495.610625)
+
+  $ ogr2ogr -t_srs "$CRS_5513_4836" -f GeoJSON /vsistdout/ /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/suunto.gpx tracks | ogrinfo -so /vsistdin/ tracks | grep ^Extent
+  Extent: (-572050.052789, -1274853.113015) - (-569926.923109, -1272495.610625)
+
+get extent in CRS_5513
+
+  ogr2ogr -t_srs "EPSG:5513" -f GeoJSON /vsistdout/ /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/suunto.gpx track_points | ogrinfo -so /vsistdin/ track_points | grep ^Extent
+  Extent: (-572046.087116, -1274856.317397) - (-569922.959333, -1272498.841086)
+
+get extent in CRS_102065_4936 
+  
+  export CRS_102065_4936="+proj=krovak +lat_0=49.5 +lon_0=24.83333333333333 +alpha=30.28813975277778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485.0,169.5,483.8,7.786,4.398,4.103,0.0 +units=m +no_defs"
+
+  ogr2ogr -t_srs "CRS_102065_4936" -f GeoJSON /vsistdout/ /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/suunto.gpx track_points | ogrinfo -so /vsistdin/ track_points | grep ^Extent
+  
+
+rescale cliped:
+
+  gdalwarp \
+    -te -572050.052789 -1274853.113015 -569926.923109, -1272495.610625 \
+    -tr 1 1 -r bilinear \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-1m.tif
+
+add some padding -100m,-100m,+100m,+100m
+
+  gdalwarp \
+    -te -572150.052789 -1274954.113015 -569826.923109, -1272395.610625 \
+    -tr 1 1 -r bilinear \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-1m-pad.tif  
+
+# TODO: podla mna tie cisla treba zaokruhlit tak aby sedeli 10m stvorce z povodneho kanvasu !!!!!!
+  teda podla extendu z povodneho DMR a pricitavat 10ky metrov
+
+alebo skusit na dva kroky najskorej gdal_translate a potom gdalwarp
+
+  gdal_translate \
+    -projwin -572060.6294999484 -1273896.0341993005 -572008.0423813025 -1273931.8169932112 \
+    -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.tif
+
+  gdalwarp \
+    -te -572060.6294999484 -1273896.0341993005 -572008.0423813025 -1273931.8169932112 \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-warp.tif
+
+ tieto dve veci hore produkuju iny vysledok, treba zistit preco.
+ Aj tento oneliner na resize a crop je vyshiftovany, zly
+
+   gdal_translate  -tr 1 1 -r bilinear   -projwin -572060.6294999484 -1273896.0341993005 -572008.0423813025 -1273931.8169932112     -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED     ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif     ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate-1m.tif
+
+ ak to spravim na dva kroky je to ok:
+
+  gdal_translate \
+    -projwin -572060.6294999484 -1273896.0341993005 -572008.0423813025 -1273931.8169932112 \
+    -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED \
+    ../gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif \
+    ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.tif
+ 
+ gdal_translate  -tr 1 1 -r bilinear ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.tif ../gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip-translate.resize.tif
+  
+
+## Cliping DMR to extent of GPX file
+
+### QGis - clip raster by extent
+  
+  17.120936019346118,17.148829400539398,48.200605837628245,48.22080119512975 [EPSG:4326]
+
+  gdal_translate -projwin -572123.9637925692 -1272434.3089299337 -569835.6164588864 -1274876.9858656945 -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/DMR-cliped.tif
+
+a neklipol to dobre !!!!
+pravdepodobne kvoli tomu ze neopreratal lon lat podla CRS_5513_4836 ale iba podla CRS_5513
+DMR malo nastavene 5513 (aj ked je 102065), a 5513 malo v projekte 4836 transform. 
+
+skusme z 102065
+
+  17.120936019346118,17.148829400539398,48.200605837628245,48.22080119512975 [EPSG:4326]
+
+  gdal_translate -projwin -572225.6437577037 -1272477.0920107327 -569937.6512923907 -1274919.4206846978 -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip.tif
+
+ak je project aj DMR deteknute ako 102065 tak to clipne spravne (vizualne), mozno az z velkymi okrajmi
+skusme zadat -projwin_srs <srs_def> teda suracnice priamo v WGS -projwin <ulx> <uly> <lrx> <lry>
+
+  gdal_translate -projwin_srs EPSG:4326 -projwin 17.120936019346118  48.22080119512975 17.148829400539398 48.200605837628245 -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip.4326.tif
+
+je to uplne zle.
+
+Skusme project 5513, DMR presetnute na 5513
+
+  17.120936019346118,17.148829400539398,48.200605837628245,48.22080119512975 [EPSG:4326]
+
+  gdal_translate -projwin -572124.3244690781 -1272433.6863660824 -569835.9694763866 -1274876.3701579568 -of GTiff -co COMPRESS=NONE -co BIGTIFF=IF_NEEDED /Volumes/data/_WORK/gis-projects/data/zbgis/DMR3.5/10m/dmr3_5_10.tif /Volumes/data/_WORK/gis-projects/qgis/elevation-profiles/okrajovka2/dmr-clip.tif
+
+otazka znie ako QGis zrata tie cisla co posled do gdal_translate.
+
+
 ## 29.4.2020
 https://www.geoportal.sk/sk/geodeticke-zaklady/geodeticke-systemy-transformacie/
 
