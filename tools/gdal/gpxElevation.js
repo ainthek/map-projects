@@ -14,7 +14,7 @@ async function main() {
 
   if (GPX_IN) {
     inStream = fs.createReadStream(GPX_IN);
-    GPX_OUT = GPX_IN + `.ele.gpx`;
+    GPX_OUT = GPX_IN + `.DMR_3_5_1m.gpx`;
     outStream = fs.createWriteStream(GPX_OUT);
   }
   await parseAndBuildXml({
