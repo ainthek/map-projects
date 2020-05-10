@@ -6,7 +6,7 @@ main();
 
 
 async function main() {
-  const [, , GPX_IN, DMR = '3.5.10m'] = process.argv;
+  const [, , GPX_IN] = process.argv;
 
   let inStream = process.stdin
   let outStream = process.stdout;
@@ -14,13 +14,13 @@ async function main() {
 
   if (GPX_IN) {
     inStream = fs.createReadStream(GPX_IN);
-    GPX_OUT = GPX_IN + `.${DMR}.gpx`;
+    GPX_OUT = GPX_IN + `.ele.gpx`;
     outStream = fs.createWriteStream(GPX_OUT);
   }
   await parseAndBuildXml({
     inStream: inStream,
     outStream: outStream,
-    transform: (gxpJs) => addElevation(gxpJs, DMR),
+    transform: (gxpJs) => addElevation(gxpJs),
   });
   if (GPX_OUT) {
     console.error("output:", GPX_OUT);
@@ -49,12 +49,12 @@ async function read(stream) {
   return Buffer.concat(chunks).toString('utf8');
 }
 
-async function addElevation(gxpJs, dmr) {
+async function addElevation(gxpJs) {
 
   const done = [];
   const points = gxpJs.gpx.trk.map(({ trkseg }) => trkseg.map(({ trkpt }) => trkpt)).flat(Infinity);
   const coordinates = points.map(({ $: { lon, lat } }) => ({ lon, lat }));
-  const elevs = await eleDMR(coordinates, dmr);
+  const elevs = await eleDMR(coordinates);
   points.forEach((point, i) => Object.assign(point, { ele: elevs[i] })); // mutating
 
   return gxpJs;
