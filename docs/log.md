@@ -1,4 +1,28 @@
 # Work Log
+## 10.5.2020
+
+data v DMR su v BVP (EPSG:8357), v akych systemoch su data z hodiniek a data z strava a srtm atd... ? 
+
+Transformačná služba podporuje transformáciu výšky súčasne medzi dvoma z nasledujúcich výškových systémov:
+
+Baltský výškový systém po vyrovnaní - realizácia Bpv (1957), označenie Bpv - EPSG:8357
+Európsky vertikálny referenčný systém - realizácia EVRF2007, označenie EVRS (EVRF2007_AMST) - EPSG:5621
+Elipsoidická výška nad elipsoidom GRS80, označenie ETRS89-h
+Použité výškové transformácie:
+
+  Vstupný      výškový systém
+  Výstupný      výškový systém
+  Transformácia [EPSG kód]
+  ETRS89-h	Bpv	 8361
+  Bpv	ETRS89-h	 8361
+  ETRS89-h	EVRS (EVRF2007_AMST)	 8362
+  EVRS (EVRF2007_AMST)	ETRS89-h	 8362
+  Bpv	EVRS (EVRF2007_AMST)	 8363
+  EVRS (EVRF2007_AMST)	Bpv	 8363
+
+https://www.geoportal.sk/sk/sluzby/aplikacie/transformacna-sluzba/
+https://evrs.bkg.bund.de/Subsites/EVRS/EN/EVRF2019/evrf2019.html;jsessionid=D13612238F46370227C833D89751D4CF.live22
+
 
 ## 4.5.2020
 Zaver: na 2 kroky crop a resize
