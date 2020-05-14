@@ -1,8 +1,8 @@
 export { drawChart, drawLegend };
 
 function drawChart(data, element) {
-  const chartWidth = 1200;
-  const chartHeight = 300;
+  const chartWidth = 800;
+  const chartHeight = 400;
   var margin = { top: 20, right: 20, bottom: 20, left: 20 };
   var width = chartWidth - margin.left - margin.right;
   var height = chartHeight - margin.top - margin.bottom;

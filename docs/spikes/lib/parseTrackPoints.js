@@ -28,10 +28,11 @@ const addDistance = (point, i, points) => {
 };
 const addSlope = (point, i, points) => {
     const previous = points[i - 1];
-    const delta = previous && point.distance.delta ? (point.ele - previous.ele) / point.distance.delta : 0;
+    const eleDelta = previous && point.ele - previous.ele
+    const delta = previous && point.distance.delta ? eleDelta / point.distance.delta : 0;
     const total = previous ? previous.slope.total + delta : 0;
     return Object.assign(points[i], {
-        slope: { delta, total }
+        slope: { delta, total, eleDelta }
     });
 }
 const add3dDistance = (point, i, points) => {
@@ -72,8 +73,8 @@ const statsTrackPoints = (trackpoints) => {
         "distance (terrain Δ)": lastPoint.distance3d.total - lastPoint.distance.total,
         "elevation (extent)": elevationExtent,
         "elevation Δ": elevationExtent[1] - elevationExtent[0],
-        "ascent": d3.sum(trackpoints, d => Math.max(0, d.slope.delta)),
-        "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.delta)),
+        "ascent": d3.sum(trackpoints, d => Math.max(0, d.slope.eleDelta)),
+        "descent": d3.sum(trackpoints, d => Math.min(0, d.slope.eleDelta)),
         // data stats
         "<ele> missing": trackpoints.filter(p => p.ele == 0).length, //TODO: better keep as null and make getter
         "sample rate (median time s)": median(trackpoints.slice(1).map(({ deltaT }) => deltaT)) / 1000,
