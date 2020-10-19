@@ -1,4 +1,16 @@
 # Work Log
+
+## back after 5 months 19.10.2020
+
+some tests of fit-file-parser js library
+
+  nvm use 13
+  cd docs/spikes
+
+  npx mocha ./test/spec.js --grep FIT
+
+
+
 ## 10.5.2020
 
 data v DMR su v BVP (EPSG:8357), v akych systemoch su data z hodiniek a data z strava a srtm atd... ? 

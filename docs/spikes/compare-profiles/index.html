@@ -65,7 +65,7 @@
     Promise.all(data).then((data) => {
       const s = d3.select("body").append("section");
       s.append("h2").html(`Chart ${d3.selectAll("section").size() - 1}`)
-      drawChart(data, s.append("div"));
+      drawChart(data, s.append("div",));
       drawLegend(data, s.append("div"));
       const stats = data.map(({ fileName, trackPoints }) => ({
         fileName,

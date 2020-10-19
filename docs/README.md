@@ -11,6 +11,7 @@ Topics of interest
 - Exporting/Importing Data
 - ...
 - More Complex Processing Pipelines
+- Sport Activity Evaluation
 
 Comparison:
 
@@ -408,7 +409,15 @@ toto sa zda ze IDE:
 
 - https://www.npmjs.com/package/ogr2ogr
 
+
+# Sport Activity Evaluation
+
+- Sigma Data center - https://www.sigma-download.com/
+- Golden Cheetah - 
 -------------------------------------
+
+
+
 
 References:
 [freemap.sk]: http://wiki.freemap.sk/HomePage
