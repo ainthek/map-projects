@@ -1,5 +1,9 @@
 # Work Log
 
+## batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
+  
+  tools/fit2gpx.sh ../gis-projects/data/suunto/fit/*.fit
+
 ## back after 5 months 19.10.2020
 
 some tests of fit-file-parser js library
