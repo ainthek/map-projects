@@ -1,8 +1,13 @@
 # Work Log
 
-## batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
+## 22.10.2020 batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
   
-  tools/fit2gpx.sh ../gis-projects/data/suunto/fit/*.fit
+  tools/fitconvert.sh ../gis-projects/data/suunto/fit/*.fit
+  
+Zareportovany bug na altitude, Garmin-FIT (perl project):
+
+  https://github.com/mrihtar/Garmin-FIT/issues/29
+
 
 ## back after 5 months 19.10.2020
 
