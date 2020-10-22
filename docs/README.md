@@ -1,6 +1,6 @@
 # map-projects
 
-Just experiments with geo data, and additional infos (tests) and additional objects (3d models) and various engines and frameworks.
+Just experiments with geo data and various engines and frameworks.
 
 
 Topics of interest
@@ -18,6 +18,7 @@ Comparison:
 - ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
 - Comparison of bicycle route planning websites <https://en.wikipedia.org/wiki/Comparison_of_bicycle_route_planning_websites>
 -------------
+
 # Data Sources
 
 ## ZBGIS
