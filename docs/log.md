@@ -1,5 +1,13 @@
 # Work Log
 
+## 23.10.2020 OSM a historia zaznamov
+
+Kto babral z poziciou Malej Bane na OSM ?
+
+  https://www.openstreetmap.org/node/333130989/history
+
+  curl https://www.openstreetmap.org/api/0.6/node/333130989/history | xmlstarlet sel -T -t -m 'osm/node' -v 'concat(@lon, ",", @lat,",",@user)' -n | awk-uniq
+
 ## 22.10.2020 batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
   
   tools/fitconvert.sh ../gis-projects/data/suunto/fit/*.fit

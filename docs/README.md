@@ -13,10 +13,8 @@ Topics of interest
 - More Complex Processing Pipelines
 - Sport Activity Evaluation
 
-Comparison:
 
-- ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
-- Comparison of bicycle route planning websites <https://en.wikipedia.org/wiki/Comparison_of_bicycle_route_planning_websites>
+
 -------------
 
 # Data Sources
@@ -26,6 +24,17 @@ Comparison:
 - https://www.geoportal.sk/sk/zbgis_smd/na-stiahnutie/
 - http://www.gku.sk/files/gku/produkty-sluzby/na-stiahnutie/gku_produkty.pdf
 
+- https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
+
+## OSM
+
+
+- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
+
+# Manuals
+
+- ZBGIS <https://www.geoportal.sk/sk/zbgis-prirucka.html>
+- OSM <https://www.openstreetmap.org/help>
 
 # Authoring Maps
 
@@ -107,17 +116,20 @@ Also one click process.
 <https://www.google.com/maps/d/embed?mid=1CgHIC2MTQMYrkcSair-y9QncFLes4dal>
 
 ## [Cesium]
-IFramew with extrenal map as source= parameter, (still buggy)
+
+Both samples here are buggy (Z-layer story, I need to fix them)
+
+IFrame with extrenal map as source= parameter, (still buggy)
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
-</iframe>	
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https%3A%2F%2Fraw.githubusercontent.com%2Fainthek%2Fmap-projects%2Fmaster%2Fdocs%2Fdata%2Fsamples%2FBMXRaceTracks.googleearthpro.kml">
+</iframe>	 
 
 Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 
 
 <iframe width="100%" height="500px"
-	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/doc/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.117977768647275%2C48.21516358587874%2C553.5685019284648%2C281.525245591343%2C-21.391550202590636%2C359.79865247344674">
+	src="https://cesium.com/cesiumjs/cesium-viewer/index.html?source=https://raw.githubusercontent.com/ainthek/map-projects/master/docs/data/samples/animated/2Tracks/2Tracks-OnePath2.kml&view=17.117977768647275%2C48.21516358587874%2C553.5685019284648%2C281.525245591343%2C-21.391550202590636%2C359.79865247344674">
 </iframe>	
 
 ## [Relive]
@@ -416,12 +428,18 @@ toto sa zda ze IDE:
 
 # Sport Activity Evaluation
 
-- Sigma Data center - https://www.sigma-download.com/
-- Golden Cheetah - 
+- Sigma Data center - <https://www.sigma-download.com/>
+- Golden Cheetah - <https://www.goldencheetah.org/>
+
+
 -------------------------------------
 
+# Other links and resources
 
+## Comparisons by others
 
+- ArcGis vs. Cesium <http://www.ika.ethz.ch/studium/cartography_lab/2017_staehli_report.pdf>
+- Comparison of bicycle route planning websites <https://en.wikipedia.org/wiki/Comparison_of_bicycle_route_planning_websites>
 
 References:
 [freemap.sk]: http://wiki.freemap.sk/HomePage
