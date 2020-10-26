@@ -1,12 +1,79 @@
 # Work Log
 
+## 26.10.2020
+
+Experimenting with gpx to QGis mapping, how are tracks, tracksequences etc mapped to qgis geometry ?
+
+What are the geometries (Line, Multiline) in GIS ? <http://help.arcgis.com/en/geodatabase/10.0/sdk/arcsde/concepts/geometry/shapes/types.htm>
+
+Time to RTFM ?: <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/vector_data.html>
+, <https://docs.qgis.org/3.4/pdf/en/QGIS-3.4-QGISTrainingManual-en.pdf>
+
+
+Studium Traing materialov a export protected areas z OSM do KML a excelu, na zaklade toho som aspon opravil údaje na OSM https://www.openstreetmap.org/way/309991398
+
+
+### Some GPX queries
+To find samples for experiments you may need to find:
+
+GPX files with more then one track segment:
+
+	git grep -c "<trkseg>" *.gpx | grep -v ":1$"
+
+GPX files without elevation:
+
+	git grep -L "<ele>" *.gpx
+
+GPX files with waypoints:
+
+	git grep -l "<wpt " *.gpx
+		
+GPX files with route
+	
+	git grep -l "<rte>" *.gpx
+
+## 25.10.2020 How to in Qgis
+
+- mark start and end of gpx track
+	- <https://gis.stackexchange.com/questions/272534/adding-symbols-to-the-end-of-a-line>
+- get OSM as layers (not as base map) to QGis 
+	- QuickOSM plugin and query by canvas extend 	 
+
+## 25.10.2020 How to publish and eBook
+
+<https://www.freecodecamp.org/news/taking-off-the-successful-launch-of-an-open-source-book-7553a2262898/>
+
+## 25.10.2020 QGis on OSX
+
+QGis 3.14 for Windows is very different from QGis 3.14 for OSX. OSX version is far beyond, using 2 years old proj lib and other older stuff.
+
+Installing nightly <https://qgis.org/en/site/forusers/alldownloads.html?highlight=nightly#qgis-nightly-release> OSX build may help.
+
+qProf plugin seems no fail on startup ;-)
+
 ## 23.10.2020 OSM a historia zaznamov
 
 Kto babral z poziciou Malej Bane na OSM ?
 
   https://www.openstreetmap.org/node/333130989/history
 
-  curl https://www.openstreetmap.org/api/0.6/node/333130989/history | xmlstarlet sel -T -t -m 'osm/node' -v 'concat(@lon, ",", @lat,",",@user)' -n | awk-uniq
+CLI: 
+	
+	curl https://www.openstreetmap.org/api/0.6/node/333130989/history | xmlstarlet sel -T -t -m 'osm/node' -v 'concat(@lon, ",", @lat,",",@user)' -n | awk-uniq
+
+Example output:
+
+	17.1296718,48.2181798,2009-01-18T17:10:11Z,NiCK_n17
+	17.1296718,48.2181798,2009-02-01T18:40:41Z,ulfl
+	17.1296718,48.2181798,2012-02-24T17:41:52Z,mareko
+	17.1296718,48.2181798,2012-12-28T16:02:15Z,mareko
+	17.1296559,48.2181889,2015-09-06T12:36:53Z,FishDoctor
+	17.1296559,48.2181889,2015-12-04T08:54:36Z,RomanKucera
+	17.1296559,48.2181889,2015-12-04T08:57:51Z,RomanKucera
+	17.1296559,48.2181889,2015-12-04T08:59:33Z,RomanKucera
+	17.1299474,48.2181438,2017-01-23T09:19:15Z,Ivor Švihran
+	17.1299474,48.2181438,2017-05-17T21:22:00Z,rmikke
+	17.1299474,48.2181438,2019-03-29T20:24:54Z,b-jazz-bot
 
 ## 22.10.2020 batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
   

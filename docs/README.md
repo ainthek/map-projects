@@ -26,11 +26,10 @@ Topics of interest
 
 - https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
 
-## OSM
 
-
-- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
-
+## Others
+- <https://app.sazp.sk/atlassr/>
+- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>	
 # Manuals
 
 - ZBGIS <https://www.geoportal.sk/sk/zbgis-prirucka.html>
