@@ -29,7 +29,11 @@ Topics of interest
 
 ## Others
 - <https://app.sazp.sk/atlassr/>
-- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>	
+- <http://maps.sopsr.sk/>
+- <http://maps.sopsr.sk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities>
+- <http://maps.geop.sazp.sk/geoserver/wfs> toto je velmi zaujimave
+- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
+- <http://geoportal.gov.sk/narodny-geoportal/galeria-map-a-mapovych-kompozicii?fbclid=IwAR0lU1rliqssFGG6WPDwARQBasiNO4qRl3t7_WQm_vP21_JHmVa80XwBwwQ>	
 # Manuals
 
 - ZBGIS <https://www.geoportal.sk/sk/zbgis-prirucka.html>

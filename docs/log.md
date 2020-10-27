@@ -12,6 +12,21 @@ Time to RTFM ?: <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/vect
 
 Studium Traing materialov a export protected areas z OSM do KML a excelu, na zaklade toho som aspon opravil údaje na OSM https://www.openstreetmap.org/way/309991398
 
+### Problematika mapy stupnov ochrany prirody
+<https://www.facebook.com/groups/1719589758277564/permalink/2778409132395616/>
+
+podobnu vec riesili na hiking.sk <https://hiking.sk/hk/fo/58088/klm_subory_slovenskych_np_a_chko.html?offset=0&period=&fifo=>
+a tuna je nieco <http://wiki.freemap.sk/LayerSopsr> a aj tuna <https://groups.google.com/g/osm_sk/c/J0ItJw1lKDE>
+
+nasiel som zdoje dat:
+
+
+<http://maps.sopsr.sk/geoserver/ows> (tento ma zle malu fatru)
+a
+<https://app.sazp.sk/atlassr/proxy.ashx?https://arc.sazp.sk/arcgis/rest/services/atlassr/atlassr_08/MapServer/export?bbox=-595107.082520365%2C-1451785.892234829%2C93602.58132958648%2C-1119363.112236737&bboxSR=102067&imageSR=102067&size=3290%2C1588&dpi=192&format=png32&transparent=true&layers=show%3A218%2C220%2C221&f=image>
+
+Exporting KML with colors: <https://gis.stackexchange.com/questions/151188/is-there-a-way-to-export-the-style-along-with-a-shapefile-to-a-kml-in-qgis>
+
 
 ### Some GPX queries
 To find samples for experiments you may need to find:
