@@ -1,0 +1,21 @@
+#!/bin/bash
+
+## Fixes some values in GPX files to be better suited for QGis import
+## Version:
+## 
+## Usage: 
+##
+## Samples:
+##     
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] || ([ -t 0 ] && [ "$#" == 0 ])
+then 
+	perl -ne "/^## ?/ && s/^## ?//g && print" "${BASH_SOURCE[0]}"
+	exit 1
+fi
+# get current dir of script , absolute, one hop symlinks supported, XB OSX because readlink -f, see also https://gist.github.com/esycat/5279354
+tools="$([ -L "$0" ] && BASHSOURCE="$(dirname "$0")/$(readlink "$0")" || BASHSOURCE="$0"; cd "$( dirname "$BASHSOURCE")" && pwd -P )"
+
+ORIG_GPX="$1"
+
+$tools/xslt/xslt3 $tools/xslt/fix.xslt gpx.filename="$1" gpx.basename="$(basename $1 .gpx)" < "$ORIG_GPX" |\
+tee >( grep "FIXED" | prefix "Fixed:$1:" 1>&2) | xml fo

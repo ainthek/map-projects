@@ -1,5 +1,23 @@
 # Work Log
 
+## 28.10.2020
+Misia ako konvertnut vsecky gpx z disku do jedneho GeoPackage ?
+
+Basic: 
+	
+	ogr2ogr -f GPKG output.gpkg  "data/myTracks/2020-03-26 15_35_35-horaren-pekna-cesta.gpx"
+
+Update:
+	
+	ogr2ogr -update -append -f GPKG output.gpkg  "data/others/roland/cerova-activity_4812673330-stops.gpx"
+	
+Ale tu je problem ze sa vsecky tracky daju do layery tracks a vsetky wpt do waypoints
+a strati sa vezba medzi waypoints a trackom. ako to dokazat premenovat ?
+	
+
+## 27.10.2020
+Training materials chapetr 1..7
+
 ## 26.10.2020
 
 Experimenting with gpx to QGis mapping, how are tracks, tracksequences etc mapped to qgis geometry ?
@@ -46,6 +64,10 @@ GPX files with waypoints:
 GPX files with route
 	
 	git grep -l "<rte>" *.gpx
+	
+GPX files withou name (any)
+
+	git grep -L "<name>" *.gpx	
 
 ## 25.10.2020 How to in Qgis
 
