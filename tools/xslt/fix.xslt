@@ -8,6 +8,7 @@
   <xsl:template match="gpx:trk">
     <trk>
       <xsl:call-template name="trk.name" />
+      <xsl:call-template name="trk.src" />
       <xsl:apply-templates select="@*|node()" />
     </trk>
   </xsl:template>
@@ -25,7 +26,7 @@
             </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="$gpx.basename" />
-              <xsl:comment>FIXED:trk.name</xsl:comment>
+              <xsl:comment>FIXED:</xsl:comment>
             </xsl:otherwise>
           </xsl:choose>
         </name>
@@ -40,9 +41,32 @@
               <xsl:value-of select="$gpx.basename" />
             </xsl:otherwise>
           </xsl:choose>
-          <xsl:comment>FIXED:trk.name</xsl:comment>
+          <xsl:comment>FIXED:</xsl:comment>
         </name>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <!-- .................................................................................... -->
+  <xsl:template match="/gpx:gpx/gpx:trk/gpx:src"></xsl:template>
+  <xsl:template name="trk.src">
+    <xsl:choose>
+      <xsl:when test="./gpx:src">
+        <src>
+          <xsl:choose>
+            <xsl:when test="./gpx:src[normalize-space()]">
+              <xsl:value-of select="normalize-space(./gpx:src)" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="/gpx:gpx/@creator" />
+              <xsl:comment>FIXED:</xsl:comment>
+            </xsl:otherwise>
+          </xsl:choose>
+        </src>
+      </xsl:when>
+      <xsl:otherwise>
+        <src><xsl:value-of select="/gpx:gpx/@creator" /></src>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
 </xsl:stylesheet>
