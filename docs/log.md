@@ -1,5 +1,59 @@
 # Work Log
 
+## 29.10.2020
+
+- continue collecting bike track in karpaty from OSM
+- finding more object to include in query (see OSM.md)
+- fixing some data on OSM (operators of TBK trails
+
+<http://www.undertheraedar.com/2015/10/glowing-lines-in-qgis.html>
+<https://gis.stackexchange.com/questions/360416/calculating-overlap-of-several-lines-in-qgis>
+<https://gis.stackexchange.com/questions/246510/adding-offset-to-overlapping-lines-in-qgis-in-same-layer>
+
+<https://gis.stackexchange.com/questions/330383/counting-number-of-features-within-another-feature-using-aggregating-function-in>
+
+<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>
+
+	/*
+	Labels each region with its highest (in altitude) airport(s)
+	and altitude, eg 'AMBLER : 264m' for the 'Northwest Artic' region
+	*/
+	with_variable(
+	  'airport_alti', -- stores the highest altitude of the region
+	  aggregate(
+	    'airports',
+	    'max',
+	    "ELEV", -- the field containing the altitude
+	    -- and limit the airports to the region they are within
+	    filter := within( $geometry, geometry( @parent ) )
+	  ),
+	    aggregate( -- finds airports at the same altitude in the region
+	      'airports',
+	      'concatenate',
+	      "NAME",
+	      filter := within( $geometry, geometry( @parent ) )
+	        and "ELEV" = @airport_alti
+	    )
+	    || ' : ' || @airport_alti || 'm'
+	    -- using || allows regions without airports to be skipped
+	)
+
+Join Attributes by location (summary) dokaze spocitat s kolkymi inymi feature sa dana feature krizuje, alebo v nasom pripade prekryva. v stlpci fid_count je ten pocet
+
+teraz je otazka ako spocitat z tohto offset, kedze aj tie ostatne budu mat rovnaky pocet.
+
+Aj tak je to na nic lebo to pocita kolko ma overlays z inymi trasami, ale nie v konkretnom mieste, naprikla Sakra Velo je 33 overlayov ale na konkretnom mieste sa prekryva len z jednou alebo dvoma trasami. takze je treba to splitnut na jednotlive useky.
+
+Takze najskorej "Split with lines". Toto je tiez uchylka lebo ways ktore su v relations s danou trasou uz su takto nasplitovane. toto bezi len nad karpatmi minuty.
+
+Lenze Split with lines sprav 2000 lines zo 6tich, nie 12 ako je ocakavane.
+zeby nieco tuna ? <https://github.com/qgis/QGIS/issues/14070>
+
+	# higher_overlays, calculated value 
+	with_variable('cfid',fid,
+	aggregate('02-joined','count_distinct',fid_2,fid=@cfid and fid<fid_2)
+	)
+
 ## 28.10.2020
 Misia ako konvertnut vsecky gpx z disku do jedneho GeoPackage ?
 
@@ -13,6 +67,7 @@ Update:
 	
 Ale tu je problem ze sa vsecky tracky daju do layery tracks a vsetky wpt do waypoints
 a strati sa vezba medzi waypoints a trackom. ako to dokazat premenovat ?
+
 	
 
 ## 27.10.2020

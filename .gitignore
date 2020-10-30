@@ -2,6 +2,7 @@
 
 node_modules
 test
+docs/QGIS-3.4-QGISTrainingManual-en.pdf
 
 # General Backup Files
 *.BAK
