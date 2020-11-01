@@ -31,11 +31,14 @@ if [[ -d $SRC ]]; then
 	QUERY="*.gpx"
 else 
     cd "$(dirname "$SRC")"
+    set -f
     QUERY="$(basename $SRC)"
+    set +f
 fi
 
 c=0
 
+echo 1>&2 "SRC:${SRC}"
 
 git ls-files "$QUERY" |\
 #head -n 2 |\

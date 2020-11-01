@@ -1,4 +1,9 @@
 # Work Log
+## 30.10.2020
+
+- fixing some bugs in gps2gpkg
+
+7.3 Lesson: Network Analysis
 
 ## 29.10.2020
 
