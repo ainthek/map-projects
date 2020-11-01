@@ -11,9 +11,9 @@
 ##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/others/"
 ##      
 ##    # FILE
-##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/"
+##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/test.gpx"
 ##    
-##    # mulriple files 
+##    # multiple files 
 ##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/suunto/converted/2020-04-*.gpx"
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] || [ "$#" != 2 ]
