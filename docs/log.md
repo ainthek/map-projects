@@ -1,4 +1,24 @@
 # Work Log
+
+## 2.11.2020
+
+Z trailforms sa oplati downloadovat veci ako *.osm, lebo obsahuju aj dalsie atributy, okrem ineho napriklad aj mtb:scale:imba:
+
+	"name"=>"Baník trail","highway"=>"path",
+	"bicycle"=>"designated",
+	"surface"=>"dirt",
+	"source:name"=>"Trailforks.com",
+	"website"=>"https://www.trailforks.com/trails/banik-trail/",
+	"mtb:type"=>"AM",
+	"mtb:scale:imba"=>"2",
+	"tf:id"=>"258802",
+	"tf:difficulty"=>"4",
+	"tf:rid"=>"23484"
+	
+ale vsecko je zgrznute do jedneho fieldy other_tags
+tu je nejaka diskusia ako to rozbit <http://osgeo-org.1560.x6.nabble.com/gdal-dev-splitting-other-tags-from-osm-file-td5293451.html>
+	
+
 ## 30.10.2020
 
 - fixing some bugs in gps2gpkg
