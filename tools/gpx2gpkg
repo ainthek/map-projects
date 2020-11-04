@@ -38,7 +38,9 @@ fi
 
 c=0
 
+echo 1>&2 "PWD:${PWD}"
 echo 1>&2 "SRC:${SRC}"
+echo 1>&2 "QUERY:${QUERY}"
 
 git ls-files "$QUERY" |\
 #head -n 2 |\
