@@ -26,10 +26,14 @@ Topics of interest
 
 - https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
 
+
 ## OSM
 
-
 - <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
+
+## Turistické značky
+
+- https://mapy.hiking.sk/
 
 # Manuals
 
