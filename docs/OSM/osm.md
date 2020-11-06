@@ -35,4 +35,70 @@ Query:
 	  </union>
 	  <print mode="body" />
 	</osm-script>
+
+
+## calculating _surface
+
+Surface nemusi byt vsade vyplneny, ani nebyva
+skusme ho odhadnut podla inych atributov
+
+https://wiki.openstreetmap.org/wiki/Key:highway#Roads
+
+Roads: 
+
+'motorway',
+'trunk',
+'primary',
+'secondary',
+'tertiary',
+'unclassified',
+'residential',
+
+'motorway_link',
+'trunk_link',
+'primary_link',
+'secondary_link',
+'tertiary_link'
+
+
+
+https://wiki.openstreetmap.org/wiki/Key:surface
+
+Calculating OSM Surface
+
+if(surface!='',
+	surface,
+	if(highway in (
+		
+		-- general
+		
+		'road',
+
+		-- roads
+		
+		'motorway',
+		'trunk',
+		'primary',
+		'secondary',
+		'tertiary',
+		'unclassified',
+		'residential',
+
+		-- links
+		
+		'motorway_link',
+		'trunk_link',
+		'primary_link',
+		'secondary_link',
+		'tertiary_link',
+
+		-- service ?
+		'service'
+	),
+	'asphalt',
+	'UNKNOWN'
+	)
+)
+
+ 
 	
