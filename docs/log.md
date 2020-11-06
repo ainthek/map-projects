@@ -1,12 +1,196 @@
 # Work Log
 
+## 2.11.2020
+
+Z trailforms sa oplati downloadovat veci ako *.osm, lebo obsahuju aj dalsie atributy, okrem ineho napriklad aj mtb:scale:imba:
+
+	"name"=>"Baník trail","highway"=>"path",
+	"bicycle"=>"designated",
+	"surface"=>"dirt",
+	"source:name"=>"Trailforks.com",
+	"website"=>"https://www.trailforks.com/trails/banik-trail/",
+	"mtb:type"=>"AM",
+	"mtb:scale:imba"=>"2",
+	"tf:id"=>"258802",
+	"tf:difficulty"=>"4",
+	"tf:rid"=>"23484"
+	
+ale vsecko je zgrznute do jedneho fieldy other_tags
+tu je nejaka diskusia ako to rozbit <http://osgeo-org.1560.x6.nabble.com/gdal-dev-splitting-other-tags-from-osm-file-td5293451.html>
+	
+
+## 30.10.2020
+
+- fixing some bugs in gps2gpkg
+
+7.3 Lesson: Network Analysis
+
+## 29.10.2020
+
+- continue collecting bike track in karpaty from OSM
+- finding more object to include in query (see OSM.md)
+- fixing some data on OSM (operators of TBK trails
+
+<http://www.undertheraedar.com/2015/10/glowing-lines-in-qgis.html>
+<https://gis.stackexchange.com/questions/360416/calculating-overlap-of-several-lines-in-qgis>
+<https://gis.stackexchange.com/questions/246510/adding-offset-to-overlapping-lines-in-qgis-in-same-layer>
+
+<https://gis.stackexchange.com/questions/330383/counting-number-of-features-within-another-feature-using-aggregating-function-in>
+
+<https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/expression.html>
+
+	/*
+	Labels each region with its highest (in altitude) airport(s)
+	and altitude, eg 'AMBLER : 264m' for the 'Northwest Artic' region
+	*/
+	with_variable(
+	  'airport_alti', -- stores the highest altitude of the region
+	  aggregate(
+	    'airports',
+	    'max',
+	    "ELEV", -- the field containing the altitude
+	    -- and limit the airports to the region they are within
+	    filter := within( $geometry, geometry( @parent ) )
+	  ),
+	    aggregate( -- finds airports at the same altitude in the region
+	      'airports',
+	      'concatenate',
+	      "NAME",
+	      filter := within( $geometry, geometry( @parent ) )
+	        and "ELEV" = @airport_alti
+	    )
+	    || ' : ' || @airport_alti || 'm'
+	    -- using || allows regions without airports to be skipped
+	)
+
+Join Attributes by location (summary) dokaze spocitat s kolkymi inymi feature sa dana feature krizuje, alebo v nasom pripade prekryva. v stlpci fid_count je ten pocet
+
+teraz je otazka ako spocitat z tohto offset, kedze aj tie ostatne budu mat rovnaky pocet.
+
+Aj tak je to na nic lebo to pocita kolko ma overlays z inymi trasami, ale nie v konkretnom mieste, naprikla Sakra Velo je 33 overlayov ale na konkretnom mieste sa prekryva len z jednou alebo dvoma trasami. takze je treba to splitnut na jednotlive useky.
+
+Takze najskorej "Split with lines". Toto je tiez uchylka lebo ways ktore su v relations s danou trasou uz su takto nasplitovane. toto bezi len nad karpatmi minuty.
+
+Lenze Split with lines sprav 2000 lines zo 6tich, nie 12 ako je ocakavane.
+zeby nieco tuna ? <https://github.com/qgis/QGIS/issues/14070>
+
+	# higher_overlays, calculated value 
+	with_variable('cfid',fid,
+	aggregate('02-joined','count_distinct',fid_2,fid=@cfid and fid<fid_2)
+	)
+
+## 28.10.2020
+Misia ako konvertnut vsecky gpx z disku do jedneho GeoPackage ?
+
+Basic: 
+	
+	ogr2ogr -f GPKG output.gpkg  "data/myTracks/2020-03-26 15_35_35-horaren-pekna-cesta.gpx"
+
+Update:
+	
+	ogr2ogr -update -append -f GPKG output.gpkg  "data/others/roland/cerova-activity_4812673330-stops.gpx"
+	
+Ale tu je problem ze sa vsecky tracky daju do layery tracks a vsetky wpt do waypoints
+a strati sa vezba medzi waypoints a trackom. ako to dokazat premenovat ?
+
+	
+
+## 27.10.2020
+Training materials chapetr 1..7
+
+## 26.10.2020
+
+Experimenting with gpx to QGis mapping, how are tracks, tracksequences etc mapped to qgis geometry ?
+
+What are the geometries (Line, Multiline) in GIS ? <http://help.arcgis.com/en/geodatabase/10.0/sdk/arcsde/concepts/geometry/shapes/types.htm>
+
+Time to RTFM ?: <https://docs.qgis.org/2.18/en/docs/gentle_gis_introduction/vector_data.html>
+, <https://docs.qgis.org/3.4/pdf/en/QGIS-3.4-QGISTrainingManual-en.pdf>
+
+
+Studium Traing materialov a export protected areas z OSM do KML a excelu, na zaklade toho som aspon opravil údaje na OSM https://www.openstreetmap.org/way/309991398
+
+### Problematika mapy stupnov ochrany prirody
+<https://www.facebook.com/groups/1719589758277564/permalink/2778409132395616/>
+
+podobnu vec riesili na hiking.sk <https://hiking.sk/hk/fo/58088/klm_subory_slovenskych_np_a_chko.html?offset=0&period=&fifo=>
+a tuna je nieco <http://wiki.freemap.sk/LayerSopsr> a aj tuna <https://groups.google.com/g/osm_sk/c/J0ItJw1lKDE>
+
+nasiel som zdoje dat:
+
+
+<http://maps.sopsr.sk/geoserver/ows> (tento ma zle malu fatru)
+a
+<https://app.sazp.sk/atlassr/proxy.ashx?https://arc.sazp.sk/arcgis/rest/services/atlassr/atlassr_08/MapServer/export?bbox=-595107.082520365%2C-1451785.892234829%2C93602.58132958648%2C-1119363.112236737&bboxSR=102067&imageSR=102067&size=3290%2C1588&dpi=192&format=png32&transparent=true&layers=show%3A218%2C220%2C221&f=image>
+
+Exporting KML with colors: <https://gis.stackexchange.com/questions/151188/is-there-a-way-to-export-the-style-along-with-a-shapefile-to-a-kml-in-qgis>
+
+
+### Some GPX queries
+To find samples for experiments you may need to find:
+
+GPX files with more then one track segment:
+
+	git grep -c "<trkseg>" *.gpx | grep -v ":1$"
+
+GPX files without elevation:
+
+	git grep -L "<ele>" *.gpx
+
+GPX files with waypoints:
+
+	git grep -l "<wpt " *.gpx
+		
+GPX files with route
+	
+	git grep -l "<rte>" *.gpx
+	
+GPX files withou name (any)
+
+	git grep -L "<name>" *.gpx	
+
+## 25.10.2020 How to in Qgis
+
+- mark start and end of gpx track
+	- <https://gis.stackexchange.com/questions/272534/adding-symbols-to-the-end-of-a-line>
+- get OSM as layers (not as base map) to QGis 
+	- QuickOSM plugin and query by canvas extend 	 
+
+## 25.10.2020 How to publish and eBook
+
+<https://www.freecodecamp.org/news/taking-off-the-successful-launch-of-an-open-source-book-7553a2262898/>
+
+## 25.10.2020 QGis on OSX
+
+QGis 3.14 for Windows is very different from QGis 3.14 for OSX. OSX version is far beyond, using 2 years old proj lib and other older stuff.
+
+Installing nightly <https://qgis.org/en/site/forusers/alldownloads.html?highlight=nightly#qgis-nightly-release> OSX build may help.
+
+qProf plugin seems no fail on startup ;-)
+
 ## 23.10.2020 OSM a historia zaznamov
 
 Kto babral z poziciou Malej Bane na OSM ?
 
   https://www.openstreetmap.org/node/333130989/history
 
-  curl https://www.openstreetmap.org/api/0.6/node/333130989/history | xmlstarlet sel -T -t -m 'osm/node' -v 'concat(@lon, ",", @lat,",",@user)' -n | awk-uniq
+CLI: 
+	
+	curl https://www.openstreetmap.org/api/0.6/node/333130989/history | xmlstarlet sel -T -t -m 'osm/node' -v 'concat(@lon, ",", @lat,",",@user)' -n | awk-uniq
+
+Example output:
+
+	17.1296718,48.2181798,2009-01-18T17:10:11Z,NiCK_n17
+	17.1296718,48.2181798,2009-02-01T18:40:41Z,ulfl
+	17.1296718,48.2181798,2012-02-24T17:41:52Z,mareko
+	17.1296718,48.2181798,2012-12-28T16:02:15Z,mareko
+	17.1296559,48.2181889,2015-09-06T12:36:53Z,FishDoctor
+	17.1296559,48.2181889,2015-12-04T08:54:36Z,RomanKucera
+	17.1296559,48.2181889,2015-12-04T08:57:51Z,RomanKucera
+	17.1296559,48.2181889,2015-12-04T08:59:33Z,RomanKucera
+	17.1299474,48.2181438,2017-01-23T09:19:15Z,Ivor Švihran
+	17.1299474,48.2181438,2017-05-17T21:22:00Z,rmikke
+	17.1299474,48.2181438,2019-03-29T20:24:54Z,b-jazz-bot
 
 ## 22.10.2020 batch konverzia *.fit na *.gpx aj z nejakym premenovanim suborov
   

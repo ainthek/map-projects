@@ -8,9 +8,10 @@ main();
 async function main() {
     const algorithms = {
         detectStops: async ({ file, data }) => {
+            // TODO: assert <time> is present othetwise makes no sense
             const gpxDom = str2dom(data);
             const inputTrackpints = parseTrackPoints(gpxDom);
-            const waitPoints = inputTrackpints.filter(p => p.deltaT > 60000);
+            const waitPoints = inputTrackpints.filter(p => p.deltaT > 60000); //TODO: make parameter
             waitPoints
                 .map(trkpt => {
                     const wpt = document.createElementNS(NS_GPX, "wpt");

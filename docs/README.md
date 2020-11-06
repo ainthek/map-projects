@@ -27,14 +27,16 @@ Topics of interest
 - https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
 
 
-## OSM
-
+## Others
+- <https://app.sazp.sk/atlassr/>
+- <http://maps.sopsr.sk/>
+- <http://maps.sopsr.sk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities>
+- <http://maps.geop.sazp.sk/geoserver/wfs> toto je velmi zaujimave
 - <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
-
-## Turistické značky
-
-- https://mapy.hiking.sk/
-
+- <http://geoportal.gov.sk/narodny-geoportal/galeria-map-a-mapovych-kompozicii?fbclid=IwAR0lU1rliqssFGG6WPDwARQBasiNO4qRl3t7_WQm_vP21_JHmVa80XwBwwQ>
+- <http://srtm.csi.cgiar.org>
+- <http://opencyclemap.org/>
+	
 # Manuals
 
 - ZBGIS <https://www.geoportal.sk/sk/zbgis-prirucka.html>

@@ -1,0 +1,55 @@
+#!/bin/bash
+
+## Add multiple gpx files to one single geopackage file
+## Version: 0.1
+## 
+## Usage: 
+##
+## Samples:
+##   
+##    # DIRECTORY (RECURSIVE)
+##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/others/"
+##      
+##    # FILE
+##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/test.gpx"
+##    
+##    # multiple files 
+##    tools/gpx2gpkg ../gis-projects/all.gpkg "../gis-projects/data/suunto/converted/2020-04-*.gpx"
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] || [ "$#" != 2 ]
+then 
+	perl -ne "/^## ?/ && s/^## ?//g && print" "${BASH_SOURCE[0]}"
+	exit 1
+fi
+tools="$([ -L "$0" ] && BASHSOURCE="$(dirname "$0")/$(readlink "$0")" || BASHSOURCE="$0"; cd "$( dirname "$BASHSOURCE")" && pwd -P )"
+
+DEST=$(abs_path "$1")
+SRC="$2"
+
+if [[ -d $SRC ]]; then
+	cd "$SRC";
+	QUERY="*.gpx"
+else 
+    cd "$(dirname "$SRC")"
+    set -f
+    QUERY="$(basename $SRC)"
+    set +f
+fi
+
+c=0
+
+echo 1>&2 "PWD:${PWD}"
+echo 1>&2 "SRC:${SRC}"
+echo 1>&2 "QUERY:${QUERY}"
+
+git ls-files "$QUERY" |\
+#head -n 2 |\
+while read f;
+do
+	c=$((c+1))
+	echo 1>&2 "$c:Adding:$f->$DEST"
+	# ogr2ogr -update -append -f GPKG "$DEST" "$f" 
+	$tools/gpx2gpkg-fix "$f" > "$f.fix.gpx" # must be saved to disk
+	ogr2ogr -update -append -f GPKG "$DEST" "$f.fix.gpx" # because /vsdin/ does not supports changing schema
+	rm "$f.fix.gpx"
+done	

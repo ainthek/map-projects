@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="marcus" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <metadata>
+    
+    <desc></desc>
+    <bounds minlat="48.2203084" minlon="17.1894003" maxlat="48.2911698" maxlon="17.4043827" />
+  </metadata>
+  <trk>
+  	<!-- orig comment -->
+  	<trgseg></trgseg>
+  </trk>
+  <trk></trk>
+</gpx>
