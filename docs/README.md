@@ -156,6 +156,11 @@ FIT is a compact binary format designed for storing and sharing data from sport,
 
 TODO: fit format docs
 
+## Fit Tools
+
+- <https://github.com/mrihtar/Garmin-FIT> (used also by GPSVisualizer)
+- <https://github.com/jimmykane/fit-parser>
+
 # GPX
 
 ## Routes, Tracks, Waypoints
