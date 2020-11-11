@@ -1,5 +1,20 @@
 # Work Log
 
+## 6.11.2020
+
+https://wiki.openstreetmap.org/wiki/Key:surface
+
+Calculating OSM Surface
+
+  if(surface!='',
+    surface,
+    if(highway in ('primary','secondary','tertiary'),
+    'asphalt',
+    'UNKNOWN'
+    )
+  )
+
+
 ## 2.11.2020
 
 Z trailforms sa oplati downloadovat veci ako *.osm, lebo obsahuju aj dalsie atributy, okrem ineho napriklad aj mtb:scale:imba:
