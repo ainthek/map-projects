@@ -155,6 +155,7 @@ Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 FIT is a compact binary format designed for storing and sharing data from sport, fitness and health  devices.  Many useful standard formats are provided or it may be customized for a specific application.   Even though it is customizable it remains highly interoperable, FIT data may be interpreted by any other FIT compliant system
 
 TODO: fit format docs
+<https://developer.garmin.com/fit/overview/>
 
 ## Fit Tools
 

@@ -1,5 +1,8 @@
 # Work Log
+## 11.11.2020
 
+TODO review <https://www.gpxsee.org/>
+TODO review <https://apizone.suunto.com/faq>
 ## 6.11.2020
 
 https://wiki.openstreetmap.org/wiki/Key:surface
