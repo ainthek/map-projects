@@ -1,5 +1,14 @@
 # Work Log
 
+## 24.12.2020 Point Nemo
+
+- <https://inaccessibility.net/calculating-poles-of-inaccessibility/>
+- <https://github.com/mapbox/polylabel>
+- <https://plugins.qgis.org/plugins/SelectWithin/>
+- <https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html#pole-of-inaccessibility>
+
+
+Calculate pint-of-inaccessibility for lakes 
 ## 6.11.2020
 
 https://wiki.openstreetmap.org/wiki/Key:surface
