@@ -24,6 +24,18 @@ Ostatne zaujimave linky:
 
 - Land Cover analyzy https://fromgistors.blogspot.com/2018/02/basic-tutorial-1.html
 
+Problem:
+
+No module named '_gdal' pri polygonize , <https://github.com/qgis/QGIS/issues/40764>
+Podobne issues a riesenim je pridat PYTHONPATH v Qgis settingoch https://github.com/qgis/QGIS/issues/33386
+ale teraz koncim na 
+
+dlopen(/Applications/QGIS.app/Contents/Resources/python/site-packages/GDAL-3.1.2-py3.7-macosx-10.13.0-x86_64.egg/osgeo/_gdal.cpython-37m-darwin.so, 2): Symbol not found: _curl_mime_addpart
+
+
+Q
+
+
 
 ## 24.12.2020 Point Nemo
 
