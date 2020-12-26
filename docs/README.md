@@ -23,25 +23,42 @@ Topics of interest
 
 - https://www.geoportal.sk/sk/zbgis_smd/na-stiahnutie/
 - http://www.gku.sk/files/gku/produkty-sluzby/na-stiahnutie/gku_produkty.pdf
-
 - https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
 
-Voľne dostupné WFS služby:
-Administratívne hranice
+- WFS Voľne dostupné WFS služby:	
+	- Administratívne hranice <https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
+	- Geografické názvoslovie <https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
 
-<https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
 
-Geografické názvoslovie
+## Slovenská agentúra životného prostredia
 
-<https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
+- Atlas krajiny Slovenskej Republiky (enviro portál) <https://app.sazp.sk/atlassr/>
+- Geoserver <http://maps.geop.sazp.sk/geoserver/>
+- WMS <http://maps.geop.sazp.sk/geoserver/ows?service=wms&request=GetCapabilities>
+- WCS <http://maps.geop.sazp.sk/ows?service=wcs&request=GetCapabilities>
+- WFS <http://maps.geop.sazp.sk/geoserver/wfs>
+
+## Národný geoportál 
+
+- Info <http://geoportal.gov.sk/narodny-geoportal/>
+- Web Klient <http://geoportal.gov.sk/sk/cat-client>
+- Galéria máp a mapových kompozícií <http://geoportal.gov.sk/narodny-geoportal/galeria-map-a-mapovych-kompozicii>
+
+## Štátna ochrana prírody 
+
+- Mapový prehliadač <http://maps.sopsr.sk/>
+
+- WMS <http://maps.sopsr.sk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities>
+- WCS (disabled) <http://maps.sopsr.sk/geoserver/ows?service=wcs&request=GetCapabilities>
+- WFS <http://maps.sopsr.sk/geoserver/wfs?request=GetCapabilities>
+
+## Open Street Map
+
+- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
+
 
 ## Others
-- <https://app.sazp.sk/atlassr/>
-- <http://maps.sopsr.sk/>
-- <http://maps.sopsr.sk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities>
-- <http://maps.geop.sazp.sk/geoserver/wfs> toto je velmi zaujimave
-- <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
-- <http://geoportal.gov.sk/narodny-geoportal/galeria-map-a-mapovych-kompozicii?fbclid=IwAR0lU1rliqssFGG6WPDwARQBasiNO4qRl3t7_WQm_vP21_JHmVa80XwBwwQ>
+- Copernicus land cover <https://sdi.eea.europa.eu/catalogue/copernicus/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities>
 - <http://srtm.csi.cgiar.org>
 - <http://opencyclemap.org/>
 	
