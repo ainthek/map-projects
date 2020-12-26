@@ -26,6 +26,14 @@ Topics of interest
 
 - https://www.geoportal.sk/sk/sluzby/mapove-sluzby/wms/wms-zbgis.html
 
+Voľne dostupné WFS služby:
+Administratívne hranice
+
+<https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
+
+Geografické názvoslovie
+
+<https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
 
 ## Others
 - <https://app.sazp.sk/atlassr/>
@@ -40,6 +48,7 @@ Topics of interest
 # Manuals
 
 - ZBGIS <https://www.geoportal.sk/sk/zbgis-prirucka.html>
+- Mapove sluzbu ZBGIS v QGise <https://www.geoportal.sk/sk/sluzby/mapove-sluzby/pripojenie-mapovych-sluzieb/>
 - OSM <https://www.openstreetmap.org/help>
 
 # Authoring Maps
@@ -155,6 +164,12 @@ Cesium with KML from Google Earth Pro `<gx:Track>` and `<LinesString>`
 FIT is a compact binary format designed for storing and sharing data from sport, fitness and health  devices.  Many useful standard formats are provided or it may be customized for a specific application.   Even though it is customizable it remains highly interoperable, FIT data may be interpreted by any other FIT compliant system
 
 TODO: fit format docs
+<https://developer.garmin.com/fit/overview/>
+
+## Fit Tools
+
+- <https://github.com/mrihtar/Garmin-FIT> (used also by GPSVisualizer)
+- <https://github.com/jimmykane/fit-parser>
 
 # GPX
 

@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="karpaty_pia_over_400m" id="karpaty_pia_over_400m">
+	<SimpleField name="fid" type="float"></SimpleField>
+	<SimpleField name="full_id" type="string"></SimpleField>
+	<SimpleField name="osm_id" type="string"></SimpleField>
+	<SimpleField name="osm_type" type="string"></SimpleField>
+	<SimpleField name="highway" type="string"></SimpleField>
+	<SimpleField name="ref" type="string"></SimpleField>
+	<SimpleField name="source:ref" type="string"></SimpleField>
+	<SimpleField name="lanes" type="string"></SimpleField>
+	<SimpleField name="maxspeed" type="string"></SimpleField>
+	<SimpleField name="oneway" type="string"></SimpleField>
+	<SimpleField name="abutters" type="string"></SimpleField>
+	<SimpleField name="maxspeed:type" type="string"></SimpleField>
+	<SimpleField name="surface" type="string"></SimpleField>
+	<SimpleField name="history" type="string"></SimpleField>
+	<SimpleField name="tracktype" type="string"></SimpleField>
+	<SimpleField name="lanes:backward" type="string"></SimpleField>
+	<SimpleField name="lanes:forward" type="string"></SimpleField>
+	<SimpleField name="turn:lanes:backward" type="string"></SimpleField>
+	<SimpleField name="turn:lanes:forward" type="string"></SimpleField>
+	<SimpleField name="source:maxspeed" type="string"></SimpleField>
+	<SimpleField name="lit" type="string"></SimpleField>
+	<SimpleField name="bicycle" type="string"></SimpleField>
+	<SimpleField name="horse" type="string"></SimpleField>
+	<SimpleField name="alt_name" type="string"></SimpleField>
+	<SimpleField name="junction" type="string"></SimpleField>
+	<SimpleField name="bridge" type="string"></SimpleField>
+	<SimpleField name="layer" type="string"></SimpleField>
+	<SimpleField name="maxheight" type="string"></SimpleField>
+	<SimpleField name="noexit" type="string"></SimpleField>
+	<SimpleField name="maxweight" type="string"></SimpleField>
+	<SimpleField name="maxweight:bus" type="string"></SimpleField>
+	<SimpleField name="foot" type="string"></SimpleField>
+	<SimpleField name="smoothness" type="string"></SimpleField>
+	<SimpleField name="service" type="string"></SimpleField>
+	<SimpleField name="is_in" type="string"></SimpleField>
+	<SimpleField name="motor_vehicle" type="string"></SimpleField>
+	<SimpleField name="access" type="string"></SimpleField>
+	<SimpleField name="covered" type="string"></SimpleField>
+	<SimpleField name="hgv" type="string"></SimpleField>
+	<SimpleField name="incline" type="string"></SimpleField>
+	<SimpleField name="mtb" type="string"></SimpleField>
+	<SimpleField name="vehicle" type="string"></SimpleField>
+	<SimpleField name="old_ref" type="string"></SimpleField>
+	<SimpleField name="ssc:class" type="string"></SimpleField>
+	<SimpleField name="maxweight:signed" type="string"></SimpleField>
+	<SimpleField name="rcn" type="string"></SimpleField>
+	<SimpleField name="mtb:scale" type="string"></SimpleField>
+	<SimpleField name="marked_trail_edu" type="string"></SimpleField>
+	<SimpleField name="mtb:scale:uphill" type="string"></SimpleField>
+	<SimpleField name="piste:type" type="string"></SimpleField>
+	<SimpleField name="cycleway" type="string"></SimpleField>
+	<SimpleField name="sidewalk" type="string"></SimpleField>
+	<SimpleField name="trail_visibility" type="string"></SimpleField>
+	<SimpleField name="width" type="string"></SimpleField>
+	<SimpleField name="snowplowing" type="string"></SimpleField>
+	<SimpleField name="marked_trail" type="string"></SimpleField>
+	<SimpleField name="tunnel" type="string"></SimpleField>
+	<SimpleField name="proposed" type="string"></SimpleField>
+	<SimpleField name="footway" type="string"></SimpleField>
+	<SimpleField name="embankment" type="string"></SimpleField>
+	<SimpleField name="sac_scale" type="string"></SimpleField>
+	<SimpleField name="area" type="string"></SimpleField>
+	<SimpleField name="int_name" type="string"></SimpleField>
+	<SimpleField name="old_name" type="string"></SimpleField>
+	<SimpleField name="motorcar" type="string"></SimpleField>
+	<SimpleField name="motorcycle" type="string"></SimpleField>
+	<SimpleField name="mtb:scale:imba" type="string"></SimpleField>
+	<SimpleField name="maxspeed:advisory" type="string"></SimpleField>
+	<SimpleField name="material" type="string"></SimpleField>
+	<SimpleField name="turn:lanes" type="string"></SimpleField>
+	<SimpleField name="placement" type="string"></SimpleField>
+	<SimpleField name="abandoned:highway" type="string"></SimpleField>
+	<SimpleField name="construction" type="string"></SimpleField>
+	<SimpleField name="segregated" type="string"></SimpleField>
+	<SimpleField name="crossing" type="string"></SimpleField>
+	<SimpleField name="ele" type="string"></SimpleField>
+	<SimpleField name="indoor" type="string"></SimpleField>
+	<SimpleField name="mtb:name" type="string"></SimpleField>
+	<SimpleField name="handrail" type="string"></SimpleField>
+	<SimpleField name="ramp" type="string"></SimpleField>
+	<SimpleField name="ramp:wheelchair" type="string"></SimpleField>
+	<SimpleField name="bench" type="string"></SimpleField>
+	<SimpleField name="bin" type="string"></SimpleField>
+	<SimpleField name="public_transport" type="string"></SimpleField>
+	<SimpleField name="source:name" type="string"></SimpleField>
+	<SimpleField name="dist_pole" type="float"></SimpleField>
+</Schema>
+<Folder><name>karpaty_pia_over_400m</name>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">215.080476990596</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.269747384472,48.2490961670508</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">220.938195051564</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.2519982579089,48.2586010370462</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">239.450540694576</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.1356094397254,48.2932563022876</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">212.750800047586</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.1695261639519,48.2992444486373</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">325.218511860851</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.1384762213544,48.322859710889</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">246.941286402305</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.1548155877427,48.3148868189578</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name></name>
+	<description></description>
+	<ExtendedData><SchemaData schemaUrl="#karpaty_pia_over_400m">
+		<SimpleData name="fid">1</SimpleData>
+		<SimpleData name="full_id">w4155469</SimpleData>
+		<SimpleData name="osm_id">4155469</SimpleData>
+		<SimpleData name="osm_type">way</SimpleData>
+		<SimpleData name="highway">secondary</SimpleData>
+		<SimpleData name="ref">503</SimpleData>
+		<SimpleData name="source:ref">www.ssc.sk</SimpleData>
+		<SimpleData name="lanes"></SimpleData>
+		<SimpleData name="maxspeed"></SimpleData>
+		<SimpleData name="oneway"></SimpleData>
+		<SimpleData name="abutters"></SimpleData>
+		<SimpleData name="maxspeed:type"></SimpleData>
+		<SimpleData name="surface"></SimpleData>
+		<SimpleData name="history"></SimpleData>
+		<SimpleData name="tracktype"></SimpleData>
+		<SimpleData name="lanes:backward"></SimpleData>
+		<SimpleData name="lanes:forward"></SimpleData>
+		<SimpleData name="turn:lanes:backward"></SimpleData>
+		<SimpleData name="turn:lanes:forward"></SimpleData>
+		<SimpleData name="source:maxspeed"></SimpleData>
+		<SimpleData name="lit"></SimpleData>
+		<SimpleData name="bicycle"></SimpleData>
+		<SimpleData name="horse"></SimpleData>
+		<SimpleData name="alt_name"></SimpleData>
+		<SimpleData name="junction"></SimpleData>
+		<SimpleData name="bridge"></SimpleData>
+		<SimpleData name="layer"></SimpleData>
+		<SimpleData name="maxheight"></SimpleData>
+		<SimpleData name="noexit"></SimpleData>
+		<SimpleData name="maxweight"></SimpleData>
+		<SimpleData name="maxweight:bus"></SimpleData>
+		<SimpleData name="foot"></SimpleData>
+		<SimpleData name="smoothness"></SimpleData>
+		<SimpleData name="service"></SimpleData>
+		<SimpleData name="is_in"></SimpleData>
+		<SimpleData name="motor_vehicle"></SimpleData>
+		<SimpleData name="access"></SimpleData>
+		<SimpleData name="covered"></SimpleData>
+		<SimpleData name="hgv"></SimpleData>
+		<SimpleData name="incline"></SimpleData>
+		<SimpleData name="mtb"></SimpleData>
+		<SimpleData name="vehicle"></SimpleData>
+		<SimpleData name="old_ref"></SimpleData>
+		<SimpleData name="ssc:class"></SimpleData>
+		<SimpleData name="maxweight:signed"></SimpleData>
+		<SimpleData name="rcn"></SimpleData>
+		<SimpleData name="mtb:scale"></SimpleData>
+		<SimpleData name="marked_trail_edu"></SimpleData>
+		<SimpleData name="mtb:scale:uphill"></SimpleData>
+		<SimpleData name="piste:type"></SimpleData>
+		<SimpleData name="cycleway"></SimpleData>
+		<SimpleData name="sidewalk"></SimpleData>
+		<SimpleData name="trail_visibility"></SimpleData>
+		<SimpleData name="width"></SimpleData>
+		<SimpleData name="snowplowing"></SimpleData>
+		<SimpleData name="marked_trail"></SimpleData>
+		<SimpleData name="tunnel"></SimpleData>
+		<SimpleData name="proposed"></SimpleData>
+		<SimpleData name="footway"></SimpleData>
+		<SimpleData name="embankment"></SimpleData>
+		<SimpleData name="sac_scale"></SimpleData>
+		<SimpleData name="area"></SimpleData>
+		<SimpleData name="int_name"></SimpleData>
+		<SimpleData name="old_name"></SimpleData>
+		<SimpleData name="motorcar"></SimpleData>
+		<SimpleData name="motorcycle"></SimpleData>
+		<SimpleData name="mtb:scale:imba"></SimpleData>
+		<SimpleData name="maxspeed:advisory"></SimpleData>
+		<SimpleData name="material"></SimpleData>
+		<SimpleData name="turn:lanes"></SimpleData>
+		<SimpleData name="placement"></SimpleData>
+		<SimpleData name="abandoned:highway"></SimpleData>
+		<SimpleData name="construction"></SimpleData>
+		<SimpleData name="segregated"></SimpleData>
+		<SimpleData name="crossing"></SimpleData>
+		<SimpleData name="ele"></SimpleData>
+		<SimpleData name="indoor"></SimpleData>
+		<SimpleData name="mtb:name"></SimpleData>
+		<SimpleData name="handrail"></SimpleData>
+		<SimpleData name="ramp"></SimpleData>
+		<SimpleData name="ramp:wheelchair"></SimpleData>
+		<SimpleData name="bench"></SimpleData>
+		<SimpleData name="bin"></SimpleData>
+		<SimpleData name="public_transport"></SimpleData>
+		<SimpleData name="source:name"></SimpleData>
+		<SimpleData name="dist_pole">217.700852328297</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.0914695974861,48.3207322138089</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
