@@ -8,13 +8,12 @@ PIA na zaklade vzdialenosti od osidlenych oblasti
 2. Ako ziskat mapove podklady pre osidelene oblasti ?
 3. Ako spocitat PIA ?
 
-
-
 2. Ako ziskat mapove podklady pre osidelene oblasti
 
-- nakoniec donwload: z CLC
+- nakoniec donwload: z Corine CLC
   - https://land.copernicus.eu/pan-european/corine-land-cover/clc2018?tab=download
-
+  - https://land.copernicus.eu/user-corner/technical-library/corine-land-cover-nomenclature-guidelines/html/index.html
+  
 Ostatne zaujimave linky:
 
 - http://geoportal.gov.sk/sk/map?wmc=http%3A%2F%2Fgeoportal.gov.sk%2Fwmc%2F4ebe874b-e2af-48cd-9dbb-501756b21302.xml
@@ -33,8 +32,24 @@ ale teraz koncim na
 dlopen(/Applications/QGIS.app/Contents/Resources/python/site-packages/GDAL-3.1.2-py3.7-macosx-10.13.0-x86_64.egg/osgeo/_gdal.cpython-37m-darwin.so, 2): Symbol not found: _curl_mime_addpart
 
 
-Q
+gdal_polygonize.py /Users/marcus/workspaces/map-projects/docs/pole-of-inaccessibility/pia-sidla/clc-sk.tif /private/var/folders/cs/7zzbk12j0k14ykd00r62l3jc0000gn/T/processing_hguMBy/1a7609a913e541f79eda79ed8b7c7473/OUTPUT.gpkg -b 1 -f "GPKG" OUTPUT DN
 
+vzdal som to: a installing nightly release
+<https://qgis.org/en/site/forusers/alldownloads.html#qgis-nightly-release>
+
+
+a tuna je kongig kde ostanu zapametane nastavenia z predoslej instalcie:
+~/Library/Application\ Support/QGIS/QGIS3/profiles/default/
+
+QGIS nightly release
+A nightly updated standalone installer from QGIS master can be downloaded from here.
+
+Installing python 3.6 on OSX , another pain:
+
+brew install does not work
+trying to use  
+brew install pyenv a potom 
+pyenv install 3.6.12
 
 
 ## 24.12.2020 Point Nemo
