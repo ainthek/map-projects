@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="47.856283497859209" minlon="16.935734603190500" maxlat="49.487011525886174" maxlon="22.098157584605399"/></metadata>                  
+<wpt lat="47.856283497859209" lon="18.335395521075824">
+  <extensions>
+    <ogr:dist_pole>1349.245120173926807</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="47.984283735454838" lon="18.473404355808793">
+  <extensions>
+    <ogr:dist_pole>1152.831350210468145</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.387559087260755" lon="16.936483067349236">
+  <extensions>
+    <ogr:dist_pole>1464.127211054555573</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.368470171529459" lon="17.367061958418446">
+  <extensions>
+    <ogr:dist_pole>1152.979576017492036</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.438061729010073" lon="17.309696539247717">
+  <extensions>
+    <ogr:Remark>Malé Karpaty</ogr:Remark>
+    <ogr:dist_pole>4641.439063397944665</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.698768760834319" lon="17.617887981532039">
+  <extensions>
+    <ogr:dist_pole>1376.938295516370999</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.73632771587161" lon="17.259925457229368">
+  <extensions>
+    <ogr:dist_pole>1286.191268538786744</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.690878640080321" lon="17.075032203653524">
+  <extensions>
+    <ogr:dist_pole>2725.903854328259968</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.283277382456852" lon="16.9357346031905">
+  <extensions>
+    <ogr:dist_pole>1350.252068434268267</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.797203215504481" lon="17.369493990646891">
+  <extensions>
+    <ogr:dist_pole>1863.132061748720844</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.781691310648583" lon="21.571426131208959">
+  <extensions>
+    <ogr:dist_pole>4287.806259936304741</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.854904843151004" lon="21.792407938544159">
+  <extensions>
+    <ogr:dist_pole>1158.384824419717233</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.977733880585319" lon="20.605805888506048">
+  <extensions>
+    <ogr:dist_pole>1210.598268177551972</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.001510293789678" lon="18.044639143300312">
+  <extensions>
+    <ogr:dist_pole>2364.79643867316463</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.751184898951358" lon="21.819400764789791">
+  <extensions>
+    <ogr:dist_pole>1090.437150839260994</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.782444150247471" lon="21.283603087091638">
+  <extensions>
+    <ogr:dist_pole>1251.246249303363356</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.683643071865134" lon="22.067237393113036">
+  <extensions>
+    <ogr:dist_pole>1656.194927880594605</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.961440651047717" lon="21.672979026973213">
+  <extensions>
+    <ogr:dist_pole>1022.517621924081709</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.271970020965966" lon="18.613313931713218">
+  <extensions>
+    <ogr:Remark>Uholnica</ogr:Remark>
+    <ogr:dist_pole>1522.185092989718896</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.978088201182153" lon="21.762501971510609">
+  <extensions>
+    <ogr:dist_pole>1516.600580483285057</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.995852671438392" lon="21.892235473204785">
+  <extensions>
+    <ogr:dist_pole>1812.248115128505333</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.068383989474796" lon="21.252262390145319">
+  <extensions>
+    <ogr:dist_pole>1404.960338366773613</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.030129796008694" lon="21.747423517996673">
+  <extensions>
+    <ogr:dist_pole>1196.920799764421417</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.011018401820344" lon="22.098157584605399">
+  <extensions>
+    <ogr:Remark>Snina</ogr:Remark>
+    <ogr:dist_pole>2678.397833418120172</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.145939395741614" lon="21.445951668646625">
+  <extensions>
+    <ogr:dist_pole>1499.782040773596009</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.868405787076654" lon="22.056592375210613">
+  <extensions>
+    <ogr:Remark>Vihorlat</ogr:Remark>
+    <ogr:dist_pole>4950.709385813650442</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.133024482093198" lon="21.681579405646598">
+  <extensions>
+    <ogr:dist_pole>1774.239718980893713</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.131201198856246" lon="21.615925201421668">
+  <extensions>
+    <ogr:dist_pole>1216.456738413828361</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.198348218275839" lon="21.483528572711158">
+  <extensions>
+    <ogr:dist_pole>1049.348060217690772</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.487011525886174" lon="18.589096765405543">
+  <extensions>
+    <ogr:Remark>Vrchpredmier</ogr:Remark>
+    <ogr:dist_pole>1499.650430276420138</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.211340836659453" lon="21.341369269245092">
+  <extensions>
+    <ogr:dist_pole>1773.569137821556069</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.173914974063138" lon="21.98413443790297">
+  <extensions>
+    <ogr:dist_pole>1900.545110979484434</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.243493636818535" lon="21.395183566479133">
+  <extensions>
+    <ogr:dist_pole>1205.882388728296291</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.269787058223535" lon="21.499987577330906">
+  <extensions>
+    <ogr:dist_pole>1289.390045221360197</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="49.246723007252456" lon="21.715346627862562">
+  <extensions>
+    <ogr:dist_pole>1186.144622908702786</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.309849924761068" lon="19.613148765622768">
+  <extensions>
+    <ogr:dist_pole>1687.739631502083284</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.275954107121628" lon="18.419457690063183">
+  <extensions>
+    <ogr:dist_pole>1200.451655791871417</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.200771683379905" lon="19.914873549071444">
+  <extensions>
+    <ogr:dist_pole>1686.743615355011798</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.256637388830349" lon="19.716165264987872">
+  <extensions>
+    <ogr:dist_pole>1418.084003186191694</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.236086775368015" lon="19.976358344612276">
+  <extensions>
+    <ogr:dist_pole>1604.926354141454567</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.270784224171514" lon="20.053206176213344">
+  <extensions>
+    <ogr:dist_pole>1232.981738885020604</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.311464215397571" lon="19.861051489667613">
+  <extensions>
+    <ogr:dist_pole>1498.0532997552084</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.372577217184627" lon="20.10544988404477">
+  <extensions>
+    <ogr:dist_pole>1197.331715360794988</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.530034338794394" lon="19.229524530780029">
+  <extensions>
+    <ogr:dist_pole>2464.432603055684922</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.444007418866093" lon="19.816006104625291">
+  <extensions>
+    <ogr:dist_pole>1064.493512819387206</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.443790905021203" lon="20.42240194801035">
+  <extensions>
+    <ogr:dist_pole>1539.335526377498354</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.746834264970254" lon="17.779946385452124">
+  <extensions>
+    <ogr:dist_pole>1876.64130889875014</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.505778395175199" lon="20.300744585802324">
+  <extensions>
+    <ogr:dist_pole>1566.836479356636573</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.718492385610375" lon="18.027076158675293">
+  <extensions>
+    <ogr:dist_pole>4866.428340663345807</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.675134798864043" lon="18.43462391857744">
+  <extensions>
+    <ogr:dist_pole>2005.12383004694766</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.584469072822536" lon="21.498288227174285">
+  <extensions>
+    <ogr:dist_pole>2479.529215921972536</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.92393051994722" lon="19.047918672455324">
+  <extensions>
+    <ogr:Remark>Point Nemo SVK</ogr:Remark>
+    <ogr:dist_pole>8152.90016586960428</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.484285191226085" lon="21.700255560566106">
+  <extensions>
+    <ogr:dist_pole>1786.678424283569484</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.512361092055173" lon="21.937599038455858">
+  <extensions>
+    <ogr:dist_pole>1876.180064833550432</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.826022704400678" lon="17.619294226351254">
+  <extensions>
+    <ogr:dist_pole>1762.597316420128436</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.892470800877526" lon="17.850407621376785">
+  <extensions>
+    <ogr:dist_pole>2306.369638971354561</ogr:dist_pole>
+  </extensions>
+</wpt>
+<wpt lat="48.966176754634105" lon="17.921396551963603">
+  <extensions>
+    <ogr:dist_pole>1108.152159724953435</ogr:dist_pole>
+  </extensions>
+</wpt>
+</gpx>
