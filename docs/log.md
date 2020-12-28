@@ -1,4 +1,36 @@
 # Work Log
+## 28.12.2020
+
+- TODO: metasearch plugin
+- <https://www.sora.sk/digitalne-mapy-pozemkov-geoinformatika-v-katastri>
+
+- show feature count (otravne) https://github.com/qgis/QGIS/issues/27128
+
+- Architektura ZBGIS http://www.skgeodesy.sk/files/slovensky/ugkk/cerpanie-prostriedkov-z-eu/programove-obdobie-2007-2013/michalik_geoportal-sluzby-zbgis.pdf
+
+- OSM Styles for QGis 
+https://gis.stackexchange.com/questions/90086/seeking-qml-or-sld-file-for-qgis-openstreetmap-data
+
+- https://wiki.openstreetmap.org/wiki/Sk:WikiProjekt_Slovensko
+- https://github.com/yannos/Beautiful_OSM_in_QGIS
+- https://wiki.openstreetmap.org/wiki/QGIS#Styles_for_OSM_data_in_QGIS 
+
+Protected areas: dalsi zdroj informacii
+<https://www.minzp.sk/files/rpi/dokumenty-stiahnutie/dfs-metaudajovy-profil.pdf>
+<https://www.arcgis.com/home/item.html?id=97dda2016a614546aecb28709102e345>
+
+Problem: wms service vracia na niektorych datach:
+
+	Download of features for layer dendrodoc:geo_zameranie failed or partially failed: Server generated an exception in GetFeature response: org.opengis.referencing.NoSuchAuthorityCodeException: No authority was defined for code "". Did you forget "AUTHORITY:NUMBER"?
+	             No authority was defined for code "". Did you forget "AUTHORITY:NUMBER"?. You may attempt reloading the layer with F5
+
+
+<https://gis.stackexchange.com/questions/368707/qgis-problem-loading-or-adding-wfs-layer>
+
+
+WMS requests:
+
+http://localhost:8083/geoserver/wfs?request=GetFeature&service=WFS&version=1.0.0&typeName=geosolutions:WorldCountries&outputFormat=application/json&CQL_FILTER=NAME=%27Monaco%27
 
 ## 26.12.2020
 

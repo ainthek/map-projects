@@ -29,7 +29,6 @@ Topics of interest
 	- Administratívne hranice <https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
 	- Geografické názvoslovie <https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
 
-
 ## Slovenská agentúra životného prostredia
 
 - Atlas krajiny Slovenskej Republiky (enviro portál) <https://app.sazp.sk/atlassr/>
@@ -37,6 +36,10 @@ Topics of interest
 - WMS <http://maps.geop.sazp.sk/geoserver/ows?service=wms&request=GetCapabilities>
 - WCS <http://maps.geop.sazp.sk/ows?service=wcs&request=GetCapabilities>
 - WFS <http://maps.geop.sazp.sk/geoserver/wfs>
+
+- Geoserver (inspire) <http://inspire.geop.sazp.sk/geoserver/web/>
+- WMS <http://inspire.geop.sazp.sk/geoserver/ps/ows?service=wms&version=1.3.0&request=GetCapabilities>
+- WFS <http://inspire.geop.sazp.sk/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities>
 
 ## Národný geoportál 
 
@@ -50,7 +53,15 @@ Topics of interest
 
 - WMS <http://maps.sopsr.sk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities>
 - WCS (disabled) <http://maps.sopsr.sk/geoserver/ows?service=wcs&request=GetCapabilities>
-- WFS <http://maps.sopsr.sk/geoserver/wfs?request=GetCapabilities>
+- WFS (toto funguje ???) <http://maps.sopsr.sk/geoserver/wfs?request=GetCapabilities>
+
+- WMS <http://www.sopsr.sk/geoserver/sopsr/ows?service=wms&request=GetCapabilities>
+
+- WFS <http://inspire.biomonitoring.sk/geoserver/ps/ows?service=WFS&version=1.1.0&request=GetCapabilities>
+	- s tohoto sa mi podarilo stiahnut ProtectedSite (chranene uzemia), ale iba z WFS 2 pluginom
+	standardne QGis tooly nejdu
+
+- Mapový prehliadač <http://webgis.biomonitoring.sk/>
 
 ## Open Street Map
 

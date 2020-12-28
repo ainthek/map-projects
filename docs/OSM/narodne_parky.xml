@@ -1,0 +1,14 @@
+<osm-script output="xml" timeout="25">
+  <id-query {{geocodeArea:Slovakia}} into="area_0" />
+  <union>
+    <query type="relation">
+      <has-kv k="boundary" v="national_park" />
+      <area-query from="area_0" />
+    </query>
+  </union>
+  <union>
+    <item />
+    <recurse type="down" />
+  </union>
+  <print mode="body" />
+</osm-script>

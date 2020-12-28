@@ -1,5 +1,23 @@
 # OSM Topics
 
+## budovy
+
+- building
+
+ale pozor napriklad na toto: https://www.openstreetmap.org/way/233537021
+
+a to je: tourism:wilderness_hut
+ale bez building, preco ? ako to znacia "inde" ?
+doplnil som building:yes
+
+https://www.openstreetmap.org/way/749244919
+building:ruins
+
+typy:
+polygony, body ?
+
+building:garage - v okrese LM je len 942 garazi ? asi nie, vecsina vobec nie je oznacena
+
 ## Interesting objects
 
 ### boundary:national_park
