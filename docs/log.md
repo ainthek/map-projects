@@ -1,4 +1,23 @@
 # Work Log
+
+## 30.12.2020
+
+<https://inspirujmese.cz/wp-content/uploads/2019/10/05_InspirujmeSe_KD_2019.pdf>
+
+Styling: 
+
+http://qgis-hub.fast-page.org/index.php
+https://plugins.qgis.org/planet/tag/style/
+
+
+Na mojom MacBook pro som nevyriesil, na masine doma chodi:
+
+/Garmin-FIT /Library/Perl/5.18/darwin-thread-multi-2level /Library/Perl/5.18 /Network/Library/Perl/5.18/darwin-thread-multi-2level /Network/Library/Perl/5.18 /Library/Perl/Updates/5.18.4 /System/Library/Perl/5.18/darwin-thread-multi-2level /System/Library/Perl/5.18 /System/Library/Perl/Extras/5.18/darwin-thread-multi-2level /System/Library/Perl/Extras/5.18 .) at tools/Garmin-FIT/fit2gpx.pl line 9.
+BEGIN failed--compilation aborted at tools/Garmin-FIT/fit2gpx.pl line 9.
+
+### JOSM 
+uspesne som zvladol niekolko updatov
+
 ## 28.12.2020
 
 - TODO: metasearch plugin

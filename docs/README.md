@@ -19,6 +19,8 @@ Topics of interest
 
 # Data Sources
 
+Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
+
 ## ZBGIS
 
 - https://www.geoportal.sk/sk/zbgis_smd/na-stiahnutie/
@@ -37,6 +39,7 @@ Topics of interest
 - WCS <http://maps.geop.sazp.sk/ows?service=wcs&request=GetCapabilities>
 - WFS <http://maps.geop.sazp.sk/geoserver/wfs>
 
+- INSPIRE SK <http://inspire.gov.sk>
 - Geoserver (inspire) <http://inspire.geop.sazp.sk/geoserver/web/>
 - WMS <http://inspire.geop.sazp.sk/geoserver/ps/ows?service=wms&version=1.3.0&request=GetCapabilities>
 - WFS <http://inspire.geop.sazp.sk/geoserver/ows?service=wfs&version=2.0.0&request=GetCapabilities>
@@ -67,6 +70,9 @@ Topics of interest
 
 - <https://tile.openstreetmap.org/{z}/{x}/{y}.png>
 
+## TOPÚ
+- Intro o TOPU <http://www.pce.sk/clanky/etika11.htm>
+- Oficialne stranky ?<https://topu.mil.sk>
 
 ## Others
 - Copernicus land cover <https://sdi.eea.europa.eu/catalogue/copernicus/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities>
