@@ -21,6 +21,16 @@ Topics of interest
 
 Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
 
+## Freemap.sk
+
+### DMR 5
+
+	Dostupné na https://dmr5.tiles.freemap.sk/{z}/{x}/{y}.png
+	Pre JOSM: tms[17]:https://dmr5.tiles.freemap.sk/{zoom}/{x}/{y}.png
+	Dostupné aj na freemap.sk ako overlay vrstva: https://www.freemap.sk/?map=9/48.632909/18.812714&layers=Xe
+
+	see <https://groups.google.com/g/osm_sk/c/7cXg2d_Zf5Y/m/ppCorYNuAgAJ>
+
 ## ZBGIS
 
 - https://www.geoportal.sk/sk/zbgis_smd/na-stiahnutie/
@@ -31,8 +41,8 @@ Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/s
 	- Administratívne hranice <https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
 	- Geografické názvoslovie <https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
 
-- DMR 3.5 https://zbgisws.skgeodesy.sk/zbgis_dmr3_wms/service.svc/get?version=1.3.0&request=Getcapabilities&service=wms
-- 
+- DMR 3.5 <https://zbgisws.skgeodesy.sk/zbgis_dmr3_wms/service.svc/get?version=1.3.0&request=Getcapabilities&service=wms>
+- DMS 5 - mapa pokrytia <https://zbgis.skgeodesy.sk/mkzbgis/sk/teren?bm=dmr&z=8&c=19.530000,48.800000#>
 
 
 ## Slovenská agentúra životného prostredia
@@ -76,9 +86,16 @@ Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/s
 	- dist starina nie ?
 
 Inspire:
+
+- zoznam datasetov: https://www.geoportal.sk/sk/inspire/ukladacie-sluzby/
+tam su linky na WMS, WFS aj download geopackages:
+
 - WMS https://zbgisws.skgeodesy.sk/inspire_buildings_wms/service.svc/get?version=1.3.0
 - WFS https://zbgisws.skgeodesy.sk/inspire_buildings_wfs/service.svc/get
-- 
+- GPKG download https://www.geoportal.sk/files/inspire/inspire_bu_geo.zip
+
+a takto aj ostatne INSPIRE TEMY.
+
 - https://om.skgeodesy.sk/
 
 ## Open Street Map
