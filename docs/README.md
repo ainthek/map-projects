@@ -31,6 +31,10 @@ Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/s
 	- Administratívne hranice <https://zbgisws.skgeodesy.sk/zbgis_administrativne_hranice_wfs/service.svc/get>
 	- Geografické názvoslovie <https://zbgisws.skgeodesy.sk/zbgis_geograficke_nazvoslovie_wfs/service.svc/get>
 
+- DMR 3.5 https://zbgisws.skgeodesy.sk/zbgis_dmr3_wms/service.svc/get?version=1.3.0&request=Getcapabilities&service=wms
+- 
+
+
 ## Slovenská agentúra životného prostredia
 
 - Atlas krajiny Slovenskej Republiky (enviro portál) <https://app.sazp.sk/atlassr/>
@@ -65,6 +69,17 @@ Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/s
 	standardne QGis tooly nejdu
 
 - Mapový prehliadač <http://webgis.biomonitoring.sk/>
+
+## Kataster
+
+- WMS https://kataster.skgeodesy.sk/eskn/services/NR/kn_wms_orto/MapServer/WmsServer?version=2.0.0&service=WMS&request=GetCapabilities
+	- dist starina nie ?
+
+Inspire:
+- WMS https://zbgisws.skgeodesy.sk/inspire_buildings_wms/service.svc/get?version=1.3.0
+- WFS https://zbgisws.skgeodesy.sk/inspire_buildings_wfs/service.svc/get
+- 
+- https://om.skgeodesy.sk/
 
 ## Open Street Map
 
@@ -498,6 +513,7 @@ toto sa zda ze IDE:
 
 References:
 [freemap.sk]: http://wiki.freemap.sk/HomePage
+[OSM.sk freemap.sk google group] https://groups.google.com/g/osm_sk/
 [uMap]: https://umap.openstreetmap.fr
 [Google MyMaps]: https://google.com/mymaps
 [Google Earth Web]: https://earth.google.com/web/

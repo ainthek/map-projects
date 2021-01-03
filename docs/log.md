@@ -1,5 +1,15 @@
 # Work Log
 
+## Mapovanie Lipt. Jan
+
+Pokus rozchodit DMR z minulych cias
+https://zbgis.skgeodesy.sk/zbgis/rest/services/DMR/MapServer/tile/16/22659/36097?blankTile=false
+
+## 1.1.2021
+
+2021-01-01T20:50:28     WARNING    bu-core2d:Building: The download limit has been reached. You may want to check the 'Only request features overlapping the view extent' option to be able to zoom in to fetch all data.
+
+
 ## 30.12.2020
 
 <https://inspirujmese.cz/wp-content/uploads/2019/10/05_InspirujmeSe_KD_2019.pdf>
