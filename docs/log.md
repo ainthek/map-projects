@@ -30,10 +30,18 @@ Dva vodopadny na ZBGIS
 https://zbgis.skgeodesy.sk/mkzbgis/sk/zakladna-mapa?bm=orto&z=19&c=20.220761,49.167466&it=point&sc=n#/detail/zbgis/98/57395
 https://zbgis.skgeodesy.sk/mkzbgis/sk/zakladna-mapa?bm=orto&z=19&c=20.220761,49.167466&it=point&sc=n#/detail/zbgis/98/58907	
 
+
+Luciansky vodopad:
+
+https://zbgis.skgeodesy.sk/mkzbgis/?bm=zbgis&z=18&c=19.402165,49.129813#/detail/zbgis/79/615974
+
+
 ## 3.2.2021 Mapovanie Lipt. Jan
 
 Pokus rozchodit DMR z minulych cias
 https://zbgis.skgeodesy.sk/zbgis/rest/services/DMR/MapServer/tile/16/22659/36097?blankTile=false
+
+zatial neuspesne...
 
 ## 1.1.2021
 
