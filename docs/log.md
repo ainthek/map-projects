@@ -1,6 +1,36 @@
 # Work Log
 
-## Mapovanie Lipt. Jan
+## 4.2.2021
+	
+Zoznam unique kategorii:
+
+	$ ogrinfo /Users/marcus/workspaces/map-projects/_private/data/zbgis_gn_shp/geograficky_nazov.shp -dialect sqlite -sql "select distinct CAT from geograficky_nazov" | grep "=" | cut -d= -f2 | trim
+	
+	Pole
+	Les
+	Vrch
+	Majer, osada, samota, miestna čas
+	Kanál, náhon
+	Vinica
+	Dolina
+	Vodný tok
+	Rybník, rybníky
+	Lúka, pasienok
+	Cesta
+	Vodná nádrž
+
+County objektov za jednotlive "kategorie":
+	
+	ogrinfo /Users/marcus/workspaces/map-projects/_private/data/zbgis_gn_shp/geograficky_nazov.shp -dialect sqlite -sql "select cat,count(*) from geograficky_nazov group by CAT" | grep "=" | cut -d= -f2 | trim | paste - -
+
+	ogrinfo /Users/marcus/workspaces/map-projects/_private/data/INSPIRE/INSPIRE_GN.gpkg -dialect sqlite -sql "select localType,count(*) from geograficky_nazov group by localCount" | grep "=" | cut -d= -f2 | trim | paste - -
+
+Dva vodopadny na ZBGIS
+
+https://zbgis.skgeodesy.sk/mkzbgis/sk/zakladna-mapa?bm=orto&z=19&c=20.220761,49.167466&it=point&sc=n#/detail/zbgis/98/57395
+https://zbgis.skgeodesy.sk/mkzbgis/sk/zakladna-mapa?bm=orto&z=19&c=20.220761,49.167466&it=point&sc=n#/detail/zbgis/98/58907	
+
+## 3.2.2021 Mapovanie Lipt. Jan
 
 Pokus rozchodit DMR z minulych cias
 https://zbgis.skgeodesy.sk/zbgis/rest/services/DMR/MapServer/tile/16/22659/36097?blankTile=false
