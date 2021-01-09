@@ -1,6 +1,37 @@
 # Work Log
 
-## 4.2.2021
+## 9.1.2021
+
+some gdal python scripts in QGis (merge, rasterize) still not working, trying to resolve.
+
+    # uninstall gdal
+	brew uninstall gdal
+	
+	brew install gdal
+	pip3 install gdal
+
+
+<https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91>
+
+Seems standalone GDAL now rorks atd least
+
+For q gis I give up and go for kyngchaos install.
+https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.16.2-2.dmg
+
+Fails to load as well, back to nightly version:
+
+Symbol not found: _curl_mime_addpart
+Referenced from: /Applications/QGIS.app/Contents/MacOS/bin/../lib/libgdal.27.dylib
+Expected in: /usr/lib/libcurl.4.dylib
+
+Nakonieco som instalol 3.10 a tam merge layers ide
+
+### Generovanie tiles:
+
+<https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale>
+
+
+## 4.1.2021
 	
 Zoznam unique kategorii:
 
