@@ -1,6 +1,29 @@
 # Work Log
 
+
+## 10.1.2020
+
+More styles research:
+
+<https://plugins.qgis.org/styles/>
+<https://gis.stackexchange.com/questions/165574/qgis-how-to-label-individual-sides-of-polygon>
+<https://anitagraser.com/2017/04/08/a-guide-to-geometry-generator-symbol-layers/>
+
+<https://www.gislounge.com/series-webgis-using-open-source-tools/>
+https://gis.stackexchange.com/questions/255733/importing-moving-rotating-and-scaling-jpg-images-onto-osm-maps-in-qgis
+
+
+TODO: QGis modeler
+
+### Merging ZBGIS DMS data
+
+	gdal_merge.py -o ../gis-projects/qgis/dmr-merged/merge1.tif  \
+		$(xs-find ../gis-projects/data/zbgis/DMR5-KU/*/dmr/ -name "hdr.adf")
+
 ## 9.1.2021
+
+QGis Map showcase <https://www.flickr.com/groups/qgis/>
+
 
 some gdal python scripts in QGis (merge, rasterize) still not working, trying to resolve.
 
