@@ -1,5 +1,21 @@
 # Work Log
 
+## 12.2.2020
+
+merging DMR3.5 a DMR5
+stale je s tym problem QGis 3.17 na OSX nevie
+gdal aj 3.10 stale spravi z DMR%ky DMR3.5 rozlisenie
+
+nasiel som hint na align rasters ten spravi resampling 3.5 na 5 resolution a potom snad mozeme mergovat
+
+podozrive CRS v fifoch od freemap/~martin
+
+lazisko nazvoslovie http://www.moravcik.alconet.sk/sk/lazisko
+
+## 11.1.2020 Hillshades and overlays
+
+https://www.esri.com/arcgis-blog/products/product/imagery/an-alternative-to-overlaying-layer-tints-on-hillshades/
+https://wanderingcartographer.wordpress.com/tag/shaded-relief/
 
 ## 10.1.2020
 
