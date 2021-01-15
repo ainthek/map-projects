@@ -1,5 +1,13 @@
 # Work Log
 
+https://github.com/nationalparkservice/symbol-library/
+
+## 13.2.2020
+
+https://github.com/AmericanRedCross
+https://www.spatialised.net/painting-terrain-in-qgis/
+
+
 ## 12.2.2020
 
 merging DMR3.5 a DMR5

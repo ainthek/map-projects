@@ -21,6 +21,9 @@ Topics of interest
 
 Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
 
+
+https://www.dkubinsky.sk/clanok/priestorove-gis-udaje-kde-ich-najst
+
 ## Freemap.sk
 
 ### DMR 5
