@@ -1,8 +1,30 @@
 # Work Log
 
-https://github.com/nationalparkservice/symbol-library/
+## 15.1.2020 OSM and CLI
 
-## 13.2.2020
+!!!!
+
+	is_in API hlada len v takych ways ktore maju meno
+	takze nenajde nepomenovanu landuse
+
+	lebo: https://github.com/drolbr/Overpass-API/blob/master/src/rules/areas.osm3s
+
+!!!!
+
+nastal cas na nejaku automatizaciu manualnych klikaciek v QUick OSM
+a neustalych manualnych refreshov layerov (v QGise) po opravach v JOSM
+
+	https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide
+
+	https://overpass-api.de/query_form.html
+
+	https://overpass-api.de/api/interpreter
+
+	https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Adding_Georeference_details_to_village_nodes_.28since_0.7.54.29
+
+## 13.2.2020 symbols
+
+https://github.com/nationalparkservice/symbol-library/
 
 https://github.com/AmericanRedCross
 https://www.spatialised.net/painting-terrain-in-qgis/

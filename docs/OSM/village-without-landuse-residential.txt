@@ -1,0 +1,27 @@
+/* slovensko 
+TODO: asi nedokoncim lebo is_in a pomenovane alebo area land use
+pozri log.md
+*/
+area["ISO3166-1:alpha3"="SVK"]->.svk;
+
+area["boundary"="administrative"]["admin_level"="8"]
+["name"="okres Liptovský Mikuláš"](area.svk)->.okres;
+
+/*
+place=neighbourhood - A neighbourhood is a smaller named, geographically localised place within a suburb of a larger city or within a town or village
+place=suburb - A part of a town or city with a well-known name and often a distinct identity.
+place=isolated_dwelling - The smallest kind of settlement (1-2 households).
+place=hamlet - A smaller rural community, typically with fewer than 100-200 inhabitants, and little infrastructure.
+place=town - An important urban centre, between a place=village and a place=city in size.
+*/
+
+node["place"~"village|town"]["name"="Svätý Kríž"](area.okres)->.residences;
+foreach.residences->.r(
+  way["landuse"="residential"](around.r:1000.0)->.p;
+  .r out;
+  .p out;
+);
+
+
+
+

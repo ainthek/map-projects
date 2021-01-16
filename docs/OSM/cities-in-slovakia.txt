@@ -1,0 +1,7 @@
+/* slovensko */
+area["ISO3166-1:alpha3"="SVK"]->.svk;
+
+node["place"="city"](area.svk);
+
+out;
+
