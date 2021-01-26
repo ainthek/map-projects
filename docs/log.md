@@ -1,5 +1,16 @@
 # Work Log
 
+## 26.1.2020
+
+sniffs z https://mapy.bratislava.sk/
+a nasledne zostavenie fake GetCapabilities v docs/spikes/mapy.bratislava.sk/capabilities.xml
+
+takto sa daju aj dalsie vrstvy, abo to QGis WMS klient zvladol
+	
+## 25.1.2020
+
+https://grassbook.org/wp-content/uploads/neteler/como2006/grass_como2006_v3.pdf
+
 ## 15.1.2020 OSM and CLI
 
 !!!!
