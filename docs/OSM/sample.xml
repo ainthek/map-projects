@@ -1,0 +1,5 @@
+<union>
+  <bbox-query s="51.249" w="7.148" n="51.251" e="7.152" />
+  <recurse type="up" />
+</union>
+<print mode="meta" />

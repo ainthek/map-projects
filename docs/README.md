@@ -20,6 +20,11 @@ Topics of interest
 # Data Sources
 
 Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
+https://www.dkubinsky.sk/clanok/priestorove-gis-udaje-kde-ich-najst
+
+## data.humdata.org
+
+	https://data.humdata.org/dataset/slovakia-high-resolution-population-density-maps-demographic-estimates
 
 ## Freemap.sk
 

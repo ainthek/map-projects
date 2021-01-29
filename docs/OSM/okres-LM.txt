@@ -1,0 +1,6 @@
+/* slovensko */
+area["ISO3166-1:alpha3"="SVK"]->.svk;
+relation["boundary"="administrative"]["admin_level"="8"]
+["name"="okres Liptovský Mikuláš"](area.svk);
+out body;
+

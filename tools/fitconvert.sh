@@ -6,7 +6,9 @@
 ##
 ## # Samples:
 ##     
-##    
+##   
+## Convert all files added "today":
+##   find ../gis-projects/data/rides/suunto/fit/*.fit -maxdepth 1 -newermt "2021-01-01" | while read f; do ./tools/fitconvert.sh $f ; done 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ] || ([ -t 0 ] && [ "$#" == 0 ])
 then 
 	perl -ne "/^## ?/ && s/^## ?//g && print" "${BASH_SOURCE[0]}"
@@ -27,7 +29,7 @@ cp $TOOL/fit2gpx.ini ./fit2slf.ini
 
 for fit in "$@"
 do
-
+    echo 1>&2 "Processing $fit"
     json="$(dirname $fit)/$(basename $fit .fit).json"
     gpx="$(dirname $fit)/$(basename $fit .fit).gpx"
     slf="$(dirname $fit)/$(basename $fit .fit).slf"
@@ -51,6 +53,7 @@ do
     mv "$slf" "$slf2"
     cp "$fit" "$fit2"
 
+    touch -t "$(format_date $ts)" "$fit"
     touch -t "$(format_date $ts)" "$json2"
     touch -t "$(format_date $ts)" "$gpx2"
     touch -t "$(format_date $ts)" "$slf2"

@@ -1,6 +1,117 @@
 # Work Log
 
-## 4.2.2021
+## 26.1.2020
+
+sniffs z https://mapy.bratislava.sk/
+a nasledne zostavenie fake GetCapabilities v docs/spikes/mapy.bratislava.sk/capabilities.xml
+
+takto sa daju aj dalsie vrstvy, abo to QGis WMS klient zvladol
+	
+## 25.1.2020
+
+https://grassbook.org/wp-content/uploads/neteler/como2006/grass_como2006_v3.pdf
+
+## 15.1.2020 OSM and CLI
+
+!!!!
+
+	is_in API hlada len v takych ways ktore maju meno
+	takze nenajde nepomenovanu landuse
+
+	lebo: https://github.com/drolbr/Overpass-API/blob/master/src/rules/areas.osm3s
+
+!!!!
+
+nastal cas na nejaku automatizaciu manualnych klikaciek v QUick OSM
+a neustalych manualnych refreshov layerov (v QGise) po opravach v JOSM
+
+	https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide
+
+	https://overpass-api.de/query_form.html
+
+	https://overpass-api.de/api/interpreter
+
+	https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_API_by_Example#Adding_Georeference_details_to_village_nodes_.28since_0.7.54.29
+
+## 13.2.2020 symbols
+
+https://github.com/nationalparkservice/symbol-library/
+
+https://github.com/AmericanRedCross
+https://www.spatialised.net/painting-terrain-in-qgis/
+
+
+## 12.2.2020
+
+merging DMR3.5 a DMR5
+stale je s tym problem QGis 3.17 na OSX nevie
+gdal aj 3.10 stale spravi z DMR%ky DMR3.5 rozlisenie
+
+nasiel som hint na align rasters ten spravi resampling 3.5 na 5 resolution a potom snad mozeme mergovat
+
+podozrive CRS v fifoch od freemap/~martin
+
+lazisko nazvoslovie http://www.moravcik.alconet.sk/sk/lazisko
+
+## 11.1.2020 Hillshades and overlays
+
+https://www.esri.com/arcgis-blog/products/product/imagery/an-alternative-to-overlaying-layer-tints-on-hillshades/
+https://wanderingcartographer.wordpress.com/tag/shaded-relief/
+
+## 10.1.2020
+
+More styles research:
+
+<https://plugins.qgis.org/styles/>
+<https://gis.stackexchange.com/questions/165574/qgis-how-to-label-individual-sides-of-polygon>
+<https://anitagraser.com/2017/04/08/a-guide-to-geometry-generator-symbol-layers/>
+
+<https://www.gislounge.com/series-webgis-using-open-source-tools/>
+https://gis.stackexchange.com/questions/255733/importing-moving-rotating-and-scaling-jpg-images-onto-osm-maps-in-qgis
+
+
+TODO: QGis modeler
+
+### Merging ZBGIS DMS data
+
+	gdal_merge.py -o ../gis-projects/qgis/dmr-merged/merge1.tif  \
+		$(xs-find ../gis-projects/data/zbgis/DMR5-KU/*/dmr/ -name "hdr.adf")
+
+## 9.1.2021
+
+QGis Map showcase <https://www.flickr.com/groups/qgis/>
+
+
+some gdal python scripts in QGis (merge, rasterize) still not working, trying to resolve.
+
+    # uninstall gdal
+	brew uninstall gdal
+	
+	brew install gdal
+	pip3 install gdal
+
+
+<https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91>
+
+Seems standalone GDAL now rorks atd least
+
+For q gis I give up and go for kyngchaos install.
+https://www.kyngchaos.com/files/software/qgis/QGIS-macOS-3.16.2-2.dmg
+
+Fails to load as well, back to nightly version:
+
+Symbol not found: _curl_mime_addpart
+Referenced from: /Applications/QGIS.app/Contents/MacOS/bin/../lib/libgdal.27.dylib
+Expected in: /usr/lib/libcurl.4.dylib
+
+Nakonieco som instalol 3.10 a tam merge layers ide
+
+### Generovanie tiles:
+
+<https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Resolution_and_Scale>
+
+
+## 4.1.2021
 	
 Zoznam unique kategorii:
 
