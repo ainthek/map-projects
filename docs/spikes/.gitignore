@@ -4,6 +4,5 @@
 node_modules/*
 !node_modules/simple-statistics/
 
-node_modules/simple-statistics/*
-!node_modules/simple-statistics/dist
+
 

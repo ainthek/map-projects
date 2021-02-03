@@ -61,15 +61,6 @@ Servers
 target
 
 
-# Dojo build
-*.uncompressed.js
-ScreenBuild*.js
-commonBuild*.js
-*.map
-*.min.css
-
-
-
 # Compilers and Tools
 .sonar
 *.Z
