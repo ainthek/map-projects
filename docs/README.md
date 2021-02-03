@@ -19,8 +19,8 @@ Topics of interest
 
 # Data Sources
 
-Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
-https://www.dkubinsky.sk/clanok/priestorove-gis-udaje-kde-ich-najst
+- Katalóg "oficiálnych služieb" <https://zbgis.skgeodesy.sk/geoportal/catalog/search/browse/browse.page>
+- Priestorove gis udaje a kde ich najst <https://www.dkubinsky.sk/clanok/priestorove-gis-udaje-kde-ich-najst>
 
 ## data.humdata.org
 
