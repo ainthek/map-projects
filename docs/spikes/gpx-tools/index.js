@@ -7,7 +7,19 @@ const NS_GPX = "http://www.topografix.com/GPX/1/1";
 main();
 async function main() {
     const algorithms = {
-        detectStops: async ({ file, data }) => {
+        removeZeroSpeed: async ({data }) => {
+            console.error("Running:detectStops");
+            // TODO: assert <time> is present othetwise makes no sense
+            const gpxDom = str2dom(data);
+            const inputTrackpints = parseTrackPoints(gpxDom);
+            debugger;
+            inputTrackpints
+                .filter(p => p.speed === 0)
+                .forEach(p => p._domNode.remove());
+            return new XMLSerializer().serializeToString(gpxDom);
+        },
+        detectStops: async ({ data }) => {
+            console.error("Running:removeZeroSpeed");
             // TODO: assert <time> is present othetwise makes no sense
             const gpxDom = str2dom(data);
             const inputTrackpints = parseTrackPoints(gpxDom);
@@ -40,9 +52,16 @@ async function main() {
             const data = await readFileAsString(file);
             input.value = data;
 
-            const result = await algorithms[algorithm]({ file, data });
+            const result = await algorithms[algorithm]({ data });
             output.value = result;
         });
+        input.addEventListener("change",async ()=>{
+            //alert();
+            const data=input.value;
+            const result = await algorithms[algorithm]({ data });
+            output.value = result;
+        })
+        
     })
 
 }

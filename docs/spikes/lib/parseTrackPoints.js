@@ -12,12 +12,19 @@ import { median, mean, mode } from "../node_modules/simple-statistics/dist/simpl
 
 const MISSING_ELE = { textContent: 0 };
 const MISSING_TIME = { textContent: undefined };
-const trkpt2js = (point, i, points) => ({
-    lat: +point.getAttribute("lat"),
-    lon: +point.getAttribute("lon"),
-    time: Date.parse((point.getElementsByTagName("time")[0] || MISSING_ELE).textContent),
-    ele: +(point.getElementsByTagName("ele")[0] || MISSING_ELE).textContent
-});
+const trkpt2js = (point, i, points) => (
+    Object.defineProperty(
+        // public
+        {
+            lat: +point.getAttribute("lat"),
+            lon: +point.getAttribute("lon"),
+            time: Date.parse((point.getElementsByTagName("time")[0] || MISSING_ELE).textContent),
+            ele: +(point.getElementsByTagName("ele")[0] || MISSING_ELE).textContent
+        },
+        // private
+        "_domNode", { value: point }
+    )
+);
 const addDistance = (point, i, points) => {
     const previous = points[i - 1];
     const delta = previous ? distVincenty(previous.lat, previous.lon, point.lat, point.lon) : 0;
@@ -53,6 +60,7 @@ const addSpeed = (point, i, points) => {
         spee3d: (d / deltaT * 3600) || 0
     });
 }
+
 // TODO: refactor to pipe or one function
 const parseTrackPoints = (dom) => Array.from(dom.getElementsByTagName("trkpt"))
     .map(trkpt2js)

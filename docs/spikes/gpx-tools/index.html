@@ -12,12 +12,28 @@
 
 <body>
     <h1>Gpx Tools</h1>
+    
     Experimental collection of tools (v.0.0.2)
-    <section id="detectStops" class="algorithm">
-        <h2>Detect stops</h2>
+    Implemented in JS.
+
+    Drag file to first textarea.
+    <!-- TODO: support copy paste and on change on input -->
+
+    <section id="removeZeroSpeed" class="algorithm">
+        <h2>Remove zero speed points</h2>
+        Each point with zero speed is deleted<br>
         <textarea class="input"></textarea>
         <textarea class="output"></textarea>
     </section>
+
+    <section id="detectStops" class="algorithm">
+        <h2>Detect stops</h2>
+        Detects "autostops" in gpx files. Creates wpt for each trackpint where deltaT>60s.
+        <br>
+        <textarea class="input"></textarea>
+        <textarea class="output"></textarea>
+    </section>
+
     <script type="module" src="index.js"></script>
 </body>
 
