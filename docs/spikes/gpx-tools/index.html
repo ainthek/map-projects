@@ -18,6 +18,12 @@
 
     Drag file to first textarea.
     <!-- TODO: support copy paste and on change on input -->
+    <section id="all" class="algorithm">
+        <h2>All-in-one</h2>
+        performs all below in sequence<br>
+        <textarea class="input"></textarea>
+        <textarea class="output"></textarea>
+    </section>
 
     <section id="removeZeroSpeed" class="algorithm">
         <h2>Remove zero speed points</h2>
@@ -29,6 +35,22 @@
     <section id="detectStops" class="algorithm">
         <h2>Detect stops</h2>
         Detects "autostops" in gpx files. Creates wpt for each trackpint where deltaT>60s.
+        <br>
+        <textarea class="input"></textarea>
+        <textarea class="output"></textarea>
+    </section>
+
+    <section id="processExtensions" class="algorithm">
+        <h2>Add/Process Extensions</h2>
+        Removes all extensions and replaces them with calculated extension in flat format
+        to be usable by QGis import (hates nested extensions) 
+        <br>
+        <textarea class="input"></textarea>
+        <textarea class="output"></textarea>
+    </section>
+    <section id="segmentize" class="algorithm">
+        <h2>segmentize</h2>
+        creates segment (line) for each 2 points
         <br>
         <textarea class="input"></textarea>
         <textarea class="output"></textarea>

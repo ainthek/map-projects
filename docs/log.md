@@ -1,4 +1,12 @@
 # Work Log
+## 5.2.2020
+
+- Preco je v bezkarskom FIT zazname kadencia ?
+- cool plugin GPX segment tool
+- to iste som ale vcera kodol v mojich UI gps tools (hrozne) 
+  a zda sa ze to sedi +- na centimetre
+
+
 
 ## 26.1.2020
 

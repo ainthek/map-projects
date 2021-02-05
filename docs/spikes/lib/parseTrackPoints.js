@@ -16,10 +16,18 @@ const trkpt2js = (point, i, points) => (
     Object.defineProperty(
         // public
         {
+            // essentials
             lat: +point.getAttribute("lat"),
             lon: +point.getAttribute("lon"),
             time: Date.parse((point.getElementsByTagName("time")[0] || MISSING_ELE).textContent),
-            ele: +(point.getElementsByTagName("ele")[0] || MISSING_ELE).textContent
+            ele: +(point.getElementsByTagName("ele")[0] || MISSING_ELE).textContent,
+            // others
+            sym: +(point.getElementsByTagName("sym")[0] || MISSING_ELE).textContent,
+            type: +(point.getElementsByTagName("type")[0] || MISSING_ELE).textContent,
+            //extensions, lax I do not care abou NS or nesting in extensions
+            // this is fine for garmin samples, if more needed add || here 
+            hr: (point.querySelector("extensions hr") || MISSING_ELE).textContent,
+            cad: (point.querySelector("extensions cad") || MISSING_ELE).textContent
         },
         // private
         "_domNode", { value: point }
@@ -52,12 +60,13 @@ const add3dDistance = (point, i, points) => {
 }
 const addSpeed = (point, i, points) => {
     const previous = points[i - 1];
-    const deltaT = previous && point.time - previous.time;
-    const d = previous && point.distance.delta;
+    const deltaT = previous && point.time - previous.time; //ms
+    const d = previous && point.distance.delta; //m
     return Object.assign(points[i], {
         deltaT,
-        speed: (d / deltaT * 3600) || 0,
-        spee3d: (d / deltaT * 3600) || 0
+        //
+        speed: ((d / deltaT)/*m/ms*/ * 1000 /*ms*/ * 3.6 /*km/h*/) || 0,
+        //spee3d: (d / deltaT * 3600) || 0
     });
 }
 
