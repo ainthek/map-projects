@@ -6,6 +6,7 @@
 - to iste som ale vcera kodol v mojich UI gps tools (hrozne) 
   a zda sa ze to sedi +- na centimetre
 
+- https://docs.sigro.org/qgis-basic-training/en/analyses.html
 
 
 ## 26.1.2020
