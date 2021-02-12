@@ -26,8 +26,8 @@ const trkpt2js = (point, i, points) => (
             type: +(point.getElementsByTagName("type")[0] || MISSING_ELE).textContent,
             //extensions, lax I do not care abou NS or nesting in extensions
             // this is fine for garmin samples, if more needed add || here 
-            hr: (point.querySelector("extensions hr") || MISSING_ELE).textContent,
-            cad: (point.querySelector("extensions cad") || MISSING_ELE).textContent
+            hr: +(point.querySelector("extensions hr") || MISSING_ELE).textContent,
+            cad: +(point.querySelector("extensions cad") || MISSING_ELE).textContent
         },
         // private
         "_domNode", { value: point }

@@ -12,10 +12,11 @@ main();
 async function main() {
     const algorithms = {
         all: async ({ data }) => {
-            
-            data=await algorithms.removeZeroSpeed({data});
-            data=await algorithms.detectStops({data});
-            data=await algorithms.processExtensions({data});
+
+            data = await algorithms.removeZeroSpeed({ data });
+            data = await algorithms.detectStops({ data });
+            data = await algorithms.processExtensions({ data });
+            data = await algorithms.clasify({ data });
             //data=await algorithms.segmentize({data});
             return data;
         },
@@ -25,7 +26,7 @@ async function main() {
             const gpxDom = str2dom(data);
             const inputTrackpints = parseTrackPoints(gpxDom);
             inputTrackpints
-                .filter(p => p.speed === 0)
+                .filter((p,i,{length}) => i!=0 && i!=length-1 && p.speed === 0)
                 .forEach(p => p._domNode.remove());
             return new XMLSerializer().serializeToString(gpxDom);
         },
@@ -80,6 +81,35 @@ async function main() {
             });
             return new XMLSerializer().serializeToString(gpxDom);
         },
+        clasify: async ({ data }) => {
+            const max = (prop) => (max, c) => Math.max(max, c[prop] || -Infinity);
+            const addType = (point, type) => (point._domNode.getElementsByTagName("type")[0] || point._domNode.appendChild(gpxDom.createElementNS(NS_GPX, "type"))).textContent = type;
+            const addDesc = (point, desc) => (point._domNode.getElementsByTagName("desc")[0] || point._domNode.appendChild(gpxDom.createElementNS(NS_GPX, "desc"))).textContent = desc;
+            const gpxDom = str2dom(data);
+            const inputTrackpints = parseTrackPoints(gpxDom);
+
+            const startPoint = inputTrackpints[0];
+            const endPoint = inputTrackpints[inputTrackpints.length - 1];
+            addType(startPoint, "startPoint");
+            addType(endPoint, "endPoint");
+            // maxSpeed
+            const maxSpeed = inputTrackpints.reduce(max("speed"), -Infinity);
+            inputTrackpints.filter(({ speed }) => speed === maxSpeed)
+                .forEach(point => addType(point, "maxSpeed"));
+            // maxHr
+            const maxHr = inputTrackpints.reduce(max("hr"), -Infinity);
+            inputTrackpints.filter(({ hr }) => hr === maxHr)
+                .forEach(point => addType(point, "maxHr"));
+            // restPoints
+            inputTrackpints.forEach((point, i, points) => {
+                const next = points[i + 1];
+                if (next && next.deltaT > 60000) {
+                    addType(point, "restPoint");
+                    addDesc(point, `pause for ${formatDelta(next.deltaT)}`);
+                }
+            });
+            return new XMLSerializer().serializeToString(gpxDom);
+        },
         segmentize: async ({ data }) => {
 
             const gpxDom = str2dom(data);
@@ -95,8 +125,7 @@ async function main() {
                     .appendChild(document.createElementNS(NS_GPX, "trk"))
                 const seg = trk
                     .appendChild(document.createElementNS(NS_GPX, "trkseg"))
-                // const seg = gpxDom.getElementsByTagName("trk")[0]
-                //     .appendChild(document.createElementNS(NS_GPX, "trkseg"))
+               
                 seg.appendChild(a._domNode);
                 seg.appendChild(b._domNode.cloneNode(true));
                 //TODO: all extension shell be parsed in inputTrackpints
