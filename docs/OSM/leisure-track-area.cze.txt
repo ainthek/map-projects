@@ -1,0 +1,7 @@
+/* slovensko */
+area["ISO3166-1:alpha3"="CZE"]->.cze;
+
+node["leisure"="track"](area.cze);
+
+out;
+

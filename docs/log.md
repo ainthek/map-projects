@@ -1,4 +1,13 @@
 # Work Log
+
+## 6.10.2021
+
+Reinkarnácia nápadu a mapovania BMX a pumptrack tratí.
+
+Nakreslis som aspon Dlhú.
+<https://www.openstreetmap.org/relation/13298109#map=19/48.41909/17.41549>
+
+
 ## 5.2.2020
 
 - Preco je v bezkarskom FIT zazname kadencia ?

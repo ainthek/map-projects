@@ -1,11 +1,24 @@
 #!/bin/bash
 
+## Executes JOSM query from file
+## Version: 1.0
+## 
+## Samples:
+## 
+## ./tools/osm ./docs/OSM/leisure-track.txt
+##
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ] || ([ -t 0 ] && [ "$#" == 0 ])
+then 
+	perl -ne "/^## ?/ && s/^## ?//g && print" "${BASH_SOURCE[0]}"
+	exit 1
+fi
 # get current dir of script , absolute, one hop symlinks supported, XB OSX because readlink -f, see also https://gist.github.com/esycat/5279354
 current="$([ -L "$0" ] && BASHSOURCE="$(dirname "$0")/$(readlink "$0")" || BASHSOURCE="$0"; cd "$( dirname "$BASHSOURCE")" && pwd -P )"
 OUT=$current/../../gis-projects/data/OpenStreetMaps
 OUT_FILE="$OUT/$(basename "$1" .txt)-$(date +%F).osm"
 
 data=$(cat "$1" | tr -d "\n" | url-encode-query)
-curl -v -X POST https://overpass-api.de/api/interpreter --data-raw "data=$data" | tee "$OUT_FILE"
+curl --insecure -s -X POST https://overpass-api.de/api/interpreter --data-raw "data=$data" | tee "$OUT_FILE"
 echo 1>&2 "saved to:$OUT_FILE"
 
