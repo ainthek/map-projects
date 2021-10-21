@@ -1,5 +1,26 @@
 # Work Log
 
+## 21.10.2021
+
+name	Pumptrack Zákamenné
+leisure	track
+sport	cycling;bmx;mtb;pumptrack
+bicycle	yes
+surface	asphalt
+source	survey
+
+
+Vinicne:
+https://www.openstreetmap.org/node/9191255910
+Zakamenne:
+https://www.openstreetmap.org/node/9191260569
+
+TODO: ako sa kreslia prechody cez cestu ?
+vo vinicnom ich je plno, ale nie su nakreslene.
+
+https://medvedkudajlabku.sk/pumptrack/
+
+
 ## 6.10.2021
 
 Reinkarnácia nápadu a mapovania BMX a pumptrack tratí.
