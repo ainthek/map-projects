@@ -1,5 +1,12 @@
 # Work Log
 
+## 27.11.2021
+
+just links from other document
+Extracting reivers from DMR 5.0
+step1: https://www.youtube.com/watch?v=yX18Yn_e3QY&t=23s
+
+
 ## 21.10.2021
 
 name	Pumptrack Zákamenné
