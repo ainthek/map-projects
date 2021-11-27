@@ -1,0 +1,9 @@
+/* slovensko */
+area["ISO3166-1:alpha3"="SVK"]->.svk;
+
+way["leisure"="track"](area.svk);
+node["leisure"="track"](area.svk);
+relation["leisure"="track"](area.svk);
+
+out;
+
