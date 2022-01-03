@@ -1,6 +1,20 @@
 # Work Log
 
-## 27.11.2021
+## 27.11.2021 - highway=footway
+
+Nekorektne znacene turisticke chodniky v Kastele, Chorvatsku.
+Opravene, a hladam teraz ci aj v SVK take zle nemame.
+
+<from: https://forum.openstreetmap.org/viewtopic.php?id=8406>
+https://gist.github.com/gravitystorm/ff5a6fdc695f08de1751
+Footways are footpaths that are planned and maintained by a city government.
+Paths are footpaths that are neither planned nor maintained.
+
+<https://gist.github.com/gravitystorm/ff5a6fdc695f08de1751>
+
+
+
+### others
 
 just links from other document
 Extracting reivers from DMR 5.0
