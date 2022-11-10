@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cesium": "^1.67.0",
-    "electron": "^8.1.1"
+    "electron": "^18.3.7"
   },
   "devDependencies": {
     "electron-reload": "^1.5.0"
